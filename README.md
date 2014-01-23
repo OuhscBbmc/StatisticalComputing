@@ -1,8 +1,8 @@
 File Repository for the *Statistical Computing User Group*
 ============
-Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  Our regular meeting time is now the first Tuesday in each month.
+Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  Our regular meeting time is now the first Tuesday of each month.
 
-This directory contains code and materials from previous presentations at the  (formerly called the SAS/R User Group).  A summary of the 2013 presentations can be [found here](./2013_Presentations/).
+This directory contains code and material from previous presentations in the user group  (formerly called the SAS/R User Group).  A summary of the 2013 presentations can be [found here](./2013_Presentations/).
 
 *(Dave & Mike, I'm going to see what we can reuse from the D2L site, and work from there).*
 
