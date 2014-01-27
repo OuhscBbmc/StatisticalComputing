@@ -1,7 +1,7 @@
 Schedule of 2013 Presentations
 ============
 
-Please click on the links to view the presentations. Click [here](./../README.md) to return to the root directory of the repository.
+Please click on the links to view the presentations. Click [here](./../) to return to the root directory of the repository.
 
 ### February 18
  * [Bayes Without Tears](./02_February/DWu_BayesianAndFrequentist_0313.pptx) by [Dee Wu](http://moon.ouhsc.edu/dwu/), Dept of [Medical Imaging and Radiation Sciences](http://www.ah.ouhsc.edu/mirs/).

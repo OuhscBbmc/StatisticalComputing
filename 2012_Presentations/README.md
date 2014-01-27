@@ -1,7 +1,7 @@
 Schedule of 2012 Presentations
 ============
 
-Please click on the links to view the presentations. Click [here](./../README.md) to return to the root directory of the repository.
+Please click on the links to view the presentations. Click [here](./../) to return to the root directory of the repository.
 
 ### September 17
  * [A Quick Survey of R Usage](./09_September/RUsage-AQuickSurvey.pptx): Some of Our Favorite Programming, Graphical, Reporting, and Analysis Features, by David Bard, Will Beasley, & Thomas Wilson, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))
