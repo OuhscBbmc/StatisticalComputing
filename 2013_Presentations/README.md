@@ -19,7 +19,13 @@ Please click on the links to view the presentations. Click [here](./../) to retu
  * [Calculating Subset Weighted Analysis Using PROC SURVEYFREQ and GENMOD](./04_April/272-2013.pdf) by Jessica Hale, David Thompson, & Paul Darden, Dept of Pediatrics
  
  * *Presentations and supplemental [material](./04_April/) for the meeting*.
+  
+### June
+ * Spatial Analysis with R, by Maleeha Shaid, Dept of Pediatrics, [Sooner SUCCESS](http://soonersuccess.ouhsc.edu/)
  
 ### August 19
- * Dealing with simple two-way tables using SAS PROC FREQ, by Som Bohora, Biostatistics and Epidemiology ([BSE](http://coph.ouhsc.edu/departments/bse/)).
+ * [Dealing with simple two-way tables using SAS PROC FREQ](./08_August/BohoraTwoWayTablesUsingSasProcFreq-2013-08-19.pdf) by Som Bohora, Biostatistics and Epidemiology ([BSE](http://coph.ouhsc.edu/departments/bse/)).
+ 
+ * *Presentations and supplemental [material](./08_August/) for the meeting*.
+
  
