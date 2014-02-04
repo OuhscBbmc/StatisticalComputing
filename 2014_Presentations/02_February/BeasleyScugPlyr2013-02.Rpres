@@ -73,6 +73,15 @@ sapply(dsSimple, class)
 str(dsSimple)
 ```
 
+Inspection of data (brief)
+========================================================
+class: small-code
+```{r}
+l <- list(a=rnorm(10), b= data.frame(b1= rnorm(5), b2=rnorm(5)))
+str(l)
+sapply(l, class)
+```
+
 Subsetting rows & columns (brief)
 ========================================================
 class: small-code

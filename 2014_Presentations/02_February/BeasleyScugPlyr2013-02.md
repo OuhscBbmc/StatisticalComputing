@@ -156,6 +156,33 @@ str(dsSimple)
 ```
 
 
+Inspection of data (brief)
+========================================================
+class: small-code
+
+```r
+l <- list(a=rnorm(10), b= data.frame(b1= rnorm(5), b2=rnorm(5)))
+str(l)
+```
+
+```
+List of 2
+ $ a: num [1:10] 1.15 -0.798 -0.806 1.968 1.02 ...
+ $ b:'data.frame':	5 obs. of  2 variables:
+  ..$ b1: num [1:5] -2.244 -0.016 2.599 -1.207 -0.957
+  ..$ b2: num [1:5] 0.26 -1.745 -1.915 -0.701 -0.887
+```
+
+```r
+sapply(l, class)
+```
+
+```
+           a            b 
+   "numeric" "data.frame" 
+```
+
+
 Subsetting rows & columns (brief)
 ========================================================
 class: small-code
