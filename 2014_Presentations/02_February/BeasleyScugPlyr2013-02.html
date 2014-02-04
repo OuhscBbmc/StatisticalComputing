@@ -791,7 +791,7 @@ hljs.initHighlightingOnLoad();
 
 <p>Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core (<a href="http://ouhsc.edu/BBMC/">BBMC</a>)</p>
 
-<p>Feb 4, 2014</p>
+<p><a href="https://github.com/OuhscBbmc/StatisticalComputing/tree/master/2014_Presentations/02_February/">February 4, 2014</a></p>
 
 </div>
 
@@ -799,7 +799,7 @@ hljs.initHighlightingOnLoad();
 <section data-transition="linear" data-transition-speed="default">
 <h3>Basic Manipulations -Part 1</h3>
 <div class="slideContent" >
-<p>The operations <strong>briefly</strong> covered today are</p>
+<p>The building block operations <em>briefly</em> covered today are</p>
 
 <ul>
 <li>Array</li>
@@ -884,6 +884,7 @@ attr(,&quot;scaled:scale&quot;)
 <h3>`data.frame` (brief)</h3>
 <div class="slideContent small-code" >
 <pre><code class="r">dsSimple &lt;- data.frame(X=x, Y=y, M=m, stringsAsFactors=F)
+
 head(dsSimple)
 </code></pre>
 
@@ -993,7 +994,7 @@ head(dsSimple)
 <section data-transition="linear" data-transition-speed="default">
 <h3>Programmatic cleaning (brief)</h3>
 <div class="slideContent small-code" >
-<pre><code class="r">(x2 &lt;- x)
+<pre><code class="r">(x2 &lt;- x) #Declare a copy of the same variable
 </code></pre>
 
 <pre><code>[1]  0  2  6  9 11 12
@@ -1197,7 +1198,8 @@ Levels: Auto Manual
 Levels: Four Six Eight
 </code></pre>
 
-<pre><code class="r">mtcars[mtcars$cyl==6, &quot;cylF&quot;] #Notice empty levels still defined
+<pre><code class="r">#Notice empty levels (ie, Four and Eight) are still defined
+mtcars[mtcars$cyl==6, &quot;cylF&quot;] 
 </code></pre>
 
 <pre><code>[1] Six Six Six Six Six Six Six
@@ -1303,6 +1305,16 @@ Levels: Four Six Eight
 <td>&hellip;</td>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>32</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>33</td>
 </tr>
 <tr>
 <td>3</td>
@@ -1459,7 +1471,7 @@ Levels: Four Six Eight
 <li><strong>combine</strong> the subsets back into a single dataset</li>
 </ul>
 
-<p>With recspect to records, the applied function can be </p>
+<p>With respect to records, the <em>apply</em> function can be </p>
 
 <ul>
 <li><strong>1-to-1</strong> (a transformation)</li>
@@ -1527,18 +1539,18 @@ tr[, c(&quot;amS&quot;,&quot;cylF&quot;,&quot;mpg&quot;,&quot;z_mpg&quot;,&quot;
             .variables = c(&quot;cylF&quot;, &quot;amS&quot;),#Splitting Variables
             .fun = summarize,             #It&#39;s many-to-1
             count = sum(!is.na(mpg)),     #New variable
-            ssqi = sqrt(sum(hp / wt))     #New variable
+            ssqi = 3.2 - sqrt(sum(hp/wt)) #New variable
 )
 su                                        #All dataset columns
 </code></pre>
 
-<pre><code>   cylF    amS count   ssqi
-1  Four   Auto     8 18.117
-2  Four Manual     3  9.431
-3   Six   Auto     3 11.976
-4   Six Manual     4 11.665
-5 Eight   Auto     2 13.309
-6 Eight Manual    12 24.019
+<pre><code>   cylF    amS count    ssqi
+1  Four   Auto     8 -14.917
+2  Four Manual     3  -6.231
+3   Six   Auto     3  -8.776
+4   Six Manual     4  -8.465
+5 Eight   Auto     2 -10.109
+6 Eight Manual    12 -20.819
 </code></pre>
 
 </div>
@@ -1550,7 +1562,7 @@ su                                        #All dataset columns
 <pre><code class="r">SummarizeCars1 &lt;- function( d ) {
   dsNew &lt;- data.frame(
     count = sum(!is.na(d$mpg)),           #Notice the new `d$`
-    ssqi = sqrt(sum(d$hp / d$wt))         #Notice the new `d$`
+    ssqi = 3.2 - sqrt(sum(d$hp / d$wt))   #Notice the new `d$`
   )
   return( dsNew )
 }
@@ -1561,13 +1573,13 @@ su &lt;- ddply(.data = mtcars,               #Dataset to split
 su
 </code></pre>
 
-<pre><code>   cylF    amS count   ssqi
-1  Four   Auto     8 18.117
-2  Four Manual     3  9.431
-3   Six   Auto     3 11.976
-4   Six Manual     4 11.665
-5 Eight   Auto     2 13.309
-6 Eight Manual    12 24.019
+<pre><code>   cylF    amS count    ssqi
+1  Four   Auto     8 -14.917
+2  Four Manual     3  -6.231
+3   Six   Auto     3  -8.776
+4   Six Manual     4  -8.465
+5 Eight   Auto     2 -10.109
+6 Eight Manual    12 -20.819
 </code></pre>
 
 </div>
@@ -1660,9 +1672,9 @@ ddply(mtcars, c(&quot;cylF&quot;), SummarizeCars2)
 <section data-transition="linear" data-transition-speed="default">
 <h3>Stump the Band (`plyr`)</h3>
 <div class="slideContent" >
-<p>I dislike sanitized demos that carefully and discreetly avoid weak spots.  Audiences get an inflated idea of its power and flexibility.</p>
+<p>I dislike sanitized demos that carefully and discreetly avoid weak spots.  Audiences get an inflated idea of the tool&#39;s ability and flexibility.</p>
 
-<p>Tell me how you want it manipulated. <em>In hindsight, this may be an awful idea.</em></p>
+<p>Tell me how you want <code>mtcars</code> manipulated. <em>In hindsight, this may be an awful idea.</em></p>
 
 </div>
 
@@ -1672,8 +1684,8 @@ ddply(mtcars, c(&quot;cylF&quot;), SummarizeCars2)
 <div class="slideContent" >
 <ul>
 <li><p>The upcoming generation of <code>plyr</code>, which focuses almost exclusively on <code>data.frame</code>s.</p></li>
-<li><p>Similar split-apply-combine logic can be used, but with a syntax that&#39;s a little closer to SQL.</p></li>
-<li><p>Exciting that it can directly operate on a dataset that&#39;s in a remote database.  This can increase performance, because databases typically have more horsepower than your laptop.  Also can substnatially reduce the network traffic if there&#39;s a lot of summarizing. </p></li>
+<li><p>It uses a similar split-apply-combine logic, but with a syntax that&#39;s a little closer to SQL.</p></li>
+<li><p>Exciting that it can directly operate on a dataset that&#39;s in a remote database.  This can increase performance, because databases typically have more horsepower than your laptop.  Also can substantially reduce the network traffic if there&#39;s a lot of summarizing. </p></li>
 <li><p>Still in the early development, and the syntax is still changing.</p></li>
 </ul>
 
