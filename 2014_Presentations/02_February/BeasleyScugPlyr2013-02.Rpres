@@ -1,0 +1,308 @@
+<style type="text/css">
+.small-code pre code {
+   font-size: 1.1em;
+}
+</style>
+
+Data Manipulation in R: Using the `plyr` package and other tools
+========================================================
+OUHSC [Statistical Computing User Group](https://github.com/OuhscBbmc/StatisticalComputing)
+
+Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))
+
+[February 4, 2014](https://github.com/OuhscBbmc/StatisticalComputing/tree/master/2014_Presentations/02_February/)
+
+Basic Manipulations -Part 1
+========================================================
+The building block operations *briefly* covered today are
+
+- Array
+- `data.frame`
+- Inspection of data
+- Subsetting rows & columns
+- Programmatic cleaning
+- Factors
+- Merging
+- Converting between long & wide datasets (`reshape2`)
+
+Basic Manipulations -Part 2
+========================================================
+The operations more thoroughly covered today are
+
+- Transforming within groups (`plyr`)
+- Summarizing within groups (`plyr`)
+
+```{r, echo=T}
+#Load the required packages
+require(knitr)
+require(plyr)
+require(reshape)
+require(ggplot2)
+```
+
+Arrays (brief)
+========================================================
+class: small-code
+```{r}
+x <- c(0, 2, 6, 9, 11, 12)    #Create IV array
+y <- c(6, 3, 4, 10, 8, 6.5)   #Create DV array
+m <- c(T, T, T, F, F, F)      #Create binary array
+```
+```{r}
+x * 100                       #Multiply by a scalar
+x + y                         #Add equal-length vectors
+x * as.integer(m)             #Multiply equal-length vectors
+scale(x, center=mean(x))      #Vector-wide function
+```
+
+`data.frame` (brief)
+========================================================
+class: small-code
+```{r}
+dsSimple <- data.frame(X=x, Y=y, M=m, stringsAsFactors=F)
+
+head(dsSimple)
+```
+
+Inspection of data (brief)
+========================================================
+class: small-code
+```{r}
+summary(dsSimple)
+sapply(dsSimple, class)
+str(dsSimple)
+```
+
+Subsetting rows & columns (brief)
+========================================================
+class: small-code
+```{r}
+x
+(xSubset1 <- x[m])
+(xSubset2 <- x[c(1,4,5)])
+
+```
+Subsetting rows & columns (brief)
+========================================================
+class: small-code
+```{r}
+dsSimple$X
+(xSubset1 <- x[m])
+(xSubset2 <- dsSimple$X[c(1,4,5)])
+(xSubset3 <- dsSimple[c(1,4,5), c("X", "Y")])
+
+```
+
+Programmatic cleaning (brief)
+========================================================
+class: small-code
+```{r}
+(x2 <- x) #Declare a copy of the same variable
+y
+x2[y < 5] <- NA
+x2
+x3 <- ifelse(test=y<5, yes=NA, no=x)
+x3
+```
+
+Another Example Dataset (again)
+========================================================
+class: small-code
+```{r, results='asis'}
+kable(head(mtcars[, ]), format = "markdown")
+```
+```{r}
+sapply(mtcars, class)
+```
+
+Factors 1 (brief)
+========================================================
+class: small-code   
+```{r}
+mtcars$am
+(mtcars$amF <- factor(mtcars$am, levels=c(0, 1), 
+                      labels=c("Auto", "Manual")))
+(mtcars$amS <- ifelse(mtcars$am==1, "Auto", "Manual"))
+mtcars$amF <- NULL
+```
+
+Factors 2 (brief)
+========================================================
+class: small-code
+```{r}
+mtcars$cyl
+(mtcars$cylF <- factor(mtcars$cyl, levels=c(4, 6, 8), 
+                       labels = c("Four", "Six", "Eight")))
+#Notice empty levels (ie, Four and Eight) are still defined
+mtcars[mtcars$cyl==6, "cylF"] 
+```
+
+Merging (brief)
+========================================================
+No sorting necessary.  Type `?merge` for help.
+```
+dsJoin1 <- merge(
+  x = dsSurvey, 
+  y = dsRecruit, 
+  by = "RecruitID", 
+  all.x = TRUE, 
+  all.y = FALSE
+)
+```
+```
+dsJoin2 <- plyr::join(
+  x = dsSurvey, 
+  y = dsRecruit, 
+  by = "RecruitID", 
+  type = "left",
+  match = "all"
+)
+```
+
+Converting long & wide (brief; `reshape2`)
+========================================================
+class: small-code
+
+SubjectID | Time1BP | Time2BP | Time3BP | Time4BP | Time5BP
+--------- | ------- | ------- | ------- | ------- | ------
+1 | 11 | 12 | 13 | 14 | 15 
+2 | 21 | 22 |  - |  - |  -
+3 | 31 | 32 | 33 | 34 |  -
+
+SubjectID | Time | BP
+--------- | ---- | ---
+1 | 1 | 11
+1 | 2 | 12
+... |
+2 | 1 | 22
+... |
+3 | 2 | 32
+3 | 3 | 33
+3 | 4 | 34
+
+Another Example Dataset (again)
+========================================================
+class: small-code
+```{r, results='asis'}
+kable(head(mtcars[, ]), format = "markdown")
+```
+```{r}
+sapply(mtcars, class)
+```
+
+The `plyr` package
+========================================================
+* **split** the dataset into subsets, based on factors
+* **apply** an arbitrary function to each subset
+* **combine** the subsets back into a single dataset
+
+With respect to records, the *apply* function can be 
+* **1-to-1** (a transformation)
+* **many-to-1** (a summary)
+* **1-to-many** (an expansion)
+
+
+Transforming within groups (`plyr`)
+========================================================
+class: small-code
+```{r}
+tr <- ddply(.data = mtcars,               #Dataset to split
+            .variables = c("cylF", "amS"),#Splitting Variables
+            .fun = transform,             #It's 1-to-1
+            z_mpg = round(scale(mpg), 1), #New variable
+            ratio = hp / wt               #New variable
+)
+tr[, c("amS","cylF","mpg","z_mpg","hp","wt","ratio")] #Subset
+```
+
+Summarizing within groups (`plyr`)
+========================================================
+class: small-code
+```{r}
+su <- ddply(.data = mtcars,               #Dataset to split
+            .variables = c("cylF", "amS"),#Splitting Variables
+            .fun = summarize,             #It's many-to-1
+            count = sum(!is.na(mpg)),     #New variable
+            ssqi = 3.2 - sqrt(sum(hp/wt)) #New variable
+)
+su                                        #All dataset columns
+```
+
+Custom function 1 (`plyr`)
+========================================================
+class: small-code
+```{r}
+SummarizeCars1 <- function( d ) {
+  dsNew <- data.frame(
+    count = sum(!is.na(d$mpg)),           #Notice the new `d$`
+    ssqi = 3.2 - sqrt(sum(d$hp / d$wt))   #Notice the new `d$`
+  )
+  return( dsNew )
+}
+su <- ddply(.data = mtcars,               #Dataset to split
+            .variables = c("cylF", "amS"),#Splitting Variables
+            .fun = SummarizeCars1         #Our new function
+)
+su
+```
+
+Custom function 2 (`plyr`)
+========================================================
+class: small-code
+```{r}
+PassThrough <- function( d ) {
+  d #returns the `d` dataset
+}
+su <- ddply(.data = mtcars,               #Dataset to split
+            .variables = c("cylF", "amS"),#Splitting Variables
+            .fun = PassThrough          #Our new function
+)
+su
+```
+
+Custom function 3 (`plyr`)
+========================================================
+class: small-code
+```{r}
+SummarizeCars2 <- function( d ) { #Reusable function
+  data.frame(
+    RowCount = nrow(d),       
+    MinHp = min(d$hp, na.rm=T),
+    MaxWt = max(d$wt, na.rm=T)
+)}
+ddply(mtcars, c("cylF"), SummarizeCars2)
+ddply(mtcars, c("cylF", "amS"), SummarizeCars2)
+```
+
+Stump the Band (`plyr`)
+========================================================
+I dislike sanitized demos that carefully and discreetly avoid weak spots.  Audiences get an inflated idea of the tool's ability and flexibility.
+
+Tell me how you want `mtcars` manipulated. *In hindsight, this may be an awful idea.*
+
+The `dplyr` package
+========================================================
+* The upcoming generation of `plyr`, which focuses almost exclusively on `data.frame`s.
+
+* It uses a similar split-apply-combine logic, but with a syntax that's a little closer to SQL.
+
+* Exciting that it can directly operate on a dataset that's in a remote database.  This can increase performance, because databases typically have more horsepower than your laptop.  Also can substantially reduce the network traffic if there's a lot of summarizing. 
+
+* Still in the early development, and the syntax is still changing.
+
+Resources
+========================================================
+#### Winston Chang
+ * [*R Graphics Cookbook*](http://shop.oreilly.com/product/0636920023135.do)
+ * [Cookbook for R](http://www.cookbook-r.com/) www.cookbook-r.com
+ 
+#### Hadley Wickham
+ * [The Split-Apply-Combine Strategy for Data Analysis](http://www.jstatsoft.org/v40/i01/), JSS
+ * http://plyr.had.co.nz/
+ * https://github.com/hadley/dplyr
+ 
+#### Phil Spector
+ * [*Data Manipulation with R*](http://www.springer.com/statistics/computational+statistics/book/978-0-387-74730-9)
+
+#### Christopher Gandrud
+ - [*Reproducible Research with R and RStudio*](http://christophergandrud.github.io/RepResR-RStudio/)
