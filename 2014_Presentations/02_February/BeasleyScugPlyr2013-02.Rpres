@@ -117,6 +117,8 @@ x3
 Another Example Dataset (again)
 ========================================================
 class: small-code
+The `mtcars` is from the `datasets` package.
+
 ```{r, results='asis'}
 kable(head(mtcars[, ]), format = "markdown")
 ```

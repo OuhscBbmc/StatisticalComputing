@@ -167,10 +167,10 @@ str(l) #Notice how b1 & b2 are shown nested in b.
 
 ```
 List of 2
- $ a: num [1:10] 0.037 0.754 -0.539 1.601 0.529 ...
+ $ a: num [1:10] 1.056 1.117 -0.154 -0.494 0.283 ...
  $ b:'data.frame':	5 obs. of  2 variables:
-  ..$ b1: num [1:5] -0.26665 -0.00509 0.54007 -0.70839 -0.91129
-  ..$ b2: num [1:5] -0.5877 0.0981 -0.0592 -0.1648 0.2496
+  ..$ b1: num [1:5] -0.164 1.503 1.204 0.719 0.622
+  ..$ b2: num [1:5] -0.298 -0.27 -0.336 -1.217 1.645
 ```
 
 ```r
@@ -293,6 +293,8 @@ x3
 Another Example Dataset (again)
 ========================================================
 class: small-code
+The `mtcars` is from the `datasets` package.
+
 
 ```r
 kable(head(mtcars[, ]), format = "markdown")
