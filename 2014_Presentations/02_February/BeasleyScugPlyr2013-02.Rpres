@@ -64,7 +64,7 @@ dsSimple <- data.frame(X=x, Y=y, M=m, stringsAsFactors=F)
 head(dsSimple)
 ```
 
-Inspection of data (brief)
+Inspection of data.frame (brief)
 ========================================================
 class: small-code
 ```{r}
@@ -73,12 +73,12 @@ sapply(dsSimple, class)
 str(dsSimple)
 ```
 
-Inspection of data (brief)
+Inspection of list (brief)
 ========================================================
 class: small-code
 ```{r}
-l <- list(a=rnorm(10), b= data.frame(b1= rnorm(5), b2=rnorm(5)))
-str(l)
+l <- list(a=rnorm(10), b=data.frame(b1= rnorm(5), b2=rnorm(5)))
+str(l) #Notice how b1 & b2 are shown nested in b.
 sapply(l, class)
 ```
 

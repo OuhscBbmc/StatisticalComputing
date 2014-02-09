@@ -117,7 +117,7 @@ head(dsSimple)
 ```
 
 
-Inspection of data (brief)
+Inspection of data.frame (brief)
 ========================================================
 class: small-code
 
@@ -156,21 +156,21 @@ str(dsSimple)
 ```
 
 
-Inspection of data (brief)
+Inspection of list (brief)
 ========================================================
 class: small-code
 
 ```r
-l <- list(a=rnorm(10), b= data.frame(b1= rnorm(5), b2=rnorm(5)))
-str(l)
+l <- list(a=rnorm(10), b=data.frame(b1= rnorm(5), b2=rnorm(5)))
+str(l) #Notice how b1 & b2 are shown nested in b.
 ```
 
 ```
 List of 2
- $ a: num [1:10] 1.15 -0.798 -0.806 1.968 1.02 ...
+ $ a: num [1:10] 0.037 0.754 -0.539 1.601 0.529 ...
  $ b:'data.frame':	5 obs. of  2 variables:
-  ..$ b1: num [1:5] -2.244 -0.016 2.599 -1.207 -0.957
-  ..$ b2: num [1:5] 0.26 -1.745 -1.915 -0.701 -0.887
+  ..$ b1: num [1:5] -0.26665 -0.00509 0.54007 -0.70839 -0.91129
+  ..$ b2: num [1:5] -0.5877 0.0981 -0.0592 -0.1648 0.2496
 ```
 
 ```r
