@@ -10,5 +10,5 @@ Please click on the links to view the presentations. Click [here](./../) to retu
 
 ### March 4
  * *The `kaps` Package: An Intro to R Packages for SAS Users* by Summer Frank, Biostatistics and Epidemiology ([BSE](http://coph.ouhsc.edu/departments/bse/)).
- * (And a 30 min presentation to be determined, possibly about multiple imputation.)
+ * *Missing Data and Multiple Imputation with SAS* (working title), by Jacob Pleitz, OU Norman [Quantitative Psychology](http://www.ou.edu/cas/psychology/people/students.html)
  
