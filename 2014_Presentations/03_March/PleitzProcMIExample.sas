@@ -33,33 +33,20 @@ datalines;
 30 50.545 	9.93 	148 
 31 47.920 	11.50 	170 
 ;
-
-proc means noprint;
-var oxygen runtime runpulse;
-run;
-
-proc corr nomiss noprint;
-var oxygen runtime runpulse;
-run;
-
-title 'Regression Excluding Missing Data';
-proc reg noprint;
-model oxygen=runtime runpulse;
-run;
+ods graphics off;
 
 title 'Multiple Imputation';
-proc mi data=Fitness seed=37851 out=miout;
-mcmc chain=single initial=em;
+proc mi data=Fitness seed=37851 out=outmi;
+mcmc chain=single initial=em timeplot (mean(oxygen)) acfplot(mean(oxygen));
 var Oxygen RunTime RunPulse;
 run;
 
-title 'Regression After Imputing Data';
-proc reg data=miout outest=outreg covout;
+proc reg data=outmi outest=outreg covout;
 model Oxygen= RunTime RunPulse;
 by _Imputation_;
 run;
 
 title 'Mianalyze';
-proc mianalyze data=outreg mult edf=28;
+proc mianalyze data=outreg edf=28;
 modeleffects Intercept RunTime RunPulse;
 run;
