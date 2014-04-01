@@ -6,7 +6,7 @@ require(tm)
 require(wordcloud)
 
 #Read in source of data
-df <- read.csv("C:/Users/twilson/Documents/GitHub/StatisticalComputing/2014_Presentations/04_April/Text.csv")
+df <- read.csv("./2014_Presentations/04_April/Text.csv")
 
 #Creates Word corpus
 StateOfTheUnionCorpus <- Corpus(DataframeSource(data.frame(df[, 1])))
