@@ -789,7 +789,9 @@ hljs.initHighlightingOnLoad();
 <div class="slideContent" >
 <p>OUHSC <a href="https://github.com/OuhscBbmc/StatisticalComputing">Statistical Computing User Group</a></p>
 
-<p>Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core (<a href="http://ouhsc.edu/BBMC/">BBMC</a>)</p>
+<p>Will Beasley, Dept of Pediatrics, </p>
+
+<p>Biomedical and Behavioral Methodology Core (<a href="http://ouhsc.edu/BBMC/">BBMC</a>)</p>
 
 <p><a href="https://github.com/OuhscBbmc/StatisticalComputing/tree/master/2014_Presentations/05_May/">May 6, 2014</a></p>
 
@@ -797,18 +799,230 @@ hljs.initHighlightingOnLoad();
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
+<h3>Overview of Git  </h3>
+<div class="slideContent" >
+<p><strong>Git</strong> is the underlying <strong>version control system</strong>.  It&#39;s a little similar to &#39;Track Changes&#39; in MS Word, with three huge differences:</p>
+
+<ol>
+<li>Collaborators can make changes simultaneously. Track Changes frequently involves a painful cognitive load to  reconcile different versions.</li>
+<li>The entire history is accessible -not just the most recent version. At anytime, you can turn back the clock to any committed change (<a href="https://github.com/OuhscBbmc/StatisticalComputing/commit/813856f8eb360ce0225665e992c028806f9cdc3e">example w/ SAS</a>).</li>
+<li>Coordinates an entire repository of files, not just isolated documents</li>
+</ol>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Overview of GitHub  </h3>
+<div class="slideContent" >
+<p><strong>GitHub</strong> is an online service that leverages Git, and adds some sauce for statisticians</p>
+
+<ul>
+<li>Hosts the repository online
+
+<ul>
+<li>Code</li>
+<li>Data</li>
+<li>Reports &amp; output</li>
+</ul></li>
+<li>Adds options for user permissions, such as read-only (unlike Dropbox)</li>
+<li>Tools for visualizing code differences and developer activity</li>
+<li>Project Management Tracking, &ldquo;Issues&rdquo;, &amp; notifications</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Outline </h3>
+<div class="slideContent" >
+<ol>
+<li>Benefits &amp; Complete examples</li>
+<li>Creation and organization</li>
+<li>Communicate with statisticians and non-statisticians</li>
+<li>Precautions with health care and PHI data</li>
+</ol>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Benefits </h3>
+<div class="slideContent" >
+<ul>
+<li>Reproducibility for internal team</li>
+<li>Reproducibility for outsiders</li>
+<li>Hosting reports</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Complete examples </h3>
+<div class="slideContent" >
+<h3>Public and applied</h3>
+
+<ul>
+<li><a href="https://github.com/OuhscBbmc/OsctrAstonWeber">github.com/OuhscBbmc/OsctrAstonWeber</a></li>
+<li><a href="https://github.com/LiveOak/LylesCarbonSteelCorrosion">github.com/LiveOak/LylesCarbonSteelCorrosion</a></li>
+<li><a href="https://github.com/LiveOak/UcaBullying">github.com/LiveOak/UcaBullying</a></li>
+</ul>
+
+<h3>Public and methodological</h3>
+
+<ul>
+<li><a href="https://github.com/wibeasley/Wats">github.com/wibeasley/Wats</a></li>
+<li><a href="https://github.com/OuhscBbmc/REDCapR">github.com/OuhscBbmc/REDCapR</a></li>
+</ul>
+
+<h3>Communication</h3>
+
+<ul>
+<li><a href="https://github.com/OuhscBbmc/RedcapGovernanceDocs">github.com/OuhscBbmc/RedcapGovernanceDocs</a></li>
+<li><a href="https://github.com/OuhscBbmc/RedcapExample">github.com/OuhscBbmc/RedcapExample</a></li>
+<li><a href="https://github.com/OuhscBbmc/StatisticalComputing">github.com/OuhscBbmc/StatisticalComputing</a></li>
+</ul>
+
+<h3>Private</h3>
+
+<ul>
+<li><a href="https://github.com/OuhscBbmc/DeSheaToothakerIntroStats">github.com/OuhscBbmc/DeSheaToothakerIntroStats</a></li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Reproducibility for Internal Team</h3>
+<div class="slideContent" >
+<ul>
+<li>Easier to be disciplined about 
+
+<ul>
+<li>maintaining a current &amp; coherent code base</li>
+<li><em>programmatic</em> data manipulation (instead of <em>manual</em>)</li>
+<li>encapsulating analyses in different files</li>
+</ul></li>
+<li>Team members can more easily review and synchronize with your changes</li>
+<li>Easier to jump between computers</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Reproducibility for Outsiders</h3>
+<div class="slideContent" >
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Benefits of Hosting Reports</h3>
+<div class="slideContent" >
+<ul>
+<li>Single URL to send to anyone interested (not just those with access to the OUHSC file server).</li>
+<li>Single report to send anyone (not a bunch of loose graphic files).</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Four Life Cycle Templates</h3>
+<div class="slideContent" >
+<ul>
+<li>Public from the start</li>
+<li>Private forever</li>
+<li>Private during development, then public</li>
+<li>Dual: Maintain a public and a private</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Mechanism</h3>
+<div class="slideContent" >
+<p>The typical sequence of operations is</p>
+
+<ol>
+<li>Log in to your computer and <strong>Sync</strong> the repository to make sure it&#39;s up-to-date.</li>
+<li><strong>Modify</strong>/create/delete a file (as normal).</li>
+<li><strong>Locally save</strong> the changes to your computer&#39;s hard drive (as normal).</li>
+<li><strong>Sync</strong> your <em>local</em> repository with the <em>central</em> repository again.  This &ldquo;pulls&rdquo; any changes from the server, attempts to merge the changes (which is usually successful), and finally &ldquo;pushes&rdquo; your recent changes to the server.</li>
+</ol>
+
+<p>The GitHub Windows &amp; Mac client hide a lot of the complexity.  </p>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Containing Data </h3>
+<div class="slideContent" >
+<p>The BBMC employs a variety of strategies.  As we descend, security increases while reproducibility decreases.</p>
+
+<ol>
+<li>Public data is contained directly as CSVs.</li>
+<li>Assume users can download the same public database (eg, large Census files)</li>
+<li>Unshared data that Git &ldquo;ignores&rdquo; and doesn&#39;t push to the server</li>
+<li>Pulling from the OUHSC file server</li>
+<li>Pulling from a database</li>
+</ol>
+
+<p>Never store PHI in a GitHub repository -even a &ldquo;private&rdquo; repository.</p>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Publicity &amp; Search Engine Optimizations </h3>
+<div class="slideContent" >
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Cautions &amp; Limitations </h3>
+<div class="slideContent" >
+<ul>
+<li>Sync early &amp; often</li>
+<li>When working in a team, avoid modifying the same file simultaneously.  Reconciliation costs you time (but is still easier than without GitHub).</li>
+<li>Works easiest with plain text (eg, SAS, R, CSV), rather than binary/proprietary formats (eg, docx &amp; sas7bdat).  The storage mechanism doesn&#39;t care, but the &ldquo;diff&rdquo; views won&#39;t be available, and reconciling differences can&#39;t be done automatically.</li>
+<li>Reconciliation strategies have a range of sophistication
+
+<ul>
+<li>Command line functions for experts.</li>
+<li>Formal branching &amp; merging using GitHub&#39;s visual tools.</li>
+<li>Our &ldquo;Hard Reset&rdquo; (which is only available option if you&#39;re not using version control).</li>
+</ul></li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
 <h3>Resources</h3>
 <div class="slideContent" >
+<h3>Git and GitHub Mechanics</h3>
+
+<ul>
+<li><a href="http://git-scm.com/">http://git-scm.com/</a></li>
+<li><a href="https://help.github.com/">https://help.github.com/</a></li>
+</ul>
+
 <h4>Victoria Stodden, Friedrich Leisch, Roger D. Peng (editors)</h4>
 
 <ul>
-<li><a href="http://www.crcpress.com/product/isbn/9781466561595"><em>Implementing Reproducible Research</em></a></li>
+<li><a href="http://www.crcpress.com/product/isbn/9781466561595"><em>Implementing Reproducible Research</em></a> (2014)</li>
 </ul>
 
 <h4>Christopher Gandrud</h4>
 
 <ul>
-<li><a href="http://christophergandrud.github.io/RepResR-RStudio/"><em>Reproducible Research with R and RStudio</em></a></li>
+<li><a href="http://christophergandrud.github.io/RepResR-RStudio/"><em>Reproducible Research with R and RStudio</em></a> (2013)</li>
 </ul>
 
 </div>
