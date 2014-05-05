@@ -2,6 +2,11 @@ Schedule of 2014 Presentations
 ============
 
 Please click on the links to view the presentations. Click [here](./../) to return to the root directory of the repository.
+### May 6
+ * *[Statistical Collaboration with GitHub](./05_May/Wordclouds in R.pptx)* by Thomas Wilson, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).
+ 
+ * *Presentations and supplemental [material](./05_May/) for the meeting*.
+ 
 ### April 1
  * *[Word Clouds in R: Lofty solutions for qualitative data](./04_April/Wordclouds in R.pptx)* by Thomas Wilson, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).
  * *[The Fifer Package](https://github.com/dustinfife/fifer)*, by [Dustin Fife](https://github.com/dustinfife/fifer), Department of [Arthritis and Clinical Immunology](http://omrf.org/programs/arthritis-clinical-immunology-research-program/), Oklahoma Medical Research Foundation ([OMRF](http://omrf.org/)).
