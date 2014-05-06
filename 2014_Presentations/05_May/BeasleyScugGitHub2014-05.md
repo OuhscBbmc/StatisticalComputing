@@ -141,6 +141,24 @@ For private reports, `knitr` produces a self-contained html report.  The graphic
 
 Inspecting the **diffs** is a great way to see if the results changed over time.
 
+My "UtilityScripts" Directory
+========================================================
+Contains files that aren't absolutely necessary for the analysis, but makes reproduction much easier.
+
+Examples: [RAnalysisSkeleton](https://github.com/wibeasley/RAnalysisSkeleton/tree/master/UtilityScripts)
+
+My "Reproduce" File
+========================================================
+Ideally expose a single file that can calls your other files in the correct order.  
+
+It's almost as easy creating a documentation file that offers clear directions to a human.
+
+Plus, you can assert that the intermediate & final files have been produced roughly correctly.
+
+I still haven't figured out how to create knitr report automatically & robustly; the working directory throws me off.  I'll likely figure it out soon and put it on [RAnalysisSkeleton](https://github.com/wibeasley/RAnalysisSkeleton).
+
+Examples: [SteelCorrosion](https://github.com/LiveOak/LylesCarbonSteelCorrosion/blob/master/UtilityScripts/Reproduce.R) ans [Wats](https://github.com/wibeasley/Wats/blob/master/UtilityScripts/Reproduce.R)
+
 Publicity & Search Engine Optimizations 
 ========================================================
 * In the repository's README.md file, provide any relevant information for humans **and search engines**.  
