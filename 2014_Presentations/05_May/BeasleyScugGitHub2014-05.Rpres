@@ -99,9 +99,21 @@ The typical sequence of operations is
  1. Log in to your computer and **Sync** the repository to make sure it's up-to-date.
  2. **Modify**/create/delete a file (as normal).
  3. **Locally save** the changes to your computer's hard drive (as normal).
- 4. **Sync** your *local* repository with the *central* repository again.  This "pulls" any changes from the server, attempts to merge the changes (which is usually successful), and finally "pushes" your recent changes to the server.
+ 4. **Commit** your saved changes to your local repository.
+ 5. **Sync** your *local* repository with the *central* repository again.  This "pulls" any changes from the server, attempts to merge the changes (which is usually successful), and finally "pushes" your recent changes to the server.
 
 The GitHub Windows & Mac client hide a lot of the complexity.  
+
+Demo
+=======
+ 1. Create a new repository in wibeasley `ScugDemo-2014-05-06`.
+ 2. Assign a new user `mhunter1`.
+ 3. Clone on my local machine.
+ 4. Copy `RAnalysisSkeleton`.
+ 5. Push changes.
+ 6. Mike makes changes in the browser version & commits.
+ 7. I sync/pull his changes.
+ 8. Create an issue w/ links.
 
 Containing Data 
 ========================================================
@@ -189,8 +201,8 @@ Resources
  * http://git-scm.com/
  * https://help.github.com/
  
-#### Victoria Stodden, Friedrich Leisch, Roger D. Peng (editors)
- * [*Implementing Reproducible Research*](http://www.crcpress.com/product/isbn/9781466561595) (2014)
+### [Implementing Reproducible Research](http://www.crcpress.com/product/isbn/9781466561595)
+ * Victoria Stodden, Friedrich Leisch, Roger D. Peng (editors; 2014)
  
-#### Christopher Gandrud
- * [*Reproducible Research with R and RStudio*](http://christophergandrud.github.io/RepResR-RStudio/) (2013)
+### [Reproducible Research with R and RStudio](http://christophergandrud.github.io/RepResR-RStudio/)
+ * Christopher Gandrud (2013)
