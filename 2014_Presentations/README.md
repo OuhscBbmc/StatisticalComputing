@@ -3,7 +3,7 @@ Schedule of 2014 Presentations
 
 Please click on the links to view the presentations. Click [here](./../) to return to the root directory of the repository.
 ### May 6
- * *[Statistical Collaboration with GitHub](./05_May/Wordclouds in R.pptx)* by Thomas Wilson, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).
+ * *[Statistical Collaboration with GitHub](http://htmlpreview.github.io/?https://raw.githubusercontent.com/OuhscBbmc/StatisticalComputing/master/2014_Presentations/05_May/BeasleyScugGitHub2014-05.html)* by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).
  
  * *Presentations and supplemental [material](./05_May/) for the meeting*.
  

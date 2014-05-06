@@ -805,7 +805,7 @@ hljs.initHighlightingOnLoad();
 
 <ol>
 <li>Collaborators can make changes simultaneously. Track Changes frequently involves a painful cognitive load to  reconcile different versions.</li>
-<li>The entire history is accessible -not just the most recent version. At anytime, you can turn back the clock to any committed change (<a href="https://github.com/OuhscBbmc/StatisticalComputing/commit/813856f8eb360ce0225665e992c028806f9cdc3e">example w/ SAS</a>).</li>
+<li>The entire history is accessible -not just the most recent version. At anytime, you can turn back the clock to any committed change (<a href="https://github.com/OuhscBbmc/StatisticalComputing/commit/813856f8eb360ce0225665e992c028806f9cdc3e">demo w/ SAS</a>).</li>
 <li>Coordinates an entire repository of files, not just isolated documents</li>
 </ol>
 
@@ -897,15 +897,16 @@ hljs.initHighlightingOnLoad();
 <h3>Reproducibility for Internal Team</h3>
 <div class="slideContent" >
 <ul>
-<li>Easier to be disciplined about 
+<li>Easier to be disciplined about.
 
 <ul>
-<li>maintaining a current &amp; coherent code base</li>
-<li><em>programmatic</em> data manipulation (instead of <em>manual</em>)</li>
-<li>encapsulating analyses in different files</li>
+<li>maintaining a current &amp; coherent code base.</li>
+<li><em>programmatic</em> data manipulation (instead of <em>manual</em>).</li>
+<li>encapsulating analyses in different files.</li>
 </ul></li>
-<li>Team members can more easily review and synchronize with your changes</li>
-<li>Easier to jump between computers</li>
+<li>Team members can more easily review and synchronize with your changes.</li>
+<li>Easier to jump between computers.</li>
+<li><a href="https://github.com/OuhscBbmc/DeSheaToothakerIntroStats">github.com/OuhscBbmc/DeSheaToothakerIntroStats</a> quickly becomes a small website.</li>
 </ul>
 
 </div>
@@ -914,6 +915,15 @@ hljs.initHighlightingOnLoad();
 <section data-transition="linear" data-transition-speed="default">
 <h3>Reproducibility for Outsiders</h3>
 <div class="slideContent" >
+<ul>
+<li>The inputs (ie, data and code) can be inspected &amp; downloaded immediately.
+
+<ul>
+<li>Details too trivial for the article are available too.</li>
+</ul></li>
+<li>The outputs (ie, stats, graphs, and reports) can be compared to their results.</li>
+<li>Ideally the exactly software versions are easily determined.</li>
+</ul>
 
 </div>
 
@@ -933,10 +943,10 @@ hljs.initHighlightingOnLoad();
 <h3>Four Life Cycle Templates</h3>
 <div class="slideContent" >
 <ul>
-<li>Public from the start</li>
-<li>Private forever</li>
-<li>Private during development, then public</li>
-<li>Dual: Maintain a public and a private</li>
+<li><strong>Public</strong> from the start.</li>
+<li><strong>Private</strong> forever.</li>
+<li><strong>Private</strong> during development, then <strong>public</strong>.</li>
+<li>Dual: Maintain both a <strong>public</strong> and a <strong>private</strong>.</li>
 </ul>
 
 </div>
@@ -972,7 +982,51 @@ hljs.initHighlightingOnLoad();
 <li>Pulling from a database</li>
 </ol>
 
-<p>Never store PHI in a GitHub repository -even a &ldquo;private&rdquo; repository.</p>
+<p>Even &ldquo;private&rdquo; GitHub repositories should never contain PHI.</p>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>RAnalysisSkeleton Repository</h3>
+<div class="slideContent" >
+<p>This is minimal example that contains elements of most of my moderately sized projects (say, takes a few weeks start to finish).</p>
+
+<p><a href="https://github.com/wibeasley/RAnalysisSkeleton">https://github.com/wibeasley/RAnalysisSkeleton</a>.</p>
+
+<p>We&#39;ll return to this after we finish the slides.</p>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Project Management and Communication</h3>
+<div class="slideContent" >
+<ul>
+<li>Communicate with internal and external collaborators.</li>
+<li>Three forms of communication have their place.
+
+<ol>
+<li>Long-term documentation stored in the repository.  It should outlive GitHub.</li>
+<li>Email has private/internal thoughts &amp; criticisms.</li>
+<li>GitHub issues host publically acceptable thoughts &amp; criticisms.  Treat as public.  Don&#39;t assume GitHub will be in business in three years; forntunately the code &amp; reports aren&#39;t tied to GitHub.  <a href="https://groups.google.com/forum/#!topic/ggplot2/dY1cKfCsb1o">Worst case</a>, you can serve them as a zip file on your faculty page.</li>
+</ol></li>
+<li>Example issues: <a href="https://github.com/OuhscBbmc/REDCapR/issues?direction=desc&amp;sort=updated&amp;state=open">REDCapR</a> and <a href="https://github.com/OuhscBbmc/RedcapGovernanceDocs/issues?direction=desc&amp;page=1&amp;sort=updated&amp;state=open">RedcapGovernanceDocs</a>.</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Distributing/Hosting Static Reports</h3>
+<div class="slideContent" >
+<p>The <a href="https://github.com/wibeasley/RAnalysisSkeleton/blob/master/Analyses/Report1/Report1.md">markdown report</a> is a quick way, but has narrow margins.</p>
+
+<p>For <em>public</em> repositories, routing the <a href="http://htmlpreview.github.io/?https://github.com/wibeasley/RAnalysisSkeleton/blob/master/Analyses/Report1/Report1.html">html report</a> through <code>http://htmlpreview.github.io</code> is typically better.</p>
+
+<p>For private reports, <code>knitr</code> produces a self-contained html report.  The graphics, text, and numeric output is in a single file you can email.  Anyone with a modern browser can open the file.</p>
+
+<p>Inspecting the <strong>diffs</strong> is a great way to see if the results changed over time.</p>
 
 </div>
 
@@ -980,24 +1034,44 @@ hljs.initHighlightingOnLoad();
 <section data-transition="linear" data-transition-speed="default">
 <h3>Publicity &amp; Search Engine Optimizations </h3>
 <div class="slideContent" >
+<ul>
+<li>In the repository&#39;s README.md file, provide any relevant information for humans <strong>and search engines</strong>.<br/></li>
+<li>It&#39;s obvious how it reduces barriers for human readers.<br/></li>
+<li>SEO is also important. Not only will it help improve the repository&#39;s SEO, it also improves the performance of your articles.</li>
+</ul>
 
 </div>
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>Cautions &amp; Limitations </h3>
+<h3>Cautions &amp; Limitations -Part 1</h3>
 <div class="slideContent" >
 <ul>
 <li>Sync early &amp; often</li>
 <li>When working in a team, avoid modifying the same file simultaneously.  Reconciliation costs you time (but is still easier than without GitHub).</li>
 <li>Works easiest with plain text (eg, SAS, R, CSV), rather than binary/proprietary formats (eg, docx &amp; sas7bdat).  The storage mechanism doesn&#39;t care, but the &ldquo;diff&rdquo; views won&#39;t be available, and reconciling differences can&#39;t be done automatically.</li>
-<li>Reconciliation strategies have a range of sophistication
+<li>Reconciliation strategies have a range of sophistication.
 
 <ul>
 <li>Command line functions for experts.</li>
 <li>Formal branching &amp; merging using GitHub&#39;s visual tools.</li>
 <li>Our &ldquo;Hard Reset&rdquo; (which is only available option if you&#39;re not using version control).</li>
 </ul></li>
+<li>Git branching &amp; forking is an important in software development, but I discourage it for repositories focused on analytics.</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Cautions &amp; Limitations -Part 2</h3>
+<div class="slideContent" >
+<p>Securing private information (data &amp; comments).</p>
+
+<ul>
+<li>Layered defense.</li>
+<li>Good protocols &amp; practices for data.</li>
+<li>Use eager <a href="https://github.com/wibeasley/RAnalysisSkeleton/blob/master/UtilityScripts/Eager.gitignore"><code>.gitignore</code></a> exclusions.</li>
 </ul>
 
 </div>
