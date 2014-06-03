@@ -3,8 +3,10 @@ Schedule of 2014 Presentations
 
 Please click on the links to view the presentations. Click [here](./../) to return to the root directory of the repository.
 ### June 3
- * *State-space Models* by Mike Hunter,  ([Developmental & Behavioral Pediatrics](http://www.oumedicine.com/pediatrics/department-sections/developmental-behavioral-pediatrics/)).
+ * *[A Visual Tour of Extended Structural Equations & State Space Models](./06_June/SCUG20140603_mhunter.pdf)* by Mike Hunter,  ([Developmental & Behavioral Pediatrics](http://www.oumedicine.com/pediatrics/department-sections/developmental-behavioral-pediatrics/)).
 
+ * *Presentations and supplemental [material](./06_June/) for the meeting*.
+ 
 ### May 6
  * *[Statistical Collaboration with GitHub](http://htmlpreview.github.io/?https://raw.githubusercontent.com/OuhscBbmc/StatisticalComputing/master/2014_Presentations/05_May/BeasleyScugGitHub2014-05.html)* by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).
  
