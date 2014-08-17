@@ -25,6 +25,6 @@ Please click on the links to view the presentations. Click [here](./../) to retu
  * *Presentations and supplemental [material](./03_March/) for the meeting*.
  
 ### February 4 
- * [Data Manipulation in R: Using the `plyr` package and other tools](http://htmlpreview.github.io/?https://raw.github.com/OuhscBbmc/StatisticalComputing/master/2014_Presentations/02_February/BeasleyScugPlyr2013-02.html#/) by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).
+ * [Data Manipulation in R: Using the `plyr` package and other tools](http://htmlpreview.github.io/?https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2014_Presentations/02_February/BeasleyScugPlyr2014-02.html#/) by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).
 
  * *Presentations and supplemental [material](./02_February/) for the meeting*.
