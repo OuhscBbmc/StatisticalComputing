@@ -2,6 +2,14 @@ Schedule of 2014 Presentations
 ============
 
 Please click on the links to view the presentations. Click [here](./../) to return to the root directory of the repository.
+
+### September 2
+ * *[Adding Graph Visualization on SAS ODS Output](./09_September/Fu_AddingGraphVisualizationOnSasOdsOutput.pptx)* by Yu Fu Oklahoma State Department of Health ([OSDH](http://www.ok.gov/health/)).
+
+ * *[Literate Programming Patterns and Practices with REDCap and `REDCapR`](./09_September/Fu_AddingGraphVisualizationOnSasOdsOutput.pptx)* by Will Beasley, Thomas Wilson, & David Bard, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).
+
+ * *Presentations and supplemental [material](./09_September/) for the meeting*.
+
 ### June 3
  * *[A Visual Tour of Extended Structural Equations & State Space Models](./06_June/SCUG20140603_mhunter.pdf)* by Mike Hunter,  ([Developmental & Behavioral Pediatrics](http://www.oumedicine.com/pediatrics/department-sections/developmental-behavioral-pediatrics/)).
 
