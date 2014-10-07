@@ -3,6 +3,11 @@ Schedule of 2014 Presentations
 
 Please click on the links to view the presentations. Click [here](./../) to return to the root directory of the repository.
 
+### October 7
+ * *[Getting Started with Bayesian GLMMs in R, SAS, Mplus, & WinBUGS](./10_October/)* by David Bard, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).
+
+ * *Presentations and supplemental [material](./10_October/) for the meeting*.
+
 ### September 2
  * *[Adding Graph Visualization on SAS ODS Output](./09_September/Fu_AddingGraphVisualizationOnSasOdsOutput.pptx)* by Yu Fu Oklahoma State Department of Health ([OSDH](http://www.ok.gov/health/)).
 
