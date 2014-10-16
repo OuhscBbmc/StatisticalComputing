@@ -3,7 +3,7 @@ Schedule of 2014 Presentations
 
 Please click on the links to view the presentations. Click [here](./../) to return to the root directory of the repository.
 
-### November 3
+### November 4
  * *[Getting Started with Bayesian GLMMs in R, SAS, Mplus, & WinBUGS](./11_November/)* by David Bard, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).
  
 ### October 7
