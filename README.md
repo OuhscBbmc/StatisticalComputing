@@ -1,6 +1,6 @@
 File Repository for the *Statistical Computing User Group*
 ============
-Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  Starting in the fall of 2014, our regular meeting time is 9:15-10:15am on the first Tuesday of each month.  (And for the fall semester, we’ll provide breakfast, including bagels and fruit.)
+Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  Starting in the fall of 2014, our regular meeting time is 9:15-10:15am on the first Tuesday of each month.  (And for the fall semester, we’ll provide breakfast, including bagels, muffins, and juice.)
 
 Our goal is to facilitate the use of statistical and methodological tools and promote collaboration, mentorship, and discussion of research and analysis.
 
