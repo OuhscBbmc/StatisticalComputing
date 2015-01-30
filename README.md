@@ -5,6 +5,7 @@ Welcome to the file repository for the OUHSC's *Statistical Computing User Group
 Our goal is to facilitate the use of statistical and methodological tools and promote collaboration, mentorship, and discussion of research and analysis.
 
 The code and material from previous presentations in the user group  (formerly called the SAS/R User Group) can be accessed here:  
+ * [2015 presentations](./2015_Presentations/).
  * [2014 presentations](./2014_Presentations/).
  * [2013 presentations](./2013_Presentations/).
  * [2012 presentations](./2012_Presentations/).
