@@ -1,6 +1,6 @@
 File Repository for the *Statistical Computing User Group*
 ============
-Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  In the spring of 2015, our regular meeting time is 10:00-11:00am on the first Tuesday of each month.
+Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  In the spring of 2015, our regular meeting time is 10-11am on the first Tuesday of each month.
 
 Our goal is to facilitate the use of statistical and methodological tools and promote collaboration, mentorship, and discussion of research and analysis.
 
@@ -17,7 +17,16 @@ The group's steering committee is Dave Thompson, Mike Anderson, and Will Beasley
 
 We meet in the East Boardroom of the Samis Education Center in Children's Hospital.  Driving and parking directions are [here](https://raw.github.com/OuhscBbmc/StatisticalComputing/master/Documents/Parking.png).  Once inside the main entrance (which is Level 2), head slightly to the right and take an elevator down to Level 1.  Exit the elevator and turn left; pass through the Samis doors.  The [East Board Room](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/Documents/SamisEdCenterMap.pdf?raw=true) will be the first room you see.  Please join us.  Electrical outlets and OUHSC Wi-Fi are available.
 
-|        | 2014 Presentations |
+## 2015 Presentations 
+
+|        |                    |
+| ------ | ------------------ |
+| February 3 | [Using knitr with logistic multilevel models and decision support trees]() <br/> by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics). <br/> <br/> Presentations and supplemental [material](./2015_Presentations/02_February/) for the meeting. |
+|        |                    |
+
+## 2014 Presentations 
+
+|        |                    |
 | ------ | ------------------ |
 | November 4 | [Getting Started with Bayesian GLMMs in R, SAS, Mplus, & WinBUGS](./2014_Presentations/11_November/GettingStartedWithBayesianGLMM2.pdf), <br/> by David Bard, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) <br/> <br/> Presentations and supplemental [material](./2014_Presentations/11_November/) for the meeting. |
 | October 7 | [Data Manipulation in R: Using the `plyr` package and other tools](http://htmlpreview.github.io/?https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2014_Presentations/02_February/BeasleyScugPlyr2014-02.html#/) <br/> by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/> (This was a rerun, because the original presenter's babysitter cancelled on him.  We chose to redo the plyr talk because many of October's attendees missed Februrary, or wanted to see it again.) <br/> <br/> Presentations and supplemental [material](./2014_Presentations/02_February/) for the meeting. |
@@ -27,14 +36,24 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 | April 1 | [Word Clouds in R: Lofty solutions for qualitative data](./2014_Presentations/04_April/Wordclouds in R.pptx) by Thomas Wilson, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/> <br/> [The Fifer Package](https://github.com/dustinfife/fifer), by [Dustin Fife](https://github.com/dustinfife/fifer), Department of [Arthritis and Clinical Immunology](http://omrf.org/programs/arthritis-clinical-immunology-research-program/), Oklahoma Medical Research Foundation ([OMRF](http://omrf.org/)). <br/> <br/> Presentations and supplemental [material](./2014_Presentations/04_April/) for the meeting. |
 | March 4 | [The `kaps` Package: An Intro to R Packages for SAS Users](./2014_Presentations/03_March/FrankAnIntroToRPackagesForSasUsers-2014-03.pptx) <br/> by Summer Frank, Biostatistics and Epidemiology ([BSE](http://coph.ouhsc.edu/departments/bse/)).  <br/> <br/> [Missing Data and Multiple Imputation with SAS](./2014_Presentations/03_March/PleitzProcMI-2014-03.pptx), <br/> by Jacob Pleitz, OU Norman [Quantitative Psychology](http://www.ou.edu/cas/psychology/people/students.html).<br/><br/>Presentations and supplemental [material](./2014_Presentations/03_March/) for the meeting.|
 | February 4 | [Data Manipulation in R: Using the `plyr` package and other tools](http://htmlpreview.github.io/?https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2014_Presentations/02_February/BeasleyScugPlyr2014-02.html#/) <br/> by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/> <br/> Presentations and supplemental [material](./2014_Presentations/02_February/) for the meeting. |
+|        |                    |
 
+## 2013 Presentations 
 
-|        | 2013 Presentations |
+|        |                    |
 | ------ | ------------------ |
 | August 19 | [Dealing with simple two-way tables using SAS PROC FREQ](./2013_Presentations/08_August/BohoraTwoWayTablesUsingSasProcFreq-2013-08-19.pdf) <br/> by Som Bohora, Biostatistics and Epidemiology ([BSE](http://coph.ouhsc.edu/departments/bse/)). <br/> <br/> Presentations and supplemental [material](./2013_Presentations/08_August/) for the meeting. |
 | June 17 | Spatial Analysis with R, by Maleeha Shaid, Dept of Pediatrics, [Sooner SUCCESS](http://soonersuccess.ouhsc.edu/) |
 | April 15 | [Calculating Subset Weighted Analysis Using PROC SURVEYFREQ and GENMOD](./2013_Presentations/04_April/272-2013.pdf) <br/> by Jessica Hale, David Thompson, & Paul Darden, Dept of Pediatrics <br/> <br/>  Presentations and supplemental [material](./2013_Presentations/04_April/) for the meeting. |
 | March 18 | A continuation of [Optimizing Study Management using REDCap, R, and other software tools](./2013_Presentations/03_March/RedcapForUserGroup.pptx) <br/> by Will Beasley, David Bard, & Thomas Wilson, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) <br/> <br/> Presentations and supplemental [material](./2013_Presentations/03_March/) for the meeting. |
 | February 18 | [Bayes Without Tears](./2013_Presentations/02_February/DWu_BayesianAndFrequentist_0313.pptx)<br/>  by [Dee Wu](http://moon.ouhsc.edu/dwu/), Dept of [Medical Imaging and Radiation Sciences](http://www.ah.ouhsc.edu/mirs/). <br/> <br/> [Optimizing Study Management using REDCap, R, and other software tools](./2013_Presentations/03_March/RedcapForUserGroup.pptx) <br/> by Will Beasley, David Bard, & Thomas Wilson, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) <br/> <br/> Presentations and supplemental [material](./2013_Presentations/02_February/) for the meeting. |
+|        |                    |
 
+## 2012 Presentations 
 
+|        |                    |
+| ------ | ------------------ |
+| November 19 | [Extending R with Compiled C code](./2012_Presentations/11_November/RToCHandout.pdf), <br/> by Michael Anderson, Dept of Biostatistics and Epidemiology ([BSE](http://coph.ouhsc.edu/departments/bse/)) and Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/> <br/> Presentations and supplemental [material](./2012_Presentations/11_November/) for the meeting. |
+| October 15 | [Balanced Anova in R and SAS](./2012_Presentations/10_October/HowtoR_ProcAnovaNormality_BoxwhiskersPlots_p3_2_2.docx) <br/> by [Dee Wu](http://moon.ouhsc.edu/dwu/), Dept of [Medical Imaging and Radiation Sciences](http://www.ah.ouhsc.edu/mirs/).<br/> <br/> Presentations and supplemental [material](./2012_Presentations/10_October/) for the meeting. |
+| September 17 | [A Quick Survey of R Usage](./2012_Presentations/09_September/RUsage-AQuickSurvey.pptx): Some of Our Favorite Programming, Graphical, Reporting, and Analysis Features, <br/> by David Bard, Will Beasley, & Thomas Wilson, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) <br/> <br/> [Box Plots in SAS](./2012_Presentations/09_September/SASRUsersGroupProcBoxplot.sas): Some of Our Favorite Programming, Graphical, Reporting, and Analysis Features, <br/> by Summer Frank, Dept of Biostatistics and Epidemiology ([BSE](http://coph.ouhsc.edu/departments/bse/)). <br/> <br/> Presentations and supplemental [material](./2012_Presentations/09_September/) for the meeting. |
+|        |                    |
