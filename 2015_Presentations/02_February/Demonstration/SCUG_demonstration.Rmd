@@ -1,0 +1,170 @@
+---
+title: "Using knitr with Multilevel Models and Decision Support Trees"
+author: "Som Bohora"
+date: "Febeuary 03, 2015"
+output: pdf_document
+geometry: margin = 0.3cm
+---
+
+```{r echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE, tidy=TRUE}
+rm(list=ls(all=TRUE))
+library(foreign)
+library(reshape2)
+library(sqldf)
+library(reshape)
+library(Hmisc)
+```
+
+## Reading data and manipulation
+```{r, echo=TRUE, eval=TRUE, message=FALSE, warning=FALSE, comment=' ', tidy=TRUE}
+depressData <- read.csv("./SCUG Presentation/Final Presentation/Final/Demonstration/Data/data1.csv", header=TRUE) 
+
+depressData$CM <- with(depressData, ifelse(hurt1w1 %in% c(1,2,3,4) | badnamesw1 %in% 1:4 | needsw1 %in% 1:4 | 
+                              sexabusew1 == 1, CM <- 1, ifelse(hurt1w1  == 0 & badnamesw1 == 0 & needsw1 == 0 
+                              & sexabusew1 == 0, CM <- 0, NA))) 
+
+depressData$hurt1w1 <- depressData$badnamesw1 <- depressData$needsw1<-depressData$sexabusew1<-NULL
+names(depressData)
+
+catVars <- names(depressData) %in% c("Group", "CM","singpsyrw1", "singpsyrw2", "singpsyrw3","pregw1", "pregw2",
+                                    "pregw3","helpfw1", "helpfw2", "helpfw3","depresw1", "depresw2", "depresw3")
+
+allFactorVars <- data.frame(depressData[!catVars], sapply(depressData[catVars], function(x) as.factor(x)))
+
+numVars <- !names(allFactorVars) %in% c("Group","CM","singpsyrw1", "singpsyrw2", "singpsyrw3","pregw1", "pregw2",
+                                      "pregw3","helpfw1", "helpfw2", "helpfw3", "depresw1", "depresw2", "depresw3")
+
+allNumericFactorVars <- data.frame(allFactorVars[!numVars], 
+                                   sapply(allFactorVars[numVars], function(x) as.numeric(x)))
+```
+
+## Imputation and restructure
+```{r, echo = TRUE, message=FALSE, results='hide', eval=TRUE, comment=' '}
+library(mice)
+imputed1 <- mice(allNumericFactorVars, me =c("", "logreg","logreg","logreg","logreg","logreg","logreg",
+                                             "logreg","logreg","logreg","logreg","","","", "",
+                                             "norm","norm","norm","norm","norm","norm","norm","norm","norm"))
+
+# Removing these variables as predictors
+pred <- imputed1$pred
+pred[,c("ID","Group", "bdiw1", "bdiw2", "bdiw3")] <- 0
+
+# Removing `pred` variables as predictors and re-running `MICE`
+imputed2 <- mice(allNumericFactorVars, seed= 98765431, me =c("", "logreg","logreg","logreg","logreg","logreg",
+                                  "logreg","logreg","logreg","logreg","logreg","","","", "","norm","norm","norm",
+                                  "norm","norm","norm","norm","norm","norm"), pred = pred)
+
+completeImputed <- complete(imputed2, inc=FALSE)
+
+long <-reshape(completeImputed, varying =list(c("bdiw1","bdiw2", "bdiw3"), 
+                                         c("PHASTcw1","PHASTcw2","PHASTcw3"),
+                                         c("singpsyrw1", "singpsyrw2", "singpsyrw3"),
+                                         c("TOTFRSw1", "TOTFRSw2", "TOTFRSw3"),
+                                         c("pregw1", "pregw2", "pregw3"),
+                                         c("helpfw1", "helpfw2", "helpfw3"),
+                                         c("spstotw1","spstotw2","spstotw3")),
+#                                          c("datew1","datew2","datew3")),
+                  v.names=c("bdiScore", "IPV", "relationship", "famRes", "preg", "depressMed", "socialSupport"), 
+                        times = 1:3, new.row.names = NULL, direction = "long")
+
+keepLong <- subset(long, 
+            select = c(ID, Group,CM, time,bdiScore,IPV,relationship,famRes,preg,depressMed,socialSupport))
+nrow(keepLong)
+
+keepLong[order(keepLong$time),]
+
+nrow(depressData[complete.cases(keepLong),])
+
+isComplete <- complete.cases(keepLong)
+sum(isComplete)
+finalLong <- keepLong[isComplete,]
+nrow(finalLong)
+
+tapply(finalLong$IPV, finalLong$time, summary)
+summary(finalLong$IPV)
+```
+
+<!-- Use of inline R codes in the R Markdown. -->
+
+The mean of `IPV` is `r mean(finalLong$IPV, na.rm=TRUE)` and correlation between IPV and depression is `r with(finalLong, cor(IPV, bdiScore))` which is less than `r 0.5 - (0.2*0.03)`.
+
+## Regression tree on IPV
+Regression tree on IPV;
+```{r, echo=TRUE, message=FALSE, fig.width=2.7, fig.height=3, comment=' '}
+library(rpart)
+library(party)
+library(partykit)
+library(rpart.plot)
+
+name1 <- c("bdiw1","bdiw2","bdiw3")
+name2 <- c("PHASTcw1", "PHASTcw2", "PHASTcw3")
+
+forReg <- depressData[, c("bdiw1", "PHASTcw1")]
+
+reglist1 <- list()
+
+for (i in 1:3){
+  reg1 <- paste(name1[i],name2[i], sep='~')
+#   print(regress)
+  reglist1[[i]] <- rpart(as.formula(reg1), maxdepth=2, method ='anova', data=completeImputed)
+  plots1 <- plot(as.party(reglist1[[i]]),tp_args = list(id = FALSE))
+}
+
+with(finalLong,tapply(IPV,time,summary))
+```
+
+## Categorizing IPV based on regression tree cut-off
+```{r, echo= TRUE, message=FALSE, eval=TRUE}
+library(lme4)
+library(MASS)
+library(lmerTest)
+library(nlme)
+library(plyr)
+
+finalLong$IPVCat <- ifelse(finalLong$IPV < 1.115, 0, 1)
+table(finalLong$IPVCat)
+
+# finalLong <- ddply(finalLong, "time", function(x) {within(x, {
+#               if (time[1] == '1') {
+#             IPVCat <- ifelse(IPV < 1.5, 0, 1)
+#             
+#             } else if (time[1] == '2') {
+#             IPVCat <- ifelse(IPV < 2.5, 0, 1)
+#             
+#            } else {
+#             IPVCat <- ifelse(IPV < 47.5, 0, 1)      
+#           }})
+#       })
+# 
+# #finalLong[,c("time","IPV", "IPVCat")]
+finalLong$IPVCat <- as.factor(finalLong$IPVCat)
+```
+
+## Different mixed-effects models (linear and quadratic) with IPV as categorical predictor
+Results from linear mixed-effects model;
+
+```{r, echo=TRUE, message=FALSE, warning=FALSE, comment=' '}
+library(lme4)
+library(lmerTest)
+library(gridExtra)
+library(coefplot)
+
+mixedModel1 <- lmer(bdiScore ~ Group*factor(time) + CM*factor(time) + IPVCat + socialSupport + 
+                IPVCat:socialSupport + relationship + famRes + IPVCat:famRes + preg + depressMed +
+                (1 | ID), data = finalLong)
+
+anova(mixedModel1, ddf ="Kenward-Roger")
+
+p1 <- plot(mixedModel1,id=0.05,idLabels=~.obs)
+p2 <- plot(mixedModel1,ylim=c(-1.5,1),type=c("p","smooth"))
+p3 <- plot(mixedModel1,col=finalLong$bdiScore)
+p4 <- plot(mixedModel1,bdiScore~resid(.))
+p5 <- coefplot(mixedModel1)
+re<-ranef(mixedModel1,condVar = TRUE)
+p6 <- qqmath(~re[[1]])
+# p1; p2; p3; p4;p4;p5;p6
+# Some regression diagnostics 
+grid.arrange(p1,p2,nrow=1)
+grid.arrange(p3,p4,nrow=1)
+grid.arrange(p5,p6,nrow=1)
+```

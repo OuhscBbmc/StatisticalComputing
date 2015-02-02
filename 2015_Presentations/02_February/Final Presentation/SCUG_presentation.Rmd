@@ -1,0 +1,93 @@
+---
+title: '**Using knitr with Multilevel Models and Decision Support Trees**'
+author: '**Som B. Bohora**'
+job: CCAN
+date: "February 03, 2015"
+output: beamer_presentation
+---
+
+# **Outline**
+  - `Markdown` & `R Markdown` (brief)
+  - `knitr` in brief
+  - `knitr` and `R Markdown` with RStudio options
+  - Demonstration 
+  
+# **Markdown & R Markdown (very brief)**
+
+##    **Markdown**
+- It is a particular type of markup language (simple formatting syntax for authoring HTML, PDF, and MS Word documents from plain text format). 
+- For example, ***LaTeX*** which is restricted to only PDF output & has greater learning curve
+
+- Other tools such as **Pandoc** to render markdown document to other formats (HTML/Word/PDF)
+
+- [THERE ARE WAYS AROUND, BUT ??](http://www.telegraph.co.uk/news/newsvideo/7207781/Daring-man-saves-van-from-train-crash.html)
+
+# **Markdown & R Markdown (very brief) contd.** 
+##   **R Markdown**
+
+- It is a file format for making dynamic documents with R with `rmarkdown` package. 
+- R Markdown document is written in markdown and enables execution of embedded R code chunks
+- `rmarkdown` comes with the RStudio IDE
+- `rmarkdown` and `pandoc` can be used outside of RStudio too. For e.g., rmarkdown::render()
+
+# **R Markdown Basics**
+
+```{r echo=FALSE, fig.width=7, fig.height=5}
+library(png)
+library(grid)
+img <- readPNG("./SCUG Presentation/Trial/Final Presentation/pic2.png")
+grid.raster(img)
+```
+    
+# **knitr for reproducible research (author:Dr. Yihui Xie)**
+
+##         **knitr + markdown + pandoc = rmarkdown**
+
+- [COOL R MARKDOWN & knitr](https://www.youtube.com/watch?v=En_8UgGZXio)
+- `knitr` is a package for producing reproducible documents and reports
+- Code and text can be embeded
+- Runs R code and includes the output (`knit` function from `knitr` package)
+- `knitr` and `pandoc` used to work separately  
+
+
+# **knitr and R Markdown wth RStudio**
+## knitr code chunk options
+
+Here is an example of knitr code chunk in .Rmd;
+
+```{r echo=FALSE, message=FALSE, fig.width=2, fig.height=0.50}
+library(png)
+library(grid)
+img <- readPNG("./SCUG Presentation/Trial/Final Presentation/pic1.png")
+grid.raster(img)
+```
+    
+- echo: show codes?
+- eval: evaluate?
+- warning/message/error: show/stop?
+- results: markup/hide/asis?
+- tidy: reformat codes?
+- cache: cache results?
+- fig.width and fig.height: figure options
+- include: chunk results in the output?
+
+
+# **Resources**
+
+1. [knitr reference card](http://cran.r-project.org/web/packages/knitr/vignettes/knitr-refcard.pdf)
+2. [R markdown and knitr cheatsheet](http://rmarkdown.rstudio.com/RMarkdownCheatSheet.pdf)
+3. [R markdown webpage](http://rmarkdown.rstudio.com)
+4. [Using R markdown](https://support.rstudio.com/hc/en-us/articles/200552086-Using-R-Markdown) 
+5. [A similar approach that uses an R file underneath the Rmd file (discussed in May)](https://github.com/wibeasley/RAnalysisSkeleton/tree/master/Analyses/Report1)
+
+```{r echo=FALSE, message=FALSE, fig.width=4, fig.height=2.5, fig.align='left'}
+library(png)
+library(grid)
+img1 <- readPNG("./SCUG Presentation/Trial/Final Presentation/knitrbook.png")
+
+grid.raster(img1)
+```
+
+# **Let's see some demostrations**
+
+
