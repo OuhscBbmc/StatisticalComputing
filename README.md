@@ -22,7 +22,7 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 |        |                    |
 | ------ | ------------------ |
 | May 5 | Data Mining Using SAS Enterprise Miner: model development using decision tree, regression, and neural net, model assessment, and scoring new data <br/> by Ram Poudel, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics) |
-| April 7 | TBD |
+| April 7 |  Extending Semiparametric AUC Model with Discrete Covariates into General Framework <br/> by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics). |
 | February 3 | [Using knitr with logistic multilevel models and decision support trees](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/02_February/SCUG_presentation.pdf?raw=true) <br/> by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics). <br/> <br/> *Presentations and supplemental [material](./2015_Presentations/02_February/) for the meeting*. |
 |        |                    |
 
