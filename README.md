@@ -15,7 +15,7 @@ The group is open to anyone interested in the tools used by statisticians and re
 
 The group's steering committee is Dave Thompson, Mike Anderson, and Will Beasley.
 
-We meet in the East Boardroom of the Samis Education Center in Children's Hospital.  Driving and parking directions are [here](https://raw.github.com/OuhscBbmc/StatisticalComputing/master/Documents/Parking.png).  Once inside the main entrance (which is Level 2), head slightly to the right and take an elevator down to Level 1.  Exit the elevator and turn left; pass through the Samis doors.  The [East Board Room](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/Documents/SamisEdCenterMap.pdf?raw=true) will be the first room you see.  Please join us.  Electrical outlets and OUHSC Wi-Fi are available.
+We meet in the East Boardroom of the Samis Education Center in Children's Hospital.  Driving and parking directions are [here](https://raw.github.com/OuhscBbmc/StatisticalComputing/master/Documents/Parking.png).  Once inside the main entrance (which is Level 2), head slightly to the right and take an elevator down to Level 1.  Exit the elevator and turn left; pass through the Samis doors.  The [East Board Room](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/Documents/SamisEdCenterMap.pdf) will be the first room you see.  Please join us.  Electrical outlets and OUHSC Wi-Fi are available.
 
 ## 2015 Presentations 
 
