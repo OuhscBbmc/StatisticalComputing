@@ -88,6 +88,6 @@ img1 <- readPNG("./SCUG Presentation/Trial/Final Presentation/knitrbook.png")
 grid.raster(img1)
 ```
 
-# **Let's see some demostrations**
+# **Let's see some demonstrations**
 
 
