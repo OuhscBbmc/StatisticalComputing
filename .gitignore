@@ -1,5 +1,8 @@
-# RStudio files
+# RStudio and History files
 .Rproj.user/
+.Rproj.user
+.Rhistory
+.RData
 
 # The devtools zip is downloaded when the package is updating itself 
 devtools.zip
@@ -12,15 +15,5 @@ DataUnshared/*
 !DataUnshared/README.md
 !DataUnshared/Contents.md
 
-# History files
-.Rhistory
-.RData
-
-# Example code in package build process
-*-Ex.R
-.Rproj.user
-# History files
-.Rhistory
-
-# Example code in package build process
-*-Ex.R
+#Image Thumbnails on Windows
+Thumbs.db
