@@ -17,3 +17,6 @@ DataUnshared/*
 
 #Image Thumbnails on Windows
 Thumbs.db
+
+#Ignore README.html files, because the .md version are converted automatically by GitHub
+README.html
