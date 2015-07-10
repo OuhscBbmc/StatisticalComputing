@@ -1,0 +1,27 @@
+        Ala     A       Alanine
+        Arg     R       Arginine
+        Asn     N       Asparagine
+        Asp     D       Aspartic acid
+        Cit     C       Citrulline
+        Cys     X       Cysteine
+        Gln     Q       Glutamine
+        Glu     E       Glutamic acid
+        Gly     G       Glycine
+        His     H       Histidine
+        Hcy     X       Homocysteine
+        Hyp     X       Hydroxyproline
+        Ile     I       Isoleucine
+        Leu     L       Leucine
+        Lys     K       Lysine
+        Met     M       Methionine
+        Orn     X       Ornithine
+        Phe     F       Phenylalanine
+        Pro     P       Proline
+        Ser     S       Serine
+        Tau     X       Taurine
+        Thr     T       Threonine
+        Trp     W       Tryptophan
+        Tyr     Y       Tyrosine
+        Val     V       Valine
+        Xaa     X       Any amino acid
+        TERM            termination codon

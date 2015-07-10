@@ -3,6 +3,12 @@ Schedule of 2015 Presentations
 
 Please click on the links to view the presentations. Click [here](./../) to return to the root directory of the repository.
 
+### July 7
+
+* **[Pandas: the primary Python tabular data analysis/manipulation toolkit](http://htmlpreview.github.io/?https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/07_July/Pandas.html#/)** by Michael Ripperger, Bioinformatics Student,  [Vanderbilt](http://www.vanderbilt.edu/)
+
+* *Presentations and supplemental [material](./2015_Presentations/07_July/) for the meeting*.
+
 ### June 2
 * **[Data Mining in Health Analytics and a Quick Look at SAS Enterprise Miner Interface](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/06_June/DataMining_SCUG_RamPoudel _02June_2015.pdf)** by Ram Poudel, Research Coordinator, [Sooner SUCCESS](https://soonersuccess.ouhsc.edu/), Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics)
 
