@@ -29,14 +29,16 @@ A [Shiny](http://shiny.rstudio.com) report is basically a website connected to R
 
 Screen Shots
 ========================================================
-(*Switch to the screen shots in PowerPoint*)
+(*Switch to the [slides of screen shots](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/10_October/beasley-scug-shiny-2015-10.pdf)*.)
 
 
 Code
 ========================================================
 (*Switch back to these slides.*)
 
-**Disclaimer**: The following code is a simplication of our real code.  The basics are the same, but the  encapsulation was flattenned and non-essential functions were omitted.
+**Disclaimer**: The following code is a simplication of our real code.  The basics are the same, but 
+* encapsulation was flattened, and 
+* non-essential functions were omitted.
 
 
 Retrieve Token
@@ -99,4 +101,32 @@ Our Current Shiny Instance is Public-Only
 
 * Data must be PHI-free. (Displayed tables *and* underlying CSVs.)
 * The instance currently run by the BBMC lacks user-authentication.
+* When PHI isn't needed, this is a huge simplification.
 * The commericial versions of Shiny have many [authentication options](http://rstudio.github.io/shiny-server/latest/#authentication-security).  It was a breeze in a non-OUHSC server I helped with.  (I rarely make these claims.)
+
+
+Three Connectivity Approaches
+========================================================
+* One-way from CSV caches (our current approach).
+    * Simple approach w/ few security concerns.
+* One-way from live database.
+    * Real-time data requires many security measures.
+    * We plan to create an instance like this.
+* Two-way to/from live database.
+    * Even more flexibility and risk.
+
+
+Deploying Code to Shiny Server
+========================================================
+1. Develop on your desktop, not on the live server.
+2. Commit & push to GitHub repo.
+3. Admin pulls updated files to server's copy of repo.
+
+Allows multiple people to develop on the same Shiny app with good insulation.
+
+Finally Getting to Shiny Code
+========================================================
+
+* I've spent so much time on the upstream components because this is the hardest material to find online.
+* Most public Shiny articles don't interact w/ PHI.
+* The PHI-free examples are really good and easy to find.

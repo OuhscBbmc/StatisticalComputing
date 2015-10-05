@@ -3,6 +3,12 @@ Schedule of 2015 Presentations
 
 Please click on the links to view the presentations. Click [here](./../) to return to the root directory of the repository.
 
+### October 6 
+
+* **[Interactive reports and webpages with R & Shiny](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2015_Presentations/10_October/beasley-scug-shiny-2015-10.html#/)** (and [screenshots](./2015_Presentations/10_October/beasley-scug-shiny-2015-10.pdf)) by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)
+
+* *Presentations and supplemental [material](./2015_Presentations/10_October/) for the meeting*.
+
 ### July 7
 
 * **[Pandas: the primary Python tabular data analysis/manipulation toolkit](http://htmlpreview.github.io/?https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/07_July/Pandas.html#/)** by Michael Ripperger, Bioinformatics Student,  [Vanderbilt](http://www.vanderbilt.edu/)

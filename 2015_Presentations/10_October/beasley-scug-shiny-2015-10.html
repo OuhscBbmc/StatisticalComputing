@@ -815,7 +815,7 @@ hljs.initHighlightingOnLoad();
 <section data-transition="linear" data-transition-speed="default">
 <h3>Screen Shots</h3>
 <div class="slideContent" >
-<p>(<em>Switch to the screen shots in PowerPoint</em>)</p>
+<p>(<em>Switch to the <a href="https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/10_October/beasley-scug-shiny-2015-10.pdf">slides of screen shots</a></em>.)</p>
 
 </div>
 
@@ -825,7 +825,12 @@ hljs.initHighlightingOnLoad();
 <div class="slideContent" >
 <p>(<em>Switch back to these slides.</em>)</p>
 
-<p><strong>Disclaimer</strong>: The following code is a simplication of our real code.  The basics are the same, but the  encapsulation was flattenned and non-essential functions were omitted.</p>
+<p><strong>Disclaimer</strong>: The following code is a simplication of our real code.  The basics are the same, but </p>
+
+<ul>
+<li>encapsulation was flattened, and </li>
+<li>non-essential functions were omitted.</li>
+</ul>
 
 </div>
 
@@ -897,7 +902,59 @@ write.csv(ds, file=pathOut, row.names=F)
 <ul>
 <li>Data must be PHI-free. (Displayed tables <em>and</em> underlying CSVs.)</li>
 <li>The instance currently run by the BBMC lacks user-authentication.</li>
+<li>When PHI isn&#39;t needed, this is a huge simplification.</li>
 <li>The commericial versions of Shiny have many <a href="http://rstudio.github.io/shiny-server/latest/#authentication-security">authentication options</a>.  It was a breeze in a non-OUHSC server I helped with.  (I rarely make these claims.)</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Three Connectivity Approaches</h3>
+<div class="slideContent" >
+<ul>
+<li>One-way from CSV caches (our current approach).
+
+<ul>
+<li>Simple approach w/ few security concerns.</li>
+</ul></li>
+<li>One-way from live database.
+
+<ul>
+<li>Real-time data requires many security measures.</li>
+<li>We plan to create an instance like this.</li>
+</ul></li>
+<li>Two-way to/from live database.
+
+<ul>
+<li>Even more flexibility and risk.</li>
+</ul></li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Deploying Code to Shiny Server</h3>
+<div class="slideContent" >
+<ol>
+<li>Develop on your desktop, not on the live server.</li>
+<li>Commit &amp; push to GitHub repo.</li>
+<li>Admin pulls updated files to server&#39;s copy of repo.</li>
+</ol>
+
+<p>Allows multiple people to develop on the same Shiny app with good insulation.</p>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Finally Getting to Shiny Code</h3>
+<div class="slideContent" >
+<ul>
+<li>I&#39;ve spent so much time on the upstream components because this is the hardest material to find online.</li>
+<li>Most public Shiny articles don&#39;t interact w/ PHI.</li>
+<li>The PHI-free examples are really good and easy to find.</li>
 </ul>
 
 </div>
