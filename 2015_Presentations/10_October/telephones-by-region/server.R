@@ -8,6 +8,10 @@ library(datasets)
 # Define a server for the Shiny app
 shinyServer(function(input, output) {
 
+  output$continents <- renderText(
+    toupper(colnames(WorldPhones))
+  )
+  
   # Fill in the spot we created for a plot
   output$phonePlot <- renderPlot({
 
@@ -16,5 +20,6 @@ shinyServer(function(input, output) {
             main=input$region,
             ylab="Number of Telephones",
             xlab="Year")
+    mtext("Margin Text", side=4)
   })
 })

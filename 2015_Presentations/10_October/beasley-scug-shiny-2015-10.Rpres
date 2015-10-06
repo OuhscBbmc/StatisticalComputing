@@ -20,12 +20,20 @@ Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))
 Overview of Shiny
 ========================================================
 
-A [Shiny](http://shiny.rstudio.com) report is basically a website connected to R.
+R doesn't work well when called by a conventional website.  RStudio's developers built the [Shiny](http://shiny.rstudio.com) web framework that permits this integration.
 
   * Requires a UI (user interface) and server file.
   * Everything can be written in R.  Shiny will create & translate to the necessary HTML5, JavaScript & CSS components.  (But these can be written to create fancy reports.)
   * Can leverage almost all R capabilities.
   * Great [official gallery](http://shiny.rstudio.com/gallery/), [user examples](https://www.rstudio.com/products/shiny/shiny-user-showcase/), [tutorials](http://shiny.rstudio.com/tutorial/), and [documentation](http://shiny.rstudio.com/), and presence in [forums](https://groups.google.com/forum/#!forum/shiny-discuss) and  [StackOverflow](http://stackoverflow.com/questions/tagged/shiny).
+
+
+Our Tipping Point
+========================================================
+* In 2012, our 8 data collectors need fresh reports every few hours; the report has stats, tables, & graphs, suggesting R.
+* Our previous best option was to install (a) R & knitr and (b) the report code on each laptop.  Updates were required too.
+* Shiny avoids the deployment hassle.  Our campus server contains the stat & reporting software.  The data collectors need only a browser.
+* Many deployment scenarios have much more than 8 users, further suggesting Shiny.
 
 
 Screen Shots
@@ -37,6 +45,15 @@ Official Gallery
 ========================================================
 (*Switch to the [RStudio's Gallery](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/10_October/beasley-scug-shiny-2015-10.pdf)*.)
 
+
+Areas of Interest of Today's Group
+========================================================
+* What are people's interest & experience.
+* Three categories to work out.
+    * Upstream data flowing
+    * Server Code
+    * UI Code
+    
 Code
 ========================================================
 (*Switch back to these slides.*)

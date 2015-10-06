@@ -800,13 +800,26 @@ hljs.initHighlightingOnLoad();
 <section data-transition="linear" data-transition-speed="default">
 <h3>Overview of Shiny</h3>
 <div class="slideContent">
-<p>A <a href="http://shiny.rstudio.com">Shiny</a> report is basically a website connected to R.</p>
+<p>R doesn't work well when called by a conventional website.  RStudio's developers built the <a href="http://shiny.rstudio.com">Shiny</a> web framework that permits this integration.</p>
 
 <ul>
 <li>Requires a UI (user interface) and server file.</li>
 <li>Everything can be written in R.  Shiny will create &amp; translate to the necessary HTML5, JavaScript &amp; CSS components.  (But these can be written to create fancy reports.)</li>
 <li>Can leverage almost all R capabilities.</li>
 <li>Great <a href="http://shiny.rstudio.com/gallery/">official gallery</a>, <a href="https://www.rstudio.com/products/shiny/shiny-user-showcase/">user examples</a>, <a href="http://shiny.rstudio.com/tutorial/">tutorials</a>, and <a href="http://shiny.rstudio.com/">documentation</a>, and presence in <a href="https://groups.google.com/forum/#!forum/shiny-discuss">forums</a> and  <a href="http://stackoverflow.com/questions/tagged/shiny">StackOverflow</a>.</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Our Tipping Point</h3>
+<div class="slideContent">
+<ul>
+<li>In 2012, our 8 data collectors need fresh reports every few hours; the report has stats, tables, &amp; graphs, suggesting R.</li>
+<li>Our previous best option was to install (a) R &amp; knitr and (b) the report code on each laptop.  Updates were required too.</li>
+<li>Shiny avoids the deployment hassle.  Our campus server contains the stat &amp; reporting software.  The data collectors need only a browser.</li>
+<li>Many deployment scenarios have much more than 8 users, further suggesting Shiny.</li>
 </ul>
 
 </div>
@@ -824,6 +837,23 @@ hljs.initHighlightingOnLoad();
 <h3>Official Gallery</h3>
 <div class="slideContent">
 <p>(<em>Switch to the <a href="https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/10_October/beasley-scug-shiny-2015-10.pdf">RStudio's Gallery</a></em>.)</p>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Areas of Interest of Today's Group</h3>
+<div class="slideContent">
+<ul>
+<li>What are people's interest &amp; experience.</li>
+<li>Three categories to work out.
+
+<ul>
+<li>Upstream data flowing</li>
+<li>Server Code</li>
+<li>UI Code</li>
+</ul></li>
+</ul>
 
 </div>
 

@@ -21,13 +21,16 @@ shinyUI(
       sidebarPanel(
         selectInput("region", "Region:",
                     choices=colnames(WorldPhones)),
+        selectInput("region_upper", "Region Upper:",
+                    choices=toupper(colnames(WorldPhones))),
         hr(),
         helpText("Data from AT&T (1961) The World's Telephones.")
       ),
 
       # Create a spot for the barplot
       mainPanel(
-        plotOutput("phonePlot")
+        plotOutput("phonePlot"),
+        textOutput("continents")
       )
 
     )
