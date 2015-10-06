@@ -7,6 +7,7 @@
 
 Interactive reports and webpages with R & Shiny
 ========================================================
+
 OUHSC [Statistical Computing User Group](https://github.com/OuhscBbmc/StatisticalComputing)
 
 Will Beasley, Dept of Pediatrics, 
@@ -31,6 +32,10 @@ Screen Shots
 ========================================================
 (*Switch to the [slides of screen shots](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/10_October/beasley-scug-shiny-2015-10.pdf)*.)
 
+
+Official Gallery
+========================================================
+(*Switch to the [RStudio's Gallery](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/10_October/beasley-scug-shiny-2015-10.pdf)*.)
 
 Code
 ========================================================
@@ -83,12 +88,14 @@ ds <- dplyr::left_join(
 )
 ```  
 
+
 Recurring Write from VM to Shiny
 ========================================================
 
 * Every ~10 minutes, run the previous code on the VM and save a **de-identified** text file to Shiny.  Use  [Task Scheduler](https://msdn.microsoft.com/en-us/library/windows/desktop/aa383614.aspx) in Windows, or  [Cron](https://help.ubuntu.com/community/CronHowto) in Linux.
 * `pathOut` goes to a write-only directory on the Shiny server, exposed through [Samba](https://www.samba.org/), so CSVs are saved on the network like a local drive.
 * R code couldn't be simpler:
+
 
 ```r
 pathOut <- "//shiny-public/dump/near.csv"
@@ -122,11 +129,60 @@ Deploying Code to Shiny Server
 2. Commit & push to GitHub repo.
 3. Admin pulls updated files to server's copy of repo.
 
-Allows multiple people to develop on the same Shiny app with good insulation.
+Helps insulate multiple developers on the same Shiny app.
+
 
 Finally Getting to Shiny Code
 ========================================================
 
-* I've spent so much time on the upstream components because this is the hardest material to find online.
-* Most public Shiny articles don't interact w/ PHI.
+* I've spent so much time on the upstream material because it's the hardest to find online.
+* Most public Shiny articles/examples don't use PHI.
 * The PHI-free examples are really good and easy to find.
+
+
+Concepts from Telephone Example
+========================================================
+
+http://shiny.rstudio.com/gallery/telephones-by-region.html
+
+* `ui` vs `server` worlds
+    * layout vs function
+    * client-side vs server-side
+* connecting/referencing components across worlds
+
+
+Concepts from DataTable Example
+========================================================
+
+http://shiny.rstudio.com/gallery/datatables-demo.html
+
+* The JavaScript `DataTables` library is neatly wrapped & exposed through R code.
+* Let the established library do the heavy lifting for you.
+* RStudio's frequently leverages established open source components.
+    * Leverages [documentation](https://www.datatables.net/).
+    * Leverages innovation in the field.
+    * Leverages your existing knowledge.
+
+
+Concepts from Reactivity Example
+========================================================
+
+http://shiny.rstudio.com/gallery/reactivity.html
+
+* Call chain (much more [here](http://shiny.rstudio.com/tutorial/lesson6/)).
+* Lazily evaluates terms ('lazy' is good here; it's efficient).
+* Watch the yellow highlights respond.
+
+
+What's Available to You Through
+========================================================
+* [shinyapps.io](http://www.shinyapps.io/)...
+* Our *public* BBMC Shiny Server...
+* Our upcoming *secured* BBMC Shiny Server...
+* Our Shiny code & server installation scripts...
+
+
+Immediate Influence & Assistance
+========================================================
+* Bryan Smith, [OUHSC Campus IT](http://it.ouhsc.edu/)
+* [Steve Soloway](https://www.linkedin.com/pub/steven-soloway/19/6b4/619), [Melinae Inc](http://www.melinae.com/)
