@@ -1,4 +1,4 @@
-File Repository for the *Statistical Computing User Group*
+﻿File Repository for the *Statistical Computing User Group*
 ============
 Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  In the spring of 2015, our regular meeting time is 10-11am on the first Tuesday of each month.
 
@@ -21,7 +21,7 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 
 |        |                    |
 | ------ | ------------------ |
-| Nov 3 | **Monte Carlo Simulation of Data that Follows a Given Covariance Structure** <br/> by Dee Wu, [Technology Applications & Translational Research](http://moon.ouhsc.edu/dwu/a-about/index.html), Dept of Radiological Sciences.|
+| Nov 3 | [Monte Carlo Simulation of Data that Follows a Given Covariance Structure](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/11_November/StatisticalComputing_08092015_GeneratingMVN.pdf) <br/> by Dee Wu, [Technology Applications & Translational Research](http://moon.ouhsc.edu/dwu/a-about/index.html), Dept of Radiological Sciences.|
 | October 6 | [Interactive reports and webpages with R & Shiny](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2015_Presentations/10_October/beasley-scug-shiny-2015-10.html#/) (and [screenshots](./2015_Presentations/10_October/beasley-scug-shiny-2015-10.pdf)) <br/> by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))<br/> <br/>  *Presentations and supplemental [material](./2015_Presentations/10_October/) for the meeting*.|
 | July 7 | [Pandas: the primary Python tabular data analysis/manipulation toolkit](http://htmlpreview.github.io/?https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/07_July/Pandas.html#/) <br/> by Michael Ripperger, Bioinformatics Student,  [Vanderbilt](http://www.vanderbilt.edu/)<br/> <br/>  *Presentations and supplemental [material](./2015_Presentations/07_July/) for the meeting*.|
 | June 2 | [Data Mining in Health Analytics and a Quick Look at SAS Enterprise Miner Interface](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/06_June/DataMining_SCUG_RamPoudel _02June_2015.pdf) <br/> by Ram Poudel, Research Coordinator, [Sooner SUCCESS](https://soonersuccess.ouhsc.edu/), Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics) <br/> <br/> *Presentations and supplemental [material](./2015_Presentations/06_June/) for the meeting*.  |

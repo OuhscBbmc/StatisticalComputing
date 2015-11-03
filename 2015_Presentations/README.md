@@ -3,6 +3,11 @@ Schedule of 2015 Presentations
 
 Please click on the links to view the presentations. Click [here](./../) to return to the root directory of the repository.
 
+### November 3
+* **[Monte Carlo Simulation of Data that Follows a Given Covariance Structure](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/11_November/StatisticalComputing_08092015_GeneratingMVN.pdf)** by Dee Wu, [Technology Applications & Translational Research](http://moon.ouhsc.edu/dwu/a-about/index.html), Dept of Radiological Sciences.|
+
+* *Presentations and supplemental [material](./2015_Presentations/11_November/) for the meeting*.
+
 ### October 6 
 
 * **[Interactive reports and webpages with R & Shiny](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2015_Presentations/10_October/beasley-scug-shiny-2015-10.html#/)** (and [screenshots](./2015_Presentations/10_October/beasley-scug-shiny-2015-10.pdf)) by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)
