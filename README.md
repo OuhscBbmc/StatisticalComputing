@@ -1,4 +1,4 @@
-File Repository for the *Statistical Computing User Group*
+File Repository for *SCUG*
 ============
 Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  In the fall of 2015, our regular meeting time remains 10-11am on the first Tuesday of each month.
 
