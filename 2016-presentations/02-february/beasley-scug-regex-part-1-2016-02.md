@@ -70,4 +70,60 @@ Cautions
 * There are two main branches of the specification.  We'll concentrate on 
     * the "Perl" branch (eg, `"\d\w"`) instead of 
     * the "Posix" branch (eg, `"[:digit:][:alnum:]"`)
+* Don't forget the "g" option in regex101.com
     
+
+Example 1
+===================================
+* Identify years in the 1990s, *or*
+* Identify years ending in 7, 8, or 9, *or*
+* Identify lines starting with a year, *or*
+* "Capture" the century of each year, *or*
+* Think of something else.
+
+```
+1916-1918 subscales for a subject
+1998-1914 subscales for a subject
+subscales for a subject 1998-1920
+```
+
+Example 2
+===================================
+* Flag the "bad" numeric values
+
+```
+1234
+23
+
+14a
+1a3
+
+ 234
+1.39
+```
+
+Example 3
+===================================
+* Swap the columns.
+
+```
+"CL_ID"            = "ClientID"
+, "RMSEQ"          = "RemovedSequence"
+, "RMVL_BEGDT"     = "RemovalBeginDate"
+, "RMVL_ENDDT"     = "RemovalEndDate"
+, "END_TYP_CDE"    = "EndTypeID"
+, "REMOVED_FROM"   = "RemovedFromTypeID"
+, "CURR_RMVL_TYP"  = "RemovalTypeCurrentID"
+, "ORIG_RMVL_TYP"  = "RemovalTypeOriginalID"
+, "FMLY_STRUCTURE" = "FamilyStructureTypeID"
+```
+
+Example 4
+===================================
+* Erase the "quietly" parameters.
+
+```
+requireNamespace("dplyr", quietly=T) #hadley/dplyr
+requireNamespace("lubridate")
+requireNamespace("OuhscMunge", quietly=TRUE) #OuhscBbmc/OuhscMunge
+```

@@ -6,3 +6,38 @@ subscales for a subject 1998-1920
 
 Example 2
 ===================================
+1234
+23
+  
+14a
+1a3
+
+ 234
+1.39
+
+Example 3
+===================================
+  "CL_ID"                      = "ClientID"
+  , "RMSEQ"                    = "RemovedSequence"
+  , "RMVL_BEGDT"               = "RemovalBeginDate"
+  , "RMVL_ENDDT"               = "RemovalEndDate"
+  , "END_TYP_CDE"              = "EndTypeID"
+  , "REMOVED_FROM_TYP_CDE"     = "RemovedFromTypeID"
+  , "CURR_RMVL_TYP_CDE"        = "RemovalTypeCurrentID"
+  , "ORIG_RMVL_TYP_CDE"        = "RemovalTypeOriginalID"
+  , "FMLY_STRUCTURE_TYP_CDE"   = "FamilyStructureTypeID"
+  , "ADDRESS"                  = "Address"
+  , "CITY"                     = "City"
+  , "STATE"                    = "StateID"
+  , "ZIP"                      = "ZipFull"
+  , "COUNTY_TYP_CDE"           = "CountyOfficeID" 
+  , "REFER_THAT_CAUSED_RMVL"   = "ReferralCausedRemoval"
+  , "REFERRAL_DT"              = "ReferralDate"
+  , "CARE_TAKER1_ID"           = "CareTaker1ID"
+  , "CARE_TAKER2_ID"           = "CareTaker2ID"
+
+Example 4
+===================================
+requireNamespace("dplyr", quietly=T) #devtools::install_github("hadley/dplyr")
+requireNamespace("lubridate")
+requireNamespace("OuhscMunge", quietly=TRUE) #devtools::install_github(repo="OuhscBbmc/OuhscMunge")

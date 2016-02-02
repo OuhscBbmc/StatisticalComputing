@@ -896,7 +896,83 @@ hljs.initHighlightingOnLoad();
 <li>the &ldquo;Perl&rdquo; branch (eg, <code>&quot;\d\w&quot;</code>) instead of </li>
 <li>the &ldquo;Posix&rdquo; branch (eg, <code>&quot;[:digit:][:alnum:]&quot;</code>)</li>
 </ul></li>
+<li>Don&#39;t forget the &ldquo;g&rdquo; option in regex101.com</li>
 </ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Example 1</h3>
+<div class="slideContent" >
+<ul>
+<li>Identify years in the 1990s, <em>or</em></li>
+<li>Identify years ending in 7, 8, or 9, <em>or</em></li>
+<li>Identify lines starting with a year, <em>or</em></li>
+<li>&ldquo;Capture&rdquo; the century of each year, <em>or</em></li>
+<li>Think of something else.</li>
+</ul>
+
+<pre><code>1916-1918 subscales for a subject
+1998-1914 subscales for a subject
+subscales for a subject 1998-1920
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Example 2</h3>
+<div class="slideContent" >
+<ul>
+<li>Flag the &ldquo;bad&rdquo; numeric values</li>
+</ul>
+
+<pre><code>1234
+23
+
+14a
+1a3
+
+ 234
+1.39
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Example 3</h3>
+<div class="slideContent" >
+<ul>
+<li>Swap the columns.</li>
+</ul>
+
+<pre><code>&quot;CL_ID&quot;            = &quot;ClientID&quot;
+, &quot;RMSEQ&quot;          = &quot;RemovedSequence&quot;
+, &quot;RMVL_BEGDT&quot;     = &quot;RemovalBeginDate&quot;
+, &quot;RMVL_ENDDT&quot;     = &quot;RemovalEndDate&quot;
+, &quot;END_TYP_CDE&quot;    = &quot;EndTypeID&quot;
+, &quot;REMOVED_FROM&quot;   = &quot;RemovedFromTypeID&quot;
+, &quot;CURR_RMVL_TYP&quot;  = &quot;RemovalTypeCurrentID&quot;
+, &quot;ORIG_RMVL_TYP&quot;  = &quot;RemovalTypeOriginalID&quot;
+, &quot;FMLY_STRUCTURE&quot; = &quot;FamilyStructureTypeID&quot;
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Example 4</h3>
+<div class="slideContent" >
+<ul>
+<li>Erase the &ldquo;quietly&rdquo; parameters.</li>
+</ul>
+
+<pre><code>requireNamespace(&quot;dplyr&quot;, quietly=T) #hadley/dplyr
+requireNamespace(&quot;lubridate&quot;)
+requireNamespace(&quot;OuhscMunge&quot;, quietly=TRUE) #OuhscBbmc/OuhscMunge
+</code></pre>
 
 </div>
 
