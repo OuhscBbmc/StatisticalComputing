@@ -20,10 +20,11 @@ Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))
 Overview of Regular Expressions
 ========================================================
 
-A 'regex' is typically a carefully crafted string that describes a pattern of text.  It's uses include:
-* Extracting components of the text,
-* Substituting components of the text, or 
-* Knowing if the pattern simply appears in the text.
+A 'regex' is typically a carefully crafted string that describes a pattern of text.  It can:
+* Extract components of the text,
+* Substitute components of the text, or 
+* Determine if the pattern simply appears in the text.
+
 
 Generalization of Simple Wildcards 
 ========================================================
@@ -38,9 +39,9 @@ Simple Examples
 | Pattern           | Matches                        |
 | ----------------- | ------------------------------ |
 | **`mike`**        | "mike", "smike", "miked", etc. |
-| **`mike4`**       | "mike4" |
-| **`mike\d`**      | "mike" followed by any single digit (eg "mike8") |
-| **`mike\d+`**     | "mike" followed by one or more digits (eg "mike1234") |
+| **`mike4`**       | "mike4", "smike4", etc. |
+| **`mike\d`**      | "mike" followed by any single digit (eg "mike8", "smike8") |
+| **`mike\d+`**     | "mike" followed by one or more digits (eg "mike1234", "smike8") |
 | **`^mike$`**      | only "mike" |
 
 
@@ -54,19 +55,19 @@ Complicated Example
 Today's Tools
 ========================================================
 
-* An online regex tester, **regex101** (https://regex101.com/)
-* [Example "subject" text](https://github.com/OuhscBbmc/StatisticalComputing/tree/master/2016-presentations/02-february/)
+* An online regex tester, **regex101** (https://regex101.com/).
+* Example "subject" text [in SCUG repo](https://github.com/OuhscBbmc/StatisticalComputing/tree/master/2016-presentations/02-february/). <br/>(Google "OU scug github".)
 * A local text editor, choose one of the following:
-    * **Atom** (https://atom.io/)
-    * **Notepad++** (https://notepad-plus-plus.org/)
-* Language agnostic as possible.  SAS, R, and Python examples in Part 2.    
+    * **Atom** (https://atom.io/).
+    * **Notepad++** (https://notepad-plus-plus.org/).
+* Today's as language agnostic as possible.  SAS, R, and Python examples in Part 2.    
 
 * Later, consider [RegexBuddy](http://www.regexbuddy.com/) for $40.
     
 
 Cautions
 ========================================================    
-* There's no single "regular expression" specification.  Each language (eg, Python & R) have slightly different flavors.
+* There's no single "regular expression" specification.  Each language (eg, Python, R, Java) have slightly different flavors.
 * There are two main branches of the specification.  We'll concentrate on 
     * the "Perl" branch (eg, `"\d\w"`) instead of 
     * the "Posix" branch (eg, `"[:digit:][:alnum:]"`)
@@ -87,9 +88,21 @@ Example 1
 subscales for a subject 1998-1920
 ```
 
+
+Strategies and Advice, Part 1
+===================================
+* Start in a regex tester.
+* Start small/simple, then slowly build complexity & generality.
+    * In the regex.
+    * In the example/subject text.
+* Leave a breadcrumb trail<br/>(ie, progression of simpler regexes, commented out).
+* Include comments to help others and you later.
+* Short-term: use the right-panels of regex101.com.
+
+
 Example 2
 ===================================
-* Flag the "bad" numeric values
+* Flag the "bad" numeric values.  Sometimes "bad" is a subjective decision.
 
 ```
 1234
@@ -101,6 +114,22 @@ Example 2
  234
 1.39
 ```
+
+
+Study the List of Tokens and Quantifiers
+===================================
+In the right panel of bottom right panel of regex101.com.  Especially these first:
+
+```
+. versus \.
+\w and \d and \s (versus \W and \D and \S)
+^ and \A
+$ and \Z
+? and * and + and things like {3,6}
+Capturing
+Character classes
+```
+
 
 Example 3
 ===================================
@@ -118,12 +147,103 @@ Example 3
 , "FMLY_STRUCTURE" = "FamilyStructureTypeID"
 ```
 
+Strategies and Advice, Part 2
+===================================
+* Anticipate misbehaving subject that you haven't seen yet.
+* Try variations of the solutions.  There are usually 10 solutions, each with strengths and weaknesses.
+    * Robustness.
+    * Readability & maintainability.
+    * Generality.
+* Create very selective regexes that loudly fail when they encounter subject text that you haven't anticipated.
+* Long-term: read and reread[*Regular Expressions Cookbook*](http://shop.oreilly.com/product/0636920023630.do), esp Ch 2.
+
+
 Example 4
 ===================================
 * Erase the "quietly" parameters.
+    * In a single file
+    * In many files
 
 ```
-requireNamespace("dplyr", quietly=T) #hadley/dplyr
+requireNamespace("dplyr", quietly=TRUE) #hadley/dplyr
 requireNamespace("lubridate")
-requireNamespace("OuhscMunge", quietly=TRUE) #OuhscBbmc/OuhscMunge
+requireNamespace("OuhscMunge",quietly=T) #OuhscBbmc/OuhscMunge
+```
+
+Example 5
+===================================
+* Pad single digits with zeros (eg, "4" becomes "04")
+
+```
+9
+4
+34
+3
+62
+43
+1
+```
+
+
+Example 6
+===================================
+* Extract the cage ID
+* Extract the mouse ID (within the cage)
+
+```
+Time,Gender,Genetype,Treatment,MouseID,OR-Recognition Index,FC-t-F %,FC-b-F %,FC-a-F %
+4M,Male,WILD,Control,c9-1,0.32,11.9,0,25.7
+4M,Male,WILD,Control,c13-2,0.47,23.7,0,11.
+4M,Male,WILD,Prozac,c10-2,0.62,40.7,11.4,51.4
+4M,Male,WILD,Prozac,c14-3,0.63,10.2,0,28.6
+4M,Male,YFP,Control,c9-2,0.42,42.4,11.4,22.9
+4M,Male,YFP,Control,c13-1,0.5,15.3,0,54.1
+4M,Male,YFP,Control,c13-nm,1,27.1,0,31.4
+4M,Male,YFP,Prozac,c10-1,0.65,20.3,17.1,54.3
+```
+
+(In some cases, you'd have to parse only the cell, not the entire line.  But this is good practice.)
+
+
+Proceed However You'd Like
+===================================
+* Work by yourself or in pairs.
+* After you're done with these 6 exercises,
+    * Invent new challenges
+    * Help someone else
+    * Check the solutions I thought of.
+
+
+Evaluate the Instructor
+===================================
+Look for an email invitation to a REDCap survey.
+
+
+Potential Solutions for 3 & 4
+===================================
+
+Example 3
+```
+(,*\s*)"(\w+)"\s+=\s+"(\w+)" and
+$1"$3"    = "$2"
+```
+
+Example 4
+```
+library\((\w+),\s*quietly=(T|TRUE)\) and 
+library($1)
+```
+
+Potential Solutions for 5 & 6
+===================================
+
+Example 5
+```
+\b(\d)\b and 
+0$1
+```
+
+Example 6
+```
+,c(\d{1,2})-(\d|nm),
 ```

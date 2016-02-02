@@ -6,7 +6,7 @@ Please click on the links to view the presentations. Click [here](./../) to retu
 ### December 1 
 * **[Time and Effort Dataset Synthesis Structure](https://rawgit.com/wibeasley/RAnalysisSkeleton/master/documentation/time-and-effort-synthesis.html)** by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))
 
-*Presentations and supplemental [material](./2015_Presentations/12_December/) for the meeting*.
+* *Presentations and supplemental [material](./2015_Presentations/12_December/) for the meeting*.
 
 ### November 3
 * **[Monte Carlo Simulation of Data that Follows a Given Covariance Structure](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2015_Presentations/11_November/StatisticalComputing_08092015_GeneratingMVN.pdf)** by Dee Wu, [Technology Applications & Translational Research](http://moon.ouhsc.edu/dwu/a-about/index.html), Dept of Radiological Sciences.|

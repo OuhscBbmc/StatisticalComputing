@@ -38,6 +38,33 @@ Example 3
 
 Example 4
 ===================================
-requireNamespace("dplyr", quietly=T) #devtools::install_github("hadley/dplyr")
+requireNamespace("dplyr", quietly=T) #hadley/dplyr
 requireNamespace("lubridate")
-requireNamespace("OuhscMunge", quietly=TRUE) #devtools::install_github(repo="OuhscBbmc/OuhscMunge")
+requireNamespace("OuhscMunge", quietly=TRUE) #OuhscBbmc/OuhscMunge
+
+Example 5
+===================================
+9
+4
+34
+3
+62
+43
+1
+
+Example 6
+===================================
+Time,Gender,Genetype,Treatment,MouseID,OR-Recognition Index,FC-t-F %,FC-b-F %,FC-a-F %
+4M,Male,WILD,Control,c9-1,0.32,11.9,0,25.7
+4M,Male,WILD,Control,c13-2,0.47,23.7,0,11.
+4M,Male,WILD,Prozac,c10-2,0.62,40.7,11.4,51.4
+4M,Male,WILD,Prozac,c14-3,0.63,10.2,0,28.6
+4M,Male,YFP,Control,c9-2,0.42,42.4,11.4,22.9
+4M,Male,YFP,Control,c13-1,0.5,15.3,0,54.1
+4M,Male,YFP,Control,c13-nm,1,27.1,0,31.4
+4M,Male,YFP,Prozac,c10-1,0.65,20.3,17.1,54.3
+4M,Male,YFP,Prozac,c10-4,0.43,44.1,5.7,40
+4M,Male,YFP,Prozac,c10-nm,0.5,15.3,5.7,34.3
+4M,Male,YFP,Prozac,c14-1,0.47,8.5,0,60
+4M,Male,YFP,Prozac,c14-2,0.65,16.9,0,8.6
+4M,Male,YFP,Prozac,c14-3,1,30.5,5.7,20
