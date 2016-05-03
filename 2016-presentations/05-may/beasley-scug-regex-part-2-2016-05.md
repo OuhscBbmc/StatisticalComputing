@@ -95,6 +95,26 @@ Cautions
 * Don't forget the "g" option in regex101.com
     
 
+R Functions
+===================================
+* `grep()` and `grep(..., value=T)`
+* `grepl()`
+* `sub()` and `gsub()`
+* `regexpr()`, `gregexpr()`, `regexec()`
+
+
+Python Functions
+===================================
+* Start with `import re`
+* `search()`
+    ```python
+    m = re.search('(?<=abc)def', 'abcdef')
+    m.group(0)
+    ```
+* `match()`
+* `sub()`
+
+
 Example 1
 ===================================
 * Identify years in the 1990s, *or*
