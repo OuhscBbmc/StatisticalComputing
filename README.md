@@ -16,6 +16,7 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 
 |        |                    |
 | ------ | ------------------ |
+| May 3 | [Text Manipulation with Regular Expressions, Part 2](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2016-presentations/05-may/beasley-scug-regex-part-2-2016-05.html).<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))<br/> <br/>  *Presentations and supplemental [material](./2016-presentations/05-may/) for the meeting*. | 
 | Mar 1 | Learning Python Programming Language in Interactive Computing Framework.<br/>by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics).<br/> <br/>  *Presentations and supplemental [material](./2016-presentations/03-march/) for the meeting*. |
 | Feb 2 | [Text Manipulation with Regular Expressions, Part 1](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2016-presentations/02-february/beasley-scug-regex-part-1-2016-02.html).<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))<br/> <br/>  *Presentations and supplemental [material](./2016-presentations/02-february/) for the meeting*. | 
 
