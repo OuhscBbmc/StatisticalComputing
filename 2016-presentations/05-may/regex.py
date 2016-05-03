@@ -24,13 +24,63 @@ example_2 = """
      234
     1.39
     """
-# m = re.match('\\d', 'abcdef')
-# print(m.group(0))
+m = re.search('\\d', 'abcdef')
+print(m)
 
 print("###### Example 3 ###########")
-
+example_3 = """
+  "CL_ID"                      = "ClientID"
+  , "RMSEQ"                    = "RemovedSequence"
+  , "RMVL_BEGDT"               = "RemovalBeginDate"
+  , "RMVL_ENDDT"               = "RemovalEndDate"
+  , "END_TYP_CDE"              = "EndTypeID"
+  , "REMOVED_FROM_TYP_CDE"     = "RemovedFromTypeID"
+  , "CURR_RMVL_TYP_CDE"        = "RemovalTypeCurrentID"
+  , "ORIG_RMVL_TYP_CDE"        = "RemovalTypeOriginalID"
+  , "FMLY_STRUCTURE_TYP_CDE"   = "FamilyStructureTypeID"
+  , "ADDRESS"                  = "Address"
+  , "CITY"                     = "City"
+  , "STATE"                    = "StateID"
+  , "ZIP"                      = "ZipFull"
+  , "COUNTY_TYP_CDE"           = "CountyOfficeID" 
+  , "REFER_THAT_CAUSED_RMVL"   = "ReferralCausedRemoval"
+  , "REFERRAL_DT"              = "ReferralDate"
+  , "CARE_TAKER1_ID"           = "CareTaker1ID"
+  , "CARE_TAKER2_ID"           = "CareTaker2ID"
+    """
 
 print("###### Example 4 ###########")
-
+example_4 = """
+    requireNamespace("dplyr", quietly=T) #hadley/dplyr
+    requireNamespace("lubridate")
+    requireNamespace("OuhscMunge", quietly=TRUE) #OuhscBbmc/OuhscMunge
+    """
 
 print("###### Example 5 ###########")
+example_5 = """
+    9
+    4
+    34
+    3
+    62
+    43
+    1
+    """
+
+print("###### Example 6 ###########")
+example_6 = """
+    Time,Gender,Genetype,Treatment,MouseID,OR-Recognition Index,FC-t-F %,FC-b-F %,FC-a-F %
+    4M,Male,WILD,Control,c9-1,0.32,11.9,0,25.7
+    4M,Male,WILD,Control,c13-2,0.47,23.7,0,11.
+    4M,Male,WILD,Prozac,c10-2,0.62,40.7,11.4,51.4
+    4M,Male,WILD,Prozac,c14-3,0.63,10.2,0,28.6
+    4M,Male,YFP,Control,c9-2,0.42,42.4,11.4,22.9
+    4M,Male,YFP,Control,c13-1,0.5,15.3,0,54.1
+    4M,Male,YFP,Control,c13-nm,1,27.1,0,31.4
+    4M,Male,YFP,Prozac,c10-1,0.65,20.3,17.1,54.3
+    4M,Male,YFP,Prozac,c10-4,0.43,44.1,5.7,40
+    4M,Male,YFP,Prozac,c10-nm,0.5,15.3,5.7,34.3
+    4M,Male,YFP,Prozac,c14-1,0.47,8.5,0,60
+    4M,Male,YFP,Prozac,c14-2,0.65,16.9,0,8.6
+    4M,Male,YFP,Prozac,c14-3,1,30.5,5.7,20
+    """

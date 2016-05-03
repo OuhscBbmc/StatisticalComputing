@@ -101,17 +101,27 @@ R Functions
 * `grepl()`
 * `sub()` and `gsub()`
 * `regexpr()`, `gregexpr()`, `regexec()`
+* Like most R functions, it's designed for vectors.
+    * Careful with subtle differences from documentation for other languages.
+    * Usually, the differences work out for the best.
 
 
 Python Functions
 ===================================
-* Start with `import re`
-* `search()`
+* Start with 
+
     ```python
-    m = re.search('(?<=abc)def', 'abcdef')
+    `import re`
+    ```
+* `search()` --the first match.
+
+    ```python
+    m = re.search('(?<=a)d', 'ad')
     m.group(0)
     ```
-* `match()`
+    
+* `findall()`  --all non-overlapping matches.
+* `match()` --careful, needs to be at the start.
 * `sub()`
 
 

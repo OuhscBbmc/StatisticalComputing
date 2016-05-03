@@ -958,6 +958,12 @@ hljs.initHighlightingOnLoad();
 <li><code>grepl()</code></li>
 <li><code>sub()</code> and <code>gsub()</code></li>
 <li><code>regexpr()</code>, <code>gregexpr()</code>, <code>regexec()</code></li>
+<li>Like most R functions, it&#39;s designed for vectors.
+
+<ul>
+<li>Careful with subtle differences from documentation for other languages.</li>
+<li>Usually, the differences work out for the best.</li>
+</ul></li>
 </ul>
 
 </div>
@@ -967,14 +973,18 @@ hljs.initHighlightingOnLoad();
 <h3>Python Functions</h3>
 <div class="slideContent" >
 <ul>
-<li>Start with <code>import re</code></li>
-<li><code>search()</code>
-<code>python
-m = re.search(&#39;(?&lt;=abc)def&#39;, &#39;abcdef&#39;)
+<li><p>Start with </p>
+
+<pre><code class="python">`import re`
+</code></pre></li>
+<li><p><code>search()</code> &ndash;the first match.</p>
+
+<pre><code class="python">m = re.search(&#39;(?&lt;=a)d&#39;, &#39;ad&#39;)
 m.group(0)
-</code></li>
-<li><code>match()</code></li>
-<li><code>sub()</code></li>
+</code></pre></li>
+<li><p><code>findall()</code>  &ndash;all non-overlapping matches.</p></li>
+<li><p><code>match()</code> &ndash;careful, needs to be at the start.</p></li>
+<li><p><code>sub()</code></p></li>
 </ul>
 
 </div>
