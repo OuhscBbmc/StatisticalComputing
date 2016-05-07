@@ -139,6 +139,20 @@ Example 1
 subscales for a subject 1998-1920
 ```
 
+Example 1 in R
+===================================
+
+```{r}
+s <- c("1916-1918 subscales for a subject", "1898-2003 subscales for a subject", "subscales for a subject 1998-1920")
+
+g <- sub("19(1|2)(\\d)", "20\\1\\2", s)
+cat(g, sep="\n")
+
+grep("19(1|2)(\\d)",  s)
+grep("19(1|2)(\\d)",  s, value=T)
+grepl("19(1|2)(\\d)",  s)
+```
+
 
 Strategies and Advice, Part 1
 ===================================
