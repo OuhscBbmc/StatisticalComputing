@@ -1010,6 +1010,41 @@ subscales for a subject 1998-1920
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
+<h3>Example 1 in R</h3>
+<div class="slideContent" >
+<pre><code class="r">s &lt;- c(&quot;1916-1918 subscales for a subject&quot;, &quot;1898-2003 subscales for a subject&quot;, &quot;subscales for a subject 1998-1920&quot;)
+
+g &lt;- sub(&quot;19(1|2)(\\d)&quot;, &quot;20\\1\\2&quot;, s)
+cat(g, sep=&quot;\n&quot;)
+</code></pre>
+
+<pre><code>2016-1918 subscales for a subject
+1898-2003 subscales for a subject
+subscales for a subject 1998-2020
+</code></pre>
+
+<pre><code class="r">grep(&quot;19(1|2)(\\d)&quot;,  s)
+</code></pre>
+
+<pre><code>[1] 1 3
+</code></pre>
+
+<pre><code class="r">grep(&quot;19(1|2)(\\d)&quot;,  s, value=T)
+</code></pre>
+
+<pre><code>[1] &quot;1916-1918 subscales for a subject&quot; &quot;subscales for a subject 1998-1920&quot;
+</code></pre>
+
+<pre><code class="r">grepl(&quot;19(1|2)(\\d)&quot;,  s)
+</code></pre>
+
+<pre><code>[1]  TRUE FALSE  TRUE
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
 <h3>Strategies and Advice, Part 1</h3>
 <div class="slideContent" >
 <ul>
