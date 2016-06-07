@@ -102,7 +102,8 @@ Strategies and Advice, Part 1
 
 Example 2
 ===================================
-* Flag the "bad" numeric values.  Sometimes "bad" is a subjective decision.
+* **Blacklist**: Flag the bad numeric values.  (Sometimes "bad" is a subjective decision.)
+* **Whitelist**: Permit only the good values.
 
 ```
 1234
