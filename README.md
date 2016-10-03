@@ -1,6 +1,6 @@
 File Repository for *SCUG*
 ============
-Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  In the fall of 2015, our regular meeting time remains 10-11am on the first Tuesday of each month.
+Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  In the fall of 2016, our regular meeting time remains 9:30-10:30am on the first Tuesday of each month.
 
 Our goal is to facilitate the use of statistical and methodological tools and promote collaboration, mentorship, and discussion of research and analysis.
 
@@ -16,6 +16,9 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 
 |        |                    |
 | ------ | ------------------ |
+| Oct 4 | Data Manipulation in R & Python: the `dplyr`, `data.table`, and `dplython` packages.<br/>by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics).<br/> <br/>  *Presentations and supplemental [material](./2016-presentations/10-october/) for the meeting*. |
+| Sept 6 | Open Agenda. |
+| Aug 2 | Open Agenda. |
 | July 5 | [Open Agenda](https://github.com/OuhscBbmc/StatisticalComputing/tree/master/2016-presentations/07-july). |
 | June 7 | [Learning Python Programming Language in Interactive Computing Framework, Part 2](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2016-presentations/06-june/interactive-python-slides.html).<br/>by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics).<br/> <br/>  *Presentations and supplemental [material](./2016-presentations/06-june/) for the meeting*. |
 | May 3 | [Text Manipulation with Regular Expressions, Part 2](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2016-presentations/05-may/beasley-scug-regex-part-2-2016-05.html).<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))<br/> <br/>   *Presentations and supplemental [material](./2016-presentations/05-may/) for the meeting*. | 
