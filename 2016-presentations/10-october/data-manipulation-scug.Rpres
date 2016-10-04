@@ -1,0 +1,319 @@
+<style type="text/css">
+.small-code pre code {
+   font-size: 0.9em;
+}
+</style>
+
+Data Manipulation in R & Python: the dplyr, data.table, and dplython packages
+========================================================
+
+<span style = "color:darkred"> _Som B. Bohora_ </span>
+
+[Department of Pediatrics](http://www.oumedicine.com/pediatrics)
+
+University of Oklahoma Health Sciences Center
+
+October 04, 2016
+
+Outline of the presentation
+========================================================
+1. **`dplyr`** in R
+1. **`dplython`** in python
+1. **`data.table`** in R
+
+
+why `dplyr`?
+========================================================
+1. Speed and performance
+1. Direct connection to and analysis within external databases
+1. Function chaining 
+1. Syntax simplicity and ease of use (SQL flavor)
+
+`dplyr` verbs
+========================================================
+6 key operations
+
+* **filter**: filter the rows of a data frame
+* **mutate**: modify or create new columns
+* **group by**: set grouping variables
+* **summarise**: aggregate a data frame
+* **arrange**: sort columns of a data frame
+* **select**: select a set of columns
+
+filter
+========================================================
+```{r}
+ds <- iris[,3:5]
+dplyr::filter(ds, Species == "setosa", Petal.Width > 0.2)
+```
+
+mutate (transmute??)
+========================================================
+```{r, echo=TRUE}
+dplyr::mutate(ds, ratio_length_width = Petal.Length / Petal.Width,
+                  sqrt_width = sqrt(Petal.Width))
+```
+
+mutate (referring to newly created columns)
+========================================================
+```{r, echo=TRUE}
+dplyr::mutate(ds, ratio_length_width = Petal.Length / Petal.Width,
+                  sqrt_width = sqrt(Petal.Width),
+                  sq_width = sqrt_width^2)
+```
+
+group_by
+========================================================
+```{r, echo=TRUE}
+grouped_ds <- dplyr::group_by(mtcars[,9:11], am, gear)
+grouped_ds
+```
+
+summarize
+========================================================
+```{r, echo=TRUE}
+dplyr::summarize(mtcars, mean_mpg = mean(mpg))
+```
+
+arrange
+========================================================
+```{r, echo=TRUE}
+dplyr::arrange(mtcars[,1:3], desc(mpg), cyl)
+```
+
+select
+========================================================
+```{r, echo=TRUE}
+library(dplyr)
+head(select(mtcars, 1:3),1)
+head(select(mtcars, mpg, cyl, disp),1)
+head(select(mtcars, mpg:disp),1)
+```
+
+`select` continued 
+========================================================
+```{r, echo=TRUE}
+library(dplyr)
+head(select(mtcars, contains('r')),2)
+head(select(mtcars, starts_with('d')),2)
+```
+
+Putting pieces together 
+========================================================
+```{r, echo=TRUE}
+library(dplyr)
+df <- mutate(mtcars, disp_cyl = disp/cyl)
+df <- filter(df, disp_cyl > 30, mpg < 25)
+df <- group_by(df, cyl, gear)
+df
+```
+
+
+Putting pieces together continued
+========================================================
+
+```{r}
+summarise(
+  group_by(
+    filter(
+      mutate(mtcars, disp_cyl = disp/cyl),
+      disp_cyl > 30, 
+      mpg > 23
+    ),
+    cyl,
+    gear
+  ),
+  avg_d_cyl = mean(disp_cyl),
+  min_d_cyl = min(disp_cyl)
+)
+```
+
+Using `%>%` from `magrittr`
+====================================
+Without pipes
+```r
+summarise(
+  group_by(
+    filter(
+      mutate(mtcars, disp_cyl = disp/cyl),
+      disp_cyl > 30, 
+      mpg > 23
+    ),
+    cyl,
+    gear
+  ),
+  avg_d_cyl = mean(disp_cyl),
+  min_d_cyl = min(disp_cyl)
+)
+```
+***
+With pipes
+```r
+mtcars %>% 
+  mutate(disp_cyl = disp/cyl) %>% 
+  filter(disp_cyl>30, mpg>23) %>% 
+  group_by(cyl, gear) %>% 
+  summarise(
+    avg_d_cyl = mean(disp_cyl),
+    min_d_cyl = min(disp_cyl)
+  )
+```
+
+Adding `ggplot2`
+====================================
+```{r fig.align='center'}
+library(magrittr); library(ggplot2)
+mtcars %>% 
+  dplyr::select(mpg, disp) %>%       
+  dplyr::arrange(mpg, disp) %>%    
+  ggplot(aes(x= mpg, y = disp)) + 
+    geom_point(size = 4, col = "blue") + theme_bw()
+```
+
+`dplyr` and `dplython` functions
+====================================
+
+| `dplyr` | `dplython`   |
+|:-----------|------------:|
+| `filter`   |  `sift` |         
+| `mutate`   |  same |        
+| `group_by` |  same |          
+| `summarize`|  same |            
+| `arrange`  |  same |        
+| `select`   |  same |   
+
+`dplython` demonstration
+====================================
+
+`data.table` package
+====================================
+* Extension of `data.drame`
+* Fast aggregation of large data
+* Fast ordered joins
+* Fast add/modify/delete of columns by group, and a fast file reader (fread)
+* Natural and flexible syntax
+
+`data.table` package continued
+====================================
+<img src="data.table.png" alt ="logo" height = "600" width = "1000" align ="right"/>
+
+
+`data.table` package (row operations)
+====================================
+```{r, echo=FALSE}
+library(data.table)
+DF <- data.frame(V1=c(1L,2L),
+                 V2=LETTERS[1:3],
+                 V3=round(rnorm(100000),4),
+                 V4=c(1:300000))   
+
+DT <- as.data.table(DF)
+```
+
+```{r, eval=FALSE}
+DT[3:5,]
+
+DT[3:5]
+
+DT[V2 == "A"]
+
+DT[ V2 %in% c("A", "C")]
+```
+
+`data.table` package (column operations)
+====================================
+```{r eval=FALSE}
+DT[, V2]
+
+DT[, .(V2, V3)]   # .() is an alias to list() to result data.table object
+
+DT[, sum(V4)]
+
+DT[, .(sum(V1), sd(V3))]
+
+DT[, .(avg = sum(V1), std = sd(V3))] # Assign column names
+
+DT[, .(V1, std = sd(V3))] # columns reclycled if different lengths
+
+DT[, {print(V2)   # multiple expressions
+      plot(V3)
+      NULL}]
+```
+
+`data.table` (group by)
+====================================
+```{r, echo=FALSE}
+DF <- data.frame(V1=c(1L,2L),
+                 V2=LETTERS[1:3],
+                 V3=round(rnorm(4),4),
+                 V4=c(1:12))   
+
+DT <- as.data.table(DF)
+
+```
+
+```{r, eval=FALSE}
+DT[, .(sum.V4 = sum(V4)), by=V1]
+
+DT[, .(sum.V4 = sum(V4)), by=.(V1,V2)]
+
+DT[1:5, .(sum.V4 = sum(V4)), by=.(V1,V2)] # only for subset rows
+
+DT[, .N, by = V1]   # total no. of observations
+# DT[V1 ==1, sum(V4)]
+
+```
+
+`data.table` (adding/updating columns, :=)
+====================================
+```{r, eval=FALSE}
+DT[, V1 := round(exp(V1),2)]  # update V1
+DT[, c("V1","V2") := list (round(exp(V1),2), LETTERS[4:6])] # update multiple columns
+DT[, V1 := NULL] # remove column
+DT[, c("V4","V3") := NULL] # remove multiple columns
+
+```
+
+`data.table` (setkey)
+====================================
+```{r, eval=FALSE}
+setkey(DT,V2) 
+DT["A"]
+DT[c("A","C")]
+DT[c("A","C"), sum(V4)]
+```
+
+`data.table` (advanced operations)
+====================================
+```{r eval=FALSE}
+DT[.N-2] # second row
+DT[, .N]  # no. of rows
+DT[,.(V2,V3)]  # or
+DT[,list(V2,V3)] 
+DT[,mean(V3), by= .(V1,V2)] 
+```
+
+`data.table` (advanced operations cont.)
+====================================
+```{r, eval=FALSE}
+#.SD
+DT[,.SD[c(1,.N)], by=V2]
+DT[, lapply(.SD, sum), by=V2] 
+DT[, lapply(.SD,sum), by=V2,.SDcols = c("V3","V4")] #same, but only for V3,V4
+
+DT[, lapply(.SD, function(x) sum(x, na.rm = TRUE)), by = V2]
+
+DT[, .(V4.Sum = sum(V4)), by=V1][V4.Sum > 25 ]  # SQL like having
+
+```
+
+<!-- References -->
+<!-- ==================================== -->
+<!-- dplyr: (https://github.com/hadley/dplyr/) -->
+<!-- dplython: (https://github.com/dodger487/dplython/) -->
+<!-- data.table: (https://s3.amazonaws.com/assets.datacamp.com/img/blog/) -->
+
+Questions?
+====================================
+
+
