@@ -225,6 +225,8 @@ DT[ V2 %in% c("A", "C")]
 ```{r eval=FALSE}
 DT[, V2]
 
+DT["V2"]          # would NOT select V2 column. We need DT[,"V2"] or DT[,V2]
+
 DT[, .(V2, V3)]   # .() is an alias to list() to result data.table object
 
 DT[, sum(V4)]
@@ -277,10 +279,11 @@ DT[, c("V4","V3") := NULL] # remove multiple columns
 `data.table` (setkey)
 ====================================
 ```{r, eval=FALSE}
-setkey(DT,V2) 
+setkey(DT,V2) # sets the key 
 DT["A"]
 DT[c("A","C")]
 DT[c("A","C"), sum(V4)]
+setkey(DT, NULL)  # removes the key
 ```
 
 `data.table` (advanced operations)
