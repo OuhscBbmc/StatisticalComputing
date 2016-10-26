@@ -16,6 +16,7 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 
 |        |                    |
 | ------ | ------------------ |
+| Nov 1 | BBMC Validator: catch and communicate data errors.<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))| 
 | Oct 4 | Data Manipulation in R & Python: the `dplyr`, `data.table`, and `dplython` packages.<br/>by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics).<br/> <br/>  *Presentations and supplemental [material](./2016-presentations/10-october/) for the meeting*. |
 | Sept 6 | Open Agenda. |
 | Aug 2 | Open Agenda. |
