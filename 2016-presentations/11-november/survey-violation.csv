@@ -1,0 +1,9 @@
+check_name,record_id,data_collector,error_message,priority,interview_date
+assess_validity,52-3,1,`assess_validity` is not set.,2,2016-10-31
+assess_validity,53-10,5,`assess_validity` is not set.,2,2016-10-31
+index_child_age,53-2,5,index child is over 60 months,2,2016-09-29
+consent_received,51-31,4,The number IRB consent should be received within 45 days.,2,2016-03-22
+consent_received,51-63,4,The number IRB consent should be received within 45 days.,2,2016-08-08
+consent_received,51-67,4,The number IRB consent should be received within 45 days.,2,2016-08-22
+consent_received,52-28,1,The number IRB consent should be received within 45 days.,2,2016-07-21
+consent_received,52-30,1,The number IRB consent should be received within 45 days.,2,2016-09-08

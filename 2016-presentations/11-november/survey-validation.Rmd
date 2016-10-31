@@ -1,0 +1,110 @@
+---
+title: P4 Survey Validation     # Change this value for new validators.
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+---
+
+This report identifies violations in the [P4 Community Survey](https://bbmc.ouhsc.edu/redcap/redcap_v6.11.5/index.php?pid=302) dataset.
+
+<!--  Set the working directory to the repository's base directory; this assumes the report is nested inside of three directories.-->
+```{r, echo=F, message=F}
+# cat("Working directory: ", getwd())
+library(knitr)
+# Change this value for new validators.
+opts_knit$set(root.dir='./../../')  #Don't combine this call with any other chunk -especially one that uses file paths.
+```
+
+<!-- Set the report-wide options, and point to the external code file. -->
+```{r set-options, echo=F}
+# cat("Working directory: ", getwd())
+report_render_start_time <- Sys.time()
+opts_chunk$set(
+  results    = 'show',
+  comment    = NA,
+  tidy       = FALSE,
+  fig.width  = 6.5,
+  fig.height = 4,
+  fig.path   = 'figure-png/'
+)
+# dpi = 400,
+# out.width = "650px", #This affects only the markdown, not the underlying png file.  The height will be scaled appropriately.
+
+echo_chunks <- FALSE
+options(width=100) #So the output is 25% wider than the default.
+
+# Change this value for new validators.
+read_chunk("./analysis/survey-validation/survey-validation.R") #This allows knitr to call chunks tagged in the underlying *.R file.
+```
+
+<!-- Load the sources.  Suppress the output when loading sources. -->
+```{r load-sources, echo=echo_chunks, message=FALSE}
+```
+
+<!-- Load 'sourced' R files.  Suppress the output when loading packages. -->
+```{r load-packages, echo=echo_chunks, message=FALSE}
+```
+
+<!-- Load any global functions and variables declared in the R file.  Suppress the output. -->
+```{r declare-globals, echo=echo_chunks, results='show', message=FALSE}
+```
+
+
+<!-- Declare any global functions specific to a Rmd output.  Suppress the output. -->
+```{r, echo=echo_chunks, message=FALSE}
+  #Put presentation-specific code in here.  It doesn't call a chunk in the codebehind file.
+```
+
+<!-- Load the datasets.   -->
+```{r load-data, echo=echo_chunks, results='show', message=FALSE}
+```
+
+<!-- Tweak the datasets.   -->
+```{r tweak-data, echo=echo_chunks, results='show', message=TRUE}
+```
+
+# Instructions
+
+1. Work through each line in the table to discover & correct entry mistakes in the database.  Be aware that a single mistake may manifest in multiple rows; fixing one value may clear several rows.
+1. Click the `record id` value in a row to be taken to the participant's Event Grid in REDCap (ie, the 'stop light page').
+1. Document your manual corrections to the records are documented in `r path_output`.  Be careful not to move this file to somewhere unsafe.
+1. To help discover the dataflow and problematic location, use the
+    * project's [codebook](https://bbmc.ouhsc.edu/redcap/redcap_v6.11.5/Design/data_dictionary_codebook.php?pid=302) in REDCap,
+    * [survey-ferry.R](https://github.com/OuhscBbmc/P4/blob/master/manipulation/ferry/survey-ferry.R) file, and
+    * [survey-validation](https://github.com/OuhscBbmc/P4/tree/master/analysis/survey-validation) report.
+1. If you create a new check, make sure the error message won't reveal any PHI.
+
+
+# Assemble Checks
+```{r assemble-checks, echo=echo_chunks, message=TRUE, results='asis'}
+```
+
+# Execute Checks
+```{r execute-checks, echo=echo_chunks, message=TRUE}
+```
+
+# Display Table
+```{r display-table, echo=echo_chunks, message=TRUE}
+```
+
+
+# Save To Disk
+```{r verify-values, echo=echo_chunks, message=TRUE}
+```
+
+```{r specify-columns-to-upload, echo=echo_chunks, message=TRUE}
+```
+
+```{r save-to-disk, echo=echo_chunks, message=TRUE}
+```
+
+
+# Session Information
+For the sake of documentation and reproducibility, the current report was rendered on a system using the following software.
+
+```{r session-info, echo=FALSE}
+report_render_duration_in_seconds <- round(as.numeric(difftime(Sys.time(), report_render_start_time, units="secs")))
+cat("Report rendered by", Sys.info()["user"], "at", strftime(Sys.time(), "%Y-%m-%d, %H:%M %z"), "in", report_render_duration_in_seconds, "seconds." )
+sessionInfo()
+```
