@@ -120,6 +120,12 @@ message("Saving list of violations to `", path_output, "`.")
 readr::write_csv(ds_violation, path=path_output)
 ```
 
+Live Products
+========================================================
+
+* [CSV of Violations](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2016-presentations/11-november/survey-violation.csv).
+* [Self-explanatory & portable report](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2016-presentations/11-november/survey-validation.html) (hopefully).
+
 Table of Violations
 ========================================================
 ![display-table](images/display-table.png)
@@ -127,3 +133,36 @@ Table of Violations
 Portable HTML Report
 ========================================================
 ![full-html-report](images/full-html-report.png)
+
+
+Important Characteristics
+========================================================
+ 
+1. No PHI within report.<br/>*Because you can't control where it will be emailed*.
+1. URLs link to PHI within REDCap.<br/>*Let REDCap handle all the authentication duties*.
+1. Sortable & filterable table.<br/>*By date, user, error type*.
+1. Portable & disconnected report.<br/>*The data collectorsaren't always OUHSC employees or on campus.*
+1. Database agnostic.<br/>*Accommodates REDCap, SQL Server, CSV, ...*
+
+
+Human Considerations
+========================================================
+1. Each check should be easy to understand
+1. Each violation should be easy (as possible) to fix
+1. Send reports frequently to data collectors
+    * So the list doesn't become overwhelmingly large
+    * So the cases are fresh on their minds
+1. *What other suggestions do you have?*
+
+
+Upcoming Features
+========================================================
+1. Report runs updates every 10 minutes, and is displayed in Shiny.
+1. Report-level checks will supplement the record-level checks.<br/>(*e.g.*, "At least 30% of participants should be female.")
+1. Graph performance of each data collector<br/>(suggested by [Geneva Marshall](http://ouhsc.edu/bbmc/team/))
+
+Generalizable
+========================================================
+* We want this mechanism to be used in almost all our research that involves live data collection.  We'll also make this publically available.
+* Ideally, a single mechanism accommodates all these types of research.
+* How could this be modified/expanded to accommodate your type of research and human environments?
