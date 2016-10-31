@@ -11,11 +11,13 @@ BBMC Validator: catch and communicate data errors
 
 OUHSC [Statistical Computing User Group](https://github.com/OuhscBbmc/StatisticalComputing)
 
-Will Beasley, Dept of Pediatrics, 
+Will Beasley<sup>1</sup>, Geneva Marshall<sup>1</sup>,<br/>Som Bohora<sup>2</sup>, & Maleeha Shahid<sup>2</sup>.
 
-Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))
 
-[November 11, 2016](https://github.com/OuhscBbmc/StatisticalComputing/tree/master/2016-presentations/11-november)
+1. Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))
+1. Center on Child Abuse and Neglect ([CCAN](https://www.oumedicine.com/department-of-pediatrics/department-sections/devbehav/center-on-child-abuse-and-neglect))
+
+[November 1, 2016](https://github.com/OuhscBbmc/StatisticalComputing/tree/master/2016-presentations/11-november)
 
 
 
