@@ -137,6 +137,12 @@ Portable HTML Report
 ![full-html-report](images/full-html-report.png)
 
 
+Example Checks
+========================================================
+![example-checks](example-checks.R)
+
+
+
 Important Characteristics
 ========================================================
  
