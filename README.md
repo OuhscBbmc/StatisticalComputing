@@ -16,6 +16,7 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 
 |        |                    |
 | ------ | ------------------ |
+| Dec 6 | NIMBLE.<br/>by Blaine Mooers, Department of Biochemistry and Molecular Biology, Laboratory of Biomolecular Structure and Function ([LBSF](http://research.ouhsc.edu/CoreFacilities/LaboratoryofBiomolecularStructureandFunction.aspx)). | 
 | Nov 1 | [BBMC Validator: catch and communicate data errors](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2016-presentations/11-november/beasley-scug-validator-2016-11.html).<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/> <br/>  *Presentations and supplemental [material](./2016-presentations/11-november/) for the meeting*. | 
 | Oct 4 | [Data Manipulation in R & Python: the `dplyr`, `data.table`, and `dplython` packages](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2016-presentations/10-october/data-manipulation-scug.html).<br/>by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics).<br/> <br/>  *Presentations and supplemental [material](./2016-presentations/10-october/) for the meeting*. |
 | Sept 6 | Open Agenda. |
