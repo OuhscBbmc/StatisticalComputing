@@ -11,7 +11,7 @@ BBMC Validator: catch and communicate data errors
 
 OUHSC [Statistical Computing User Group](https://github.com/OuhscBbmc/StatisticalComputing)
 
-Will Beasley<sup>1</sup>, Geneva Marshall<sup>1</sup>,<br/>Som Bohora<sup>2</sup>, & Maleeha Shahid<sup>2</sup>.
+Will Beasley<sup>1</sup>, Geneva Marshall<sup>1</sup>, Thomas Wilson<sup>1</sup>,<br/>Som Bohora<sup>2</sup>, & Maleeha Shahid<sup>2</sup>.
 
 
 1. Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))
