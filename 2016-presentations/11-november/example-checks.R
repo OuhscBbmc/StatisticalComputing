@@ -76,3 +76,25 @@ validation_check(
     )
   }
 )
+
+
+#### Geneva's Checks ########################################
+validation_check(
+  name          = "index_child_age_wave_2",
+  error_message = "The age of the child at subsequent waves should be greater than 3 months",
+  priority      = 2L,
+  passing_test  = function( d ) {
+    ifelse(d$wave %in% 2, d$cdemo_age_c01 >= 3, TRUE)
+    }
+)
+
+#Would like to discuss the approach:
+validation_check(
+  name          = "index_child_consistent",
+  error_message = "The date of birth should be the same on all waves",
+  priority      = 2L,
+  passing_test  = function( d ) {
+    # "Group by the subject it, then in a mutate clause, make sure the values are (or aren't) constant. Both records should get flagged with this approach"
+    #I don't know how to do this, but it's probably important.
+  } 
+)
