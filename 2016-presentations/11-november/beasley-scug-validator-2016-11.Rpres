@@ -163,14 +163,22 @@ Human Considerations
 1. *What other suggestions do you have?*
 
 
-Upcoming Features
+Upcoming Features/Uses
 ========================================================
 1. Report runs updates every 10 minutes, and is displayed in Shiny.
 1. Report-level checks will supplement the record-level checks.<br/>(*e.g.*, "At least 30% of participants should be female.")
-1. Graph performance of each data collector<br/>(suggested by [Geneva Marshall](http://ouhsc.edu/bbmc/team/))
+1. Graph performance of each data collector.<br/>(Suggested by [Geneva Marshall](http://ouhsc.edu/bbmc/team/).)
+1. The data collectors could check the report after their 3 hour interview, but before leaving the participant's home.<br/>(Suggested by [Thomas Wilson](http://ouhsc.edu/bbmc/team/).)
+1. Pull the reusable code into a package, leaving a file with only the checks and a few project-specific parameters.
 
 Generalizable
 ========================================================
 * We want this mechanism to be used in almost all our research that involves live data collection.  We'll also make this publically available.
 * Ideally, a single mechanism accommodates all these types of research.
 * How could this be modified/expanded to accommodate your type of research and human environments?
+
+Feedback During Presentation
+========================================================
+* [Mike Anderson](http://coph.ouhsc.edu/departments/bse/faculty/anderson.aspx): use a similar tool to create an *action item report* that fills the gap between (a) static REDCap scheduling and (b) "errors" of the Validator report.
+* Summer Frank: Building off of Thomas's idea, the data collectors could review only the top priority violations before leaving the participant.  Ignore the checks that can be corrected later, that don't eat up more of the participant's time.
+* [Dwayne Geller](https://github.com/dgeller-OUHSC): Use REDCap's DET (data entry trigger) to run a mini version of the validator that shows errors to the data collector in a REDCap text field.  This would reduce a round trip between the Validator report and REDCap.

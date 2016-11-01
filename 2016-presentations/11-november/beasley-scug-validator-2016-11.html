@@ -789,7 +789,7 @@ hljs.initHighlightingOnLoad();
 <div class="slideContent" >
 <p>OUHSC <a href="https://github.com/OuhscBbmc/StatisticalComputing">Statistical Computing User Group</a></p>
 
-<p>Will Beasley<sup>1</sup>, Geneva Marshall<sup>1</sup>,<br/>Som Bohora<sup>2</sup>, &amp; Maleeha Shahid<sup>2</sup>.</p>
+<p>Will Beasley<sup>1</sup>, Geneva Marshall<sup>1</sup>, Thomas Wilson<sup>1</sup>,<br/>Som Bohora<sup>2</sup>, &amp; Maleeha Shahid<sup>2</sup>.</p>
 
 <ol>
 <li>Biomedical and Behavioral Methodology Core (<a href="http://ouhsc.edu/BBMC/">BBMC</a>)</li>
@@ -978,12 +978,14 @@ readr::write_csv(ds_violation, path=path_output)
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>Upcoming Features</h3>
+<h3>Upcoming Features&#x2F;Uses</h3>
 <div class="slideContent" >
 <ol>
 <li>Report runs updates every 10 minutes, and is displayed in Shiny.</li>
 <li>Report-level checks will supplement the record-level checks.<br/>(<em>e.g.</em>, &ldquo;At least 30% of participants should be female.&rdquo;)</li>
-<li>Graph performance of each data collector<br/>(suggested by <a href="http://ouhsc.edu/bbmc/team/">Geneva Marshall</a>)</li>
+<li>Graph performance of each data collector.<br/>(Suggested by <a href="http://ouhsc.edu/bbmc/team/">Geneva Marshall</a>.)</li>
+<li>The data collectors could check the report after their 3 hour interview, but before leaving the participant&#39;s home.<br/>(Suggested by <a href="http://ouhsc.edu/bbmc/team/">Thomas Wilson</a>.)</li>
+<li>Pull the reusable code into a package, leaving a file with only the checks and a few project-specific parameters.</li>
 </ol>
 
 </div>
@@ -996,6 +998,18 @@ readr::write_csv(ds_violation, path=path_output)
 <li>We want this mechanism to be used in almost all our research that involves live data collection.  We&#39;ll also make this publically available.</li>
 <li>Ideally, a single mechanism accommodates all these types of research.</li>
 <li>How could this be modified/expanded to accommodate your type of research and human environments?</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Feedback During Presentation</h3>
+<div class="slideContent" >
+<ul>
+<li><a href="http://coph.ouhsc.edu/departments/bse/faculty/anderson.aspx">Mike Anderson</a>: use a similar tool to create an <em>action item report</em> that fills the gap between (a) static REDCap scheduling and (b) &ldquo;errors&rdquo; of the Validator report.</li>
+<li>Summer Frank: Building off of Thomas&#39;s idea, the data collectors could review only the top priority violations before leaving the participant.  Ignore the checks that can be corrected later, that don&#39;t eat up more of the participant&#39;s time.</li>
+<li><a href="https://github.com/dgeller-OUHSC">Dwayne Geller</a>: Use REDCap&#39;s DET (data entry trigger) to run a mini version of the validator that shows errors to the data collector in a REDCap text field.  This would reduce a round trip between the Validator report and REDCap.</li>
 </ul>
 
 </div>
