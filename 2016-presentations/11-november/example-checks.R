@@ -1,4 +1,4 @@
-#### Maleeha Examples ########################################
+#### Maleeha's Checks ########################################
 # validation test examples for ASQ-3
 validation_check(
   name          = "was_asq_skipped",
@@ -34,6 +34,45 @@ validation_check (
       d$pregnant_current & (d$cdemo_num_children >1) & (d$cdemo_age_c02 <72),
       !is.na(lead_screening_utility_status_1),
       TRUE
+    )
+  }
+)
+
+
+#### Som's Checks ########################################
+validation_check(
+  name          = "home_01_non_pregnant",
+  error_message = "`Non-pregnant or subjects with no children should skip this question.",
+  priority      = 2L,
+  passing_test  = function( d ) {
+    ifelse((d$pregnant_current == 1 & d$cdemo_num_children == 1), !is.na(d$home_preg_index_child), FALSE)
+  }
+)
+
+validation_check(
+  name          = "home_01through11_missing",
+  error_message = "These questions (home_01 through home_11) should not be missing if child is <= 36 months,but missing.",
+  priority      = 2L,
+  passing_test  = function( d ) {
+    home_01through11_names <- c(paste0("home","_", "0", 1:9), paste0("home","_", 10:11))
+    ifelse(
+      d$cdemo_age_c01 < 36,
+      apply(d[home_01through11_names], 1, function(x) sum(is.na(x))) == 0, 
+      FALSE 
+    )
+  }
+)
+
+validation_check(
+  name          = "home_12through18_missing",
+  error_message = "These questions (home_12 through home_18) should not be asked if child is <= 36 months,but are asked.",
+  priority      = 2L,
+  passing_test  = function( d ) {
+    home_12through18_names <- paste0("home","_", c(12:13,15:18))
+    ifelse(
+      d$cdemo_age_c01 < 36,
+      apply(d[home_12through18_names], 1, function(x) sum(is.na(x))) == 0, 
+      FALSE 
     )
   }
 )
