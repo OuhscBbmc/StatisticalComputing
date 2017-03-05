@@ -16,6 +16,7 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 
 |        |                    |
 | ------ | ------------------ |
+| March 7 | [Creating a minimal R package: initializing package skeleton](https://github.com/wibeasley/r-package-skeleton).<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/> <br/>  *Presentations and supplemental [material](./2017-presentations/03-march/) for the meeting*. | 
 | Jan 30 | REDCap Experiences at IUPUI.<br/>by Andy Arenson, [IUPUI School of Medicine](http://medicine.iupui.edu/medical-education/med-school-curriculum).
 
 ## 2016 Presentations 
