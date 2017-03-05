@@ -1,4 +1,4 @@
-SCUG meeting: 2017-03-08
+SCUG meetings: 2017-03-07 & 2017-04-04
 
 Creating a minimal R package: initializing package skeleton
 ===========
