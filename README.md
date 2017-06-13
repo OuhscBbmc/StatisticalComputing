@@ -16,6 +16,11 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 
 |        |                    |
 | ------ | ------------------ |
+| Dec<br/>5| Bayesian Analysis with Python.<br/>by Blaine Mooers, Department of Biochemistry and Molecular Biology, Laboratory of Biomolecular Structure and Function ([LBSF](http://research.ouhsc.edu/CoreFacilities/LaboratoryofBiomolecularStructureandFunction.aspx)).| 
+| Nov<br/>7| *tbd* |
+| Oct<br/>3| *tbd* |
+| Sep<br/>5| *tbd* |
+| Aug<br/>1| *maybe cancelled* |
 | Jul<br/>4| *cancelled --holiday* | 
 | Jun<br/>6 | [Creating a minimal R package, Part 4: adding more functions](https://github.com/wibeasley/r-package-skeleton). | 
 | May<br/>2 | [Creating a minimal R package, Part 3: adding functions](https://github.com/wibeasley/r-package-skeleton). | 
