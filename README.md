@@ -17,10 +17,10 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 |        |                    |
 | ------ | ------------------ |
 | Dec<br/>5| Bayesian Analysis with Python.<br/>by Blaine Mooers, Department of Biochemistry and Molecular Biology, Laboratory of Biomolecular Structure and Function ([LBSF](http://research.ouhsc.edu/CoreFacilities/LaboratoryofBiomolecularStructureandFunction.aspx)).| 
-| Nov<br/>7| *tbd* |
-| Oct<br/>3| *tbd* |
-| Sep<br/>5| *tbd* |
-| Aug<br/>1| *maybe cancelled* |
+| Nov<br/>7| Performing semi-parametric AUC model in homemade R, Python, and Julia packages.<br/>by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics). |
+| Oct<br/>3| Ellis Island: a pattern for incorporating extrnal data, Part 2.<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). |
+| Sep<br/>5| Ellis Island: a pattern for incorporating extrnal data, Part 1.<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). |
+| Aug<br/>1| *cancelled --summer* |
 | Jul<br/>4| *cancelled --holiday* | 
 | Jun<br/>6 | [Creating a minimal R package, Part 4: adding more functions](https://github.com/wibeasley/r-package-skeleton). | 
 | May<br/>2 | [Creating a minimal R package, Part 3: adding functions](https://github.com/wibeasley/r-package-skeleton). | 
