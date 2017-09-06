@@ -18,8 +18,8 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 | ------ | ------------------ |
 | Dec<br/>5| Bayesian Analysis with Python.<br/>by Blaine Mooers, Department of Biochemistry and Molecular Biology, Laboratory of Biomolecular Structure and Function ([LBSF](http://research.ouhsc.edu/CoreFacilities/LaboratoryofBiomolecularStructureandFunction.aspx)).| 
 | Nov<br/>7| Performing semi-parametric AUC model in homemade R, Python, and Julia packages.<br/>by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics). |
-| Oct<br/>3| Ellis Island: a software pattern for assimilating external data, Part 2.<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). |
-| Sep<br/>5| Ellis Island: a software pattern for assimilating external data, Part 1.<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). |
+| Oct<br/>3| [Ellis Island: a software pattern for assimilating external data, Part 2.](https://github.com/wibeasley/RAnalysisSkeleton/blob/master/documentation/patterns/ellis-island.md) |
+| Sep<br/>5| [Ellis Island: a software pattern for assimilating external data, Part 1.](https://github.com/wibeasley/RAnalysisSkeleton/blob/master/documentation/patterns/ellis-island.md)<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). |
 | Aug<br/>1| *cancelled --summer* |
 | Jul<br/>4| *cancelled --holiday* | 
 | Jun<br/>6 | [Creating a minimal R package, Part 4: adding more functions](https://github.com/wibeasley/r-package-skeleton). | 
@@ -27,6 +27,8 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 | Apr<br/>4 | [Creating a minimal R package, Part 2: testing framework](https://github.com/wibeasley/r-package-skeleton). | 
 | Mar<br/>7 | [Creating a minimal R package, Part 1: initializing package skeleton](https://github.com/wibeasley/r-package-skeleton).<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/> <br/>  *Presentations and supplemental [material](./2017-presentations/03-march/) for the meeting*. | 
 | Jan<br/>30 | REDCap Experiences at IUPUI.<br/>by Andy Arenson, [IUPUI School of Medicine](http://medicine.iupui.edu/medical-education/med-school-curriculum).
+
+
 
 ## 2016 Presentations 
 
