@@ -2,7 +2,7 @@
 rm(list=ls(all=TRUE)) #Clear the memory for any variables set from any previous runs.
 
 # ---- load-sources ------------------------------------------------------------
-source("./manipulation/osdh/ellis/common-ellis.R")
+source("./2017-presentations/10-october/common-ellis.R")
 
 # ---- load-packages -----------------------------------------------------------
 library(magrittr                , quietly=TRUE)
@@ -29,7 +29,7 @@ col_types <- readr::cols_only(
 # ---- load-data ---------------------------------------------------------------
 path_in      <- "2017-presentations/10-october/maternal-health-01-fake.csv"
 
-readr::spec_csv(path_in)
+# readr::spec_csv(path_in)
 ds_with_duplicates <- readr::read_csv(path_in, col_types=col_types)
 rm(path_in, col_types)
 
