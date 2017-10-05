@@ -1,4 +1,4 @@
-Learning Python Programming Language in Interactive Computing Framework
+Learning Python Programming Language in Interactive Computing Framework, part 1
 =======================================
 
 In this meeting, we will learn key differences about two versions of Python, how to use Jupyter Notebook, Python essentials (variables, expressions, statements, conditional execution, functions, iteration, strings, little bit of files etc.), and compare few commands of Python with R programming language.
