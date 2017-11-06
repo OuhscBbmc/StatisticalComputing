@@ -16,7 +16,7 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 
 |        |                    |
 | ------ | ------------------ |
-| Feb<br/>5| Performing semi-parametric AUC model in homemade R, Python, and Julia packages.<br/>by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics). |
+| Feb<br/>5| [Performing semi-parametric AUC model in homemade R, Python, and Julia packages](https://sbohora.github.io/sAUC/).<br/>by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics). |
 
 ## 2017 Presentations
 
