@@ -5,8 +5,10 @@ Open Agenda
 
 #### Possible Topics
 
-1. yaml & csv
+1. [yaml](https://github.com/viking/r-yaml/) & csv
+    * flatten/denormalize list to data.frame [example](https://stackoverflow.com/questions/47242697/denormalize-coerce-list-with-nested-vectors-to-data-frame-in-r)
 
+1. controlling long pipelines with flow files, such as [osdh-flow.R](https://github.com/OuhscBbmc/miechv-3/blob/82065bc983eb492fb325a4896d18cb5188c8025e/manipulation/osdh/osdh-flow.R)
 
 1. [config](https://github.com/rstudio/config) package
     * centralize your project-wide settings so it's available & consistent across multiple files.
