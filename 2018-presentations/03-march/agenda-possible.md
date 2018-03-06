@@ -3,7 +3,30 @@ Open Agenda
 
 [SCUG](https://github.com/OuhscBbmc/StatisticalComputing), March 2018
 
-#### Possible Topics
+#### Actual Topics
+
+1. Python & R tradeoffs on the follow dimensions
+    * production system vs research
+    * computer science background vs stats background
+    * data manipulation vs analysis
+    * propagation of ideas/manuscripts to external audiences
+    * development costs
+
+1. [knitr](https://yihui.name/knitr/) & automated reports
+    * some overlap with this [2013 presentation](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2013_Presentations/03_March/RedcapForUserGroup.pptx) and this [2014 presentation](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2014_Presentations/09_September/LiterateProgrammingPatternsAndPracticesWithREDCap.pdf).
+
+1. GitHub
+    * some overlap with this [2014 presentation](http://htmlpreview.github.io/?https://raw.githubusercontent.com/OuhscBbmc/StatisticalComputing/master/2014_Presentations/05_May/BeasleyScugGitHub2014-05.html) and this [2014 presentation](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2014_Presentations/09_September/LiterateProgrammingPatternsAndPracticesWithREDCap.pdf).
+
+1. benefits of promoting consistency of files/patterns across projects, and using skeletons ([example](https://github.com/wibeasley/RAnalysisSkeleton)).
+
+1. [REDCap](https://projectredcap.org/) & research
+    * creating REDCap projects
+    * token security
+    * [REDCapR](https://github.com/OuhscBbmc/REDCapR)
+    *  some overlap with this [2014 presentation](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/2014_Presentations/09_September/LiterateProgrammingPatternsAndPracticesWithREDCap.pdf).
+
+#### Possible Topics (that weren't covered today)
 
 1. [yaml](https://github.com/viking/r-yaml/) & csv
     * flatten/denormalize list to data.frame [example](https://stackoverflow.com/questions/47242697/denormalize-coerce-list-with-nested-vectors-to-data-frame-in-r)
@@ -14,6 +37,11 @@ Open Agenda
     * centralize your project-wide settings so it's available & consistent across multiple files.
     * similar to a project-wide ['declare-globals'](https://github.com/wibeasley/RAnalysisSkeleton/blob/master/manipulation/te-ellis.R#L25) chunk.
 
+1. text editors
+    * my favorites: [RStudio](https://www.rstudio.com/products/rstudio/download/preview/), [Atom](https://atom.io/), and [Notepad++](https://notepad-plus-plus.org/).
+    * find & replace across files with regexes: Atom
+    * easily zoom in & out is especially nice when sharing screens: tie -- Atom & Notepad++
+    * multicolumn select: 1st place--RStudio and 2nd place--Atom (with the [Sublime-Style-Column-Selection](https://atom.io/packages/Sublime-Style-Column-Selection) package)
 
 1. tight text control
     * [`base::sprintf()`](https://www.rdocumentation.org/packages/base/versions/3.4.3/topics/sprintf)
@@ -30,7 +58,6 @@ Open Agenda
         * [Hadley's Style Guide for R](http://adv-r.had.co.nz/Style.html) (this one is probably more representative what your team might produce to unify your projects)
 
 1. Use skeleton repos to jumpstart your projects, such as  [RAnalysisSkeleton](https://github.com/wibeasley/RAnalysisSkeleton)
-
 
 1. verify-values
 
@@ -67,25 +94,26 @@ Open Agenda
       sqldf::sqldf(
         stringsAsFactors = FALSE
       )   
-  ```
+    ```
 
-  Cumulation, by restricting on itself
-  ```r
-  ds_visit_cumulative_count <- "
-    SELECT
-      b.week, b.program_code, b.worker_name,
-      count(distinct a.case_number) as     client_distinct_cumulative_by_worker
-    FROM ds_visit_3 a
-    JOIN ds_visit_3 b ON
-      (a.week <= b.week)
-      AND (a.program_code=b.program_code AND     a.worker_name=b.worker_name)
-    GROUP BY b.program_code, b.worker_name, b.week
-    ORDER BY b.program_code, b.worker_name, b.week
+    Cumulation, by restricting on itself
+    ```r
+    ds_visit_cumulative_count <- "
+      SELECT
+        b.week, b.program_code, b.worker_name,
+        count(distinct a.case_number) as     client_distinct_cumulative_by_worker
+      FROM ds_visit_3 a
+      JOIN ds_visit_3 b ON
+        (a.week <= b.week)
+        AND (a.program_code=b.program_code AND     a.worker_name=b.worker_name)
+      GROUP BY b.program_code, b.worker_name, b.week
+      ORDER BY b.program_code, b.worker_name, b.week
     " %>%
     sqldf::sqldf()
     ```
 
     Windows of time, using a join
+
     ```r
     ds_client_week_visit_goal <- "
       SELECT
