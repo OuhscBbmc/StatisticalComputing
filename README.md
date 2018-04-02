@@ -16,7 +16,8 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 
 |        |                    |
 | ------ | ------------------ |
-| Apr<br/>3| [Performing semi-parametric AUC model in homemade R, Python, and Julia packages](https://sbohora.github.io/sAUC/).<br/>by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics). |
+| May<br/>2| [Performing semi-parametric AUC model in homemade R, Python, and Julia packages](https://sbohora.github.io/sAUC/).<br/>by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics). |
+| Apr<br/>3|*Open Conversation & Questions.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/> <br/>  *Presentations and supplemental [material](./2018-presentations/03-march/) for the meeting*. |
 | Mar<br/>6|*Open Conversation & Questions.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/> <br/>  *Presentations and supplemental [material](./2018-presentations/03-march/) for the meeting*. |
 | Feb<br/>6| Developing Dashboards for non-Statisticians.<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). |
 
