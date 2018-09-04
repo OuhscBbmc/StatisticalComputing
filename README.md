@@ -16,6 +16,9 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 
 |        |                    |
 | ------ | ------------------ |
+| Sep<br/>4| [codified package: Produce standard/formalized demographics tables.](https://github.com/OuhscBbmc/codified)<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/>Discussion of New REDCap User Group<br/>by Thomas Wilson, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).|
+| Aug<br/>7| *cancelled --summer* |
+| July<br/>3| *cancelled --summer* |
 | Jun<br/>12|*Open Conversation & Questions.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/> <br/>  *Presentations and supplemental [material](./2018-presentations/06-june/) for the meeting*. |
 | May<br/>1| [Performing semi-parametric AUC model in homemade R, Python, and Julia packages](https://sbohora.github.io/sAUC/).<br/>by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics). |
 | Apr<br/>3|*Open Conversation & Questions.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/> <br/>  *Presentations and supplemental [material](./2018-presentations/03-march/) for the meeting*. |
