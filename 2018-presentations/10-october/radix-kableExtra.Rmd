@@ -1,0 +1,30 @@
+---
+title: "kableExtra css *vs* radix css "
+output: 
+  radix::radix_article:
+    style: styles.css
+  # rmarkdown::html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+library(magrittr)
+mtcars %>% 
+  dplyr::select(mpg, cyl, disp) %>% 
+  head() %>% 
+  knitr::kable(format = "html") %>%
+  kableExtra::kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width        = TRUE # Radix does this by default
+  ) 
+```
+
+
+Something in the new [radix package](https://rstudio.github.io/radix/)  is preventing the the kableExtra styles from rendering completely.  For instance, the `bootstrap_options` aren't being expressed at all.  And the (default) radix is blocking `full_width=TRUE` also.
+
+I'm guessing that radix will get at least some traction, especially with the apparent advantages in webpages.  If kableExtra isn't compatible with radix, consider stating that, so people don't get frustrated.  If it is compatible, a dedicated vignette might be helpful, since it seems there are differences.
+
+If there is a dedicated section/vignette on radix, consider mentioning if kableExtra is compatible with  [paged tables](https://rstudio.github.io/radix/tables.html#paged-tables).
