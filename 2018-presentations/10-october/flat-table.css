@@ -1,30 +1,47 @@
-.flat-table-class {
+.flat-table {
   display: block;
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 115%;
   overflow: auto;
   width: auto;
+  white-space: pre;
 }
-
-#flat-table-id {
-  display: block;
-  font-family: sans-serif;
-  -webkit-font-smoothing: antialiased;
-  font-size: 115%;
-  overflow: auto;
-  width: auto;
+td.column-row-index {
+  color: rgb(200, 200, 200);
+  text-align: right;
+  font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
 }
-
+td.column-mpg {
+  font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+  color: red;
+  white-space: pre;
+}
+.column-cyl {
+  white-space: pre;
+  text-align: right;
+}
+td.column-hp {
+  font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+  white-space: pre;
+}
 th {
-  background-color: rgb(112, 196, 105);
+  background-color: rgb(78, 135, 72);
   color: white;
-  font-weight: normal;
+  font-weight: bold;
   padding: 20px 30px;
   text-align: center;
 }
 td {
-  background-color: rgb(238, 238, 238);
-  color: rgb(111, 111, 111);
+  color: rgb(50, 50, 50);
   padding: 20px 30px;
 }
+.aaaaa {
+  color: "red";
+  background-color: "red";
+  padding: 20px 30px;
+  font-size: 300%;
+}
+
+# https://stackoverflow.com/questions/24254552/knitr-style-table-with-css
+# https://bookdown.org/yihui/rmarkdown/tufte-css.html

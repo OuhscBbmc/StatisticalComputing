@@ -2,8 +2,9 @@
 title: "dt-css"
 output: 
   html_document:
-    theme: NULL
-    style: flat-table.css
+    # theme: NULL
+    keep_md: TRUE
+    css: "flat-table.css"
 ---
 
 ```{r setup, include=FALSE}
@@ -12,19 +13,27 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r echo=FALSE}
 library(magrittr)
-ds <- mtcars %>% 
-  dplyr::select(mpg, cyl, disp) %>% 
-  head() 
+mtcars %>% 
+  # table_patient() %>% 
+  DT::datatable(
+    colnames      = gsub("_", " ", colnames(.)),
+    escape        = FALSE,
+    options       = list(
+    pageLength  = 30,
+    dom = 'tip',
+    columnDefs = list(
+      list(className = 'column-row-index', targets = 0),
+      list(className = 'column-mrn', targets = 1),
+      list(className = 'column-age', targets = 4),
+      list(className = 'column-bed', targets = 6)
+    ),
+    class = "aaaaa"
+    # initComplete = DT::JS(
+    #   "function(settings, json) {",
+    #   "$(this.api().table().header()).css({'background-color': '#555', 'color': '#fff'});",
+    #   "}"
+    # )
+    )
+  )
 
-DT::datatable(
-  data        = ds,
-  class       = "flat-table-class"
-  # class       = "flat-table stripe",
-  # extensions  = 'Responsive'
-)
-
-DT::datatable(
-  data        = ds,
-  elementId   = "flat-table-id"
-)
 ```

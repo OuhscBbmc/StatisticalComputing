@@ -1,0 +1,33 @@
+---
+title: "dt-css"
+output: 
+  html_document:
+    # theme: NULL
+    css: flat-table.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r echo=FALSE}
+library(magrittr)
+ds <- mtcars %>% 
+  dplyr::select(mpg, cyl, disp) %>% 
+  head() 
+
+DT::datatable(
+  data        = ds
+)
+DT::datatable(
+  data        = ds,
+  class       = "flat-table-class"
+  # class       = "flat-table stripe",
+  # extensions  = 'Responsive'
+)
+
+DT::datatable(
+  data        = ds,
+  elementId   = "flat-table-id"
+)
+```
