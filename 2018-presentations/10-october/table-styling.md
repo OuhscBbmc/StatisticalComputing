@@ -26,9 +26,25 @@ kableExtra
 CSS
 ========================================================
 * declare styles separately from content.
-* selectors
-* classes vs ids
+* selectors: **type** *vs* **class** *vs* **id**
+* lots of browser-based sandboxes ([example](https://www.w3schools.com/css/tryit.asp?filename=trycss_table_border-collapse))
+* [archer.html](archer.html)
+
 
 Debugging Browser
 ========================================================
 ctrl-shift-j
+
+
+Alternatives to CSS file
+========================================================
+* embedded in Rmd
+* custom function
+
+
+More DT
+========================================================
+* options: https://rstudio.github.io/DT/options.html
+* functions: https://rstudio.github.io/DT/functions.html
+* extensions: https://rstudio.github.io/DT/extensions.html
+* plugins: https://rstudio.github.io/DT/plugins.html
