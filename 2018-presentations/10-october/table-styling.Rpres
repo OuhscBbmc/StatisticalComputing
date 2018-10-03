@@ -1,4 +1,4 @@
-Table Styling
+Customizing Display Tables: Using CSS with DT and kableExtra
 ========================================================
 author: Will Beasley
 date: SCUG 2018-10-02
@@ -12,6 +12,8 @@ DataTables (DT)
 * https://datatables.net/
 
 > DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, build upon the foundations of progressive enhancement, that adds all of these advanced features to any HTML table.
+* [demo: dt-css.Rmd](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2018-presentations/10-october/dt-css.html)
+
 
 kableExtra
 ========================================================
@@ -21,7 +23,9 @@ kableExtra
 * https://github.com/haozhu233/kableExtra
 * https://haozhu233.github.io/kableExtra/awesome_table_in_html.html
 
-> When we are talking about table generators in R, knitr's `kable()` function is usually a popular choice because of its ultimate simplicity. Unlike those powerful table rendering engines such as xtable, the philosophy behind `knitr::kable()` is to make it easy for programmers to use
+> When we are talking about table generators in R, knitr's `kable()` function is usually a popular choice because of its ultimate simplicity. Unlike those powerful table rendering engines such as xtable, the philosophy behind `knitr::kable()` is to make it easy for programmers to use.
+
+* [demo: kableExtra.Rmd](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2018-presentations/10-october/radix-kableExtra.html)
 
 CSS
 ========================================================
@@ -48,3 +52,11 @@ More DT
 * functions: https://rstudio.github.io/DT/functions.html
 * extensions: https://rstudio.github.io/DT/extensions.html
 * plugins: https://rstudio.github.io/DT/plugins.html
+
+
+Other R Packages for Creating Tables
+========================================================
+* [xtable](https://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf)
+* [huxtable](https://hughjonesd.github.io/huxtable/)
+* [tables](https://CRAN.R-project.org/package=tables)
+* [Hmisc](https://CRAN.R-project.org/package=Hmisc)

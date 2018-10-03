@@ -15,6 +15,11 @@ knitr::opts_chunk$set(echo = TRUE)
 library(magrittr)
 mtcars %>% 
   # table_patient() %>% 
+  DT::datatable()
+
+
+mtcars %>% 
+  # table_patient() %>% 
   DT::datatable(
     colnames      = gsub("_", " ", colnames(.)),
     escape        = FALSE,
@@ -23,9 +28,9 @@ mtcars %>%
     dom = 'tip',
     columnDefs = list(
       list(className = 'column-row-index', targets = 0),
-      list(className = 'column-mrn', targets = 1),
-      list(className = 'column-age', targets = 4),
-      list(className = 'column-bed', targets = 6)
+      list(className = 'column-mpg', targets = 1),
+      list(className = 'column-cyl', targets = 4),
+      list(className = 'column-hp', targets = 6)
     ),
     class = "aaaaa"
     # initComplete = DT::JS(
