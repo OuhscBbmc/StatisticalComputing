@@ -16,6 +16,7 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 
 |        |                    |
 | ------ | ------------------ |
+| Dec<br/>04|*Open Conversation & Questions.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/><br/>*Presentations and supplemental [material](./2018-presentations/12-december/) for the meeting*. |
 | Nov<br/>6| Bayesian Data Analysis of Simple Statistical Models with Python.<br/>by Blaine Mooers, Department of Biochemistry and Molecular Biology, Laboratory of Biomolecular Structure and Function ([LBSF](http://research.ouhsc.edu/CoreFacilities/LaboratoryofBiomolecularStructureandFunction.aspx)).|
 | Oct<br/>2| [Customizing Display Tables: Using CSS with DT and kableExtra.](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2018-presentations/10-october/table-styling.html)<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/><br/>*Presentations and supplemental [material](./2018-presentations/10-october/) for the meeting*. |
 | Sep<br/>4| [codified package: Produce standard/formalized demographics tables.](https://github.com/OuhscBbmc/codified)<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/>Discussion of New REDCap User Group<br/>by Thomas Wilson, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).|
