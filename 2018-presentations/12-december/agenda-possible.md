@@ -5,17 +5,37 @@ Open Agenda
 
 #### Actual Topics
 
-1. Shiny
+**Shiny**
+1. Review of Oct 2015 presentation
+    * [slides](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2015_Presentations/10_October/beasley-scug-shiny-2015-10.html#/) of "Interactive reports and webpages with R & Shiny"
+    * [supplemental material](2015_Presentations/10_October)
+1. Deployment scenarios
+    * public vs pro
+    * hosts
+    * authentication
+1. Comparison with similar and/or overlapping reporting solutions, including:
+    * JavaScript-enhanced graphs using
+        * ggplot + plotly
+        * straight plotly
+    * 'static' knitr html reports
+        * cron job refreshing the underlying dataset every ~10 min
+        * saved to a secured file server accessible by your team
+    * Power BI and others
 
-1. TBD
 
 
 #### Possible Topics (that weren't covered today)
 
+1. *plumber** package:
+    > Gives the ability to automatically generate and serve an HTTP API from R functions using the annotations in the R documentation around your functions.
+1. Creating thumbnails in an html page by scanning for all graphics in a subdirectory
+      * [example](https://github.com/OuhscBbmc/DeSheaToothakerIntroStats/blob/master/thumbnails/thumbnails.md)
+      * [code](https://github.com/OuhscBbmc/DeSheaToothakerIntroStats/tree/master/thumbnails)
+
 1. [yaml](https://github.com/viking/r-yaml/) & csv
     * flatten/denormalize list to data.frame [example](https://stackoverflow.com/questions/47242697/denormalize-coerce-list-with-nested-vectors-to-data-frame-in-r)
 
-1. controlling long pipelines with flow files, such as [osdh-flow.R](https://github.com/OuhscBbmc/miechv-3/blob/82065bc983eb492fb325a4896d18cb5188c8025e/manipulation/osdh/osdh-flow.R)
+1. controlling long pipelines with flow files, such as [reproduce.R](https://github.com/dss-ialh/displaying-health-data/blob/master/utility/reproduce.R)
 
 1. [config](https://github.com/rstudio/config) package
     * centralize your project-wide settings so it's available & consistent across multiple files.
