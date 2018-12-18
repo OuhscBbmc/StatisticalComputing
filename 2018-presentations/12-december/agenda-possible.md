@@ -31,6 +31,12 @@ Open Agenda
 1. Creating thumbnails in an html page by scanning for all graphics in a subdirectory
       * [example](https://github.com/OuhscBbmc/DeSheaToothakerIntroStats/blob/master/thumbnails/thumbnails.md)
       * [code](https://github.com/OuhscBbmc/DeSheaToothakerIntroStats/tree/master/thumbnails)
+      
+1. Technical Debt
+
+    * ["Introduction to the Technical Debt Concept"](https://www.agilealliance.org/introduction-to-the-technical-debt-concept/)
+    * ["Project Management and Technical Debt"](https://www.agilealliance.org/project-management-and-technical-debt/)
+    * ["Escaping the black hole of technical debt"](https://www.atlassian.com/agile/software-development/technical-debt)
 
 1. [yaml](https://github.com/viking/r-yaml/) & csv
     * flatten/denormalize list to data.frame [example](https://stackoverflow.com/questions/47242697/denormalize-coerce-list-with-nested-vectors-to-data-frame-in-r)
