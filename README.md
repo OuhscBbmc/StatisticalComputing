@@ -1,10 +1,11 @@
 File Repository for *SCUG*
 ============
-Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  In the spring of 2018, our regular meeting time remains 9:30-10:30am on the first Tuesday of each month.
+
+Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  In the spring of 2019, our regular meeting time remains 9:30-10:30am on the first Tuesday of each month.
 
 Our goal is to facilitate the use of statistical and methodological tools and promote collaboration, mentorship, and discussion of research and analysis.
 
-The code and material from previous presentations in the user group  (formerly called the SAS/R User Group) can be accessed here:  [2012](./2012_Presentations/), [2013](./2013_Presentations/), [2014](./2014_Presentations/), [2015](./2015_Presentations/), [2016](./2016-presentations/), [2017](./2017-presentations/), and [2018](./2018-presentations/).
+The code and material from previous presentations in the user group  (formerly called the SAS/R User Group) can be accessed here:  [2012](./2012_Presentations/), [2013](./2013_Presentations/), [2014](./2014_Presentations/), [2015](./2015_Presentations/), [2016](./2016-presentations/), [2017](./2017-presentations/), [2018](./2018-presentations/), and [2019](./2019-presentations/).
 
 The group is open to anyone interested in the tools used by statisticians and research methodologists. If you would like to present, please contact [Will Beasley](william-beasley@ouhsc.edu).  We encourage any students or employees to participate or present . Alternatively, tell us if there’s a technique that would help your research or assignments, and we’ll try to arrange an expert to teach us about it.
 
@@ -12,11 +13,20 @@ The group's steering committee is Mike Anderson and Will Beasley.
 
 We meet in the East Boardroom of the Samis Education Center in Children's Hospital.  (If you don't see us in the East Boardroom, walk 50 yds to your right and check if we've been moved to the West Boardroom.)  Driving and parking directions are [here](https://raw.github.com/OuhscBbmc/StatisticalComputing/master/Documents/Parking.png).  Once inside the main entrance (which is Level 2), head slightly to the right and take an elevator down to Level 1.  Exit the elevator and turn left; pass through the Samis doors.  The [East Board Room](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/Documents/SamisEdCenterMap.pdf) will be the first room you see.  Please join us.  Electrical outlets and OUHSC Wi-Fi are available.
 
+
+## 2019 Presentations
+
+|        |                    |
+| ------ | ------------------ |
+| Apr<br/>02|*Shiny Development, part 2.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/><br/>*Presentations and supplemental [material](./2019-presentations/02-february/) for the meeting*. |
+| March<br/>05|*Relational Database Design and Optimization*<br/>hosted by Sree Mandem, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/><br/>*Presentations and supplemental [material](./2019-presentations/03-march/) for the meeting*. |
+| Feb<br/>05|*Shiny Development, part 1.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/><br/>*Presentations and supplemental [material](./2019-presentations/02-february/) for the meeting*. |
+
 ## 2018 Presentations
 
 |        |                    |
 | ------ | ------------------ |
-| Dec<br/>04|*Open Conversation & Questions.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/><br/>*Presentations and supplemental [material](./2018-presentations/12-december/) for the meeting*. |
+| Dec<br/>04|*Shiny Deployment; Open Conversation & Questions.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/><br/>*Presentations and supplemental [material](./2018-presentations/12-december/) for the meeting*. |
 | Nov<br/>6| Bayesian Data Analysis of Simple Statistical Models with Python.<br/>by Blaine Mooers, Department of Biochemistry and Molecular Biology, Laboratory of Biomolecular Structure and Function ([LBSF](http://research.ouhsc.edu/CoreFacilities/LaboratoryofBiomolecularStructureandFunction.aspx)).|
 | Oct<br/>2| [Customizing Display Tables: Using CSS with DT and kableExtra.](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2018-presentations/10-october/table-styling.html)<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/><br/>*Presentations and supplemental [material](./2018-presentations/10-october/) for the meeting*. |
 | Sep<br/>4| [codified package: Produce standard/formalized demographics tables.](https://github.com/OuhscBbmc/codified)<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/>Discussion of New REDCap User Group<br/>by Thomas Wilson, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).|
@@ -44,8 +54,6 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 | Mar<br/>7 | [Creating a minimal R package, Part 1: initializing package skeleton](https://github.com/wibeasley/r-package-skeleton).<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/><br/>*Presentations and supplemental [material](./2017-presentations/03-march/) for the meeting*. |
 | Jan<br/>30 | REDCap Experiences at IUPUI.<br/>by Andy Arenson, [IUPUI School of Medicine](http://medicine.iupui.edu/medical-education/med-school-curriculum).
 
-
-
 ## 2016 Presentations
 
 |        |                    |
@@ -60,7 +68,6 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 | May<br/>3 | [Text Manipulation with Regular Expressions, Part 2](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2016-presentations/05-may/beasley-scug-regex-part-2-2016-05.html).<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) <br/><br/>*Presentations and supplemental [material](./2016-presentations/05-may/) for the meeting*. |
 | Mar<br/>1 | [Learning Python Programming Language in Interactive Computing Framework, Part 1](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2016-presentations/03-march/interactive-python-slides.html).<br/>by Som Bohora, Dept of Pediatrics, [Developmental & Behavioral Pediatrics](http://www.oumedicine.com/ouphysicians/child-specialties/list-of-child-specialties/developmental--behavioral-pediatrics). <br/><br/>*Presentations and supplemental [material](./2016-presentations/03-march/) for the meeting*. |
 | Feb<br/>2 | [Text Manipulation with Regular Expressions, Part 1](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2016-presentations/02-february/beasley-scug-regex-part-1-2016-02.html).<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) <br/><br/>*Presentations and supplemental [material](./2016-presentations/02-february/) for the meeting*. |
-
 
 ## 2015 Presentations
 
