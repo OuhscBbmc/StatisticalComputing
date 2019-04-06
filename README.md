@@ -18,7 +18,7 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 
 |        |                    |
 | ------ | ------------------ |
-| May<br/>07|*Shiny Development, part 2.*<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/><br/>*Presentations and supplemental [material](./2019-presentations/02-february/) for the meeting*. |
+| May<br/>07|*[Demo of developing & submitting supercomputer batch jobs](https://github.com/wibeasley/RAnalysisSkeleton/blob/master/documentation/oscer-steps.md)*,<br/>by Will Beasley.<br/><br/>*Shiny Development, part 2.*<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/><br/>*Presentations and supplemental [material](./2019-presentations/02-february/) for supercomputer demo*.<br/><br/>*Presentations and supplemental [material](https://github.com/wibeasley/RAnalysisSkeleton/blob/master/utility/super-computer) for Shiny*. |
 | Apr<br/>02|*[Intro to Supercomputing & How It Can Help You](2019-presentations/04-april/ouhsc-scug-2019-oscer.pdf).*<br/>by [Henry Neeman](http://hneeman.oscer.ou.edu/), OU Supercomputing Center for Education & Research ([OSCER](http://www.ou.edu/oscer)). |
 | March<br/>05|*Relational Database Design and Optimization*<br/>by Sree Mandem, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))|
 | Feb<br/>05|*Shiny Development, part 1.*<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)).<br/><br/>*Presentations and supplemental [material](./2019-presentations/02-february/) for the meeting*. |
