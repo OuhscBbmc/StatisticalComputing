@@ -1,33 +1,15 @@
 Open Agenda
 ======================
 
-[SCUG](https://github.com/OuhscBbmc/StatisticalComputing), Dec 2018
-
-#### Actual Topics
-
-**Shiny**
-1. Review of Oct 2015 presentation
-    * [slides](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2015_Presentations/10_October/beasley-scug-shiny-2015-10.html#/) of "Interactive reports and webpages with R & Shiny"
-    * [supplemental material](2015_Presentations/10_October)
-1. Deployment scenarios
-    * public vs pro
-    * hosts
-    * authentication
-1. Comparison with similar and/or overlapping reporting solutions, including:
-    * JavaScript-enhanced graphs using
-        * ggplot + plotly
-        * straight plotly
-    * 'static' knitr html reports
-        * cron job refreshing the underlying dataset every ~10 min
-        * saved to a secured file server accessible by your team
-    * Power BI and others
+[SCUG](https://github.com/OuhscBbmc/StatisticalComputing), June 2019
 
 
 
-#### Possible Topics (that weren't covered today)
+#### Possible Topics 
 
 1. *plumber** package:
     > Gives the ability to automatically generate and serve an HTTP API from R functions using the annotations in the R documentation around your functions.
+
 1. Creating thumbnails in an html page by scanning for all graphics in a subdirectory
       * [example](https://github.com/OuhscBbmc/DeSheaToothakerIntroStats/blob/master/thumbnails/thumbnails.md)
       * [code](https://github.com/OuhscBbmc/DeSheaToothakerIntroStats/tree/master/thumbnails)
@@ -141,6 +123,25 @@ Open Agenda
 
 Recently Discussed
 -------------------------------------------
+
+#### Dec 2018
+
+**Shiny**
+1. Review of Oct 2015 presentation
+    * [slides](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2015_Presentations/10_October/beasley-scug-shiny-2015-10.html#/) of "Interactive reports and webpages with R & Shiny"
+    * [supplemental material](2015_Presentations/10_October)
+1. Deployment scenarios
+    * public vs pro
+    * hosts
+    * authentication
+1. Comparison with similar and/or overlapping reporting solutions, including:
+    * JavaScript-enhanced graphs using
+        * ggplot + plotly
+        * straight plotly
+    * 'static' knitr html reports
+        * cron job refreshing the underlying dataset every ~10 min
+        * saved to a secured file server accessible by your team
+    * Power BI and others
 
 #### June 2018
 
