@@ -3,16 +3,11 @@ Open Agenda
 
 [SCUG](https://github.com/OuhscBbmc/StatisticalComputing), June 2019
 
+#### Actual Topics
 
-
-#### Possible Topics 
-
-1. GitLab on campus
-
-1. SQLite with R and other languages
-
-1. `case` waterfalls in SQL
-
+1. RStudio Connect has been purchased.  Contact Melissa Nestor if interested.
+1. Cliff Mack's Warehouse training.  Contact if interested.  See https://tdwi.org/events/onsite-education/onsite/sessions/workshops/ba-all-dimensional-data-modeling-skills-a-deep-dive.aspx
+1. Regular Expressions on SQL Server using a .NET assembly.
 1. [CTE](https://www.essentialsql.com/introduction-common-table-expressions-ctes/)s (common table expressions) in SQL.  ([Example](https://github.com/OuhscBbmc/DhsWaiver/blob/master/Analysis/Eda/ad-hoc/attachment-biobehavioral-catchup/attachment-biobehavioral-catchup-2019-06.sql) in a private link.)
 
     ```sql
@@ -81,7 +76,18 @@ Open Agenda
       --,group_assignment
     
     ```
-    
+ 
+
+#### Possible Topics 
+
+1. GitLab on campus
+
+1. Hashing IDs
+
+1. SQLite with R and other languages
+
+1. `case` waterfalls in SQL
+   
 1. *plumber** package:
     > Gives the ability to automatically generate and serve an HTTP API from R functions using the annotations in the R documentation around your functions.
 
