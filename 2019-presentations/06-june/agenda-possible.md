@@ -7,6 +7,81 @@ Open Agenda
 
 #### Possible Topics 
 
+1. GitLab on campus
+
+1. SQLite with R and other languages
+
+1. `case` waterfalls in SQL
+
+1. [CTE](https://www.essentialsql.com/introduction-common-table-expressions-ctes/)s (common table expressions) in SQL.  ([Example](https://github.com/OuhscBbmc/DhsWaiver/blob/master/Analysis/Eda/ad-hoc/attachment-biobehavioral-catchup/attachment-biobehavioral-catchup-2019-06.sql) in a private link.)
+
+    ```sql
+    use dhs_waiver_premiss_1;
+
+    with r as ( -- stands for 'r'eferral
+      SELECT   
+        referral_sha,
+        roster.group_assignment,
+        year(ReferralDate) as referral_year,
+        case 
+          when RemovalBeginDate is null then 0
+          else 1
+        end as child_removed,
+        (datediff(day, Dob, ReferralDate) / (365.25/12))  as age_in_month,
+        case
+          when [RemovalBeginDate] is null and
+              datediff(day, Dob, ReferralDate) < 180                      then '1) not removed; before 6m old'
+          when [RemovalBeginDate] is null and
+              datediff(day, Dob, ReferralDate) between 180 and 730        then '1b) not removed; between 6m & 24m old'
+          when [RemovalBeginDate] is null and
+              datediff(day, Dob, ReferralDate) > 730                      then '1c) not removed; after 24m old'
+              
+          when dob is null                                                then 'dob is missing' 
+          when ReferralDate is null                                       then 'ReferralDate is missing' 
+          when RemovalendDate is null                                     then '4) not reunified' 
+
+          when datediff(day, ReferralDate, RemovalBeginDate) > 92 and
+              datediff(day, Dob, ReferralDate) < 180                      then '2a) not initially removed; before 6m old'   -- ie, 3 months between referral & removed
+          when datediff(day, ReferralDate, RemovalBeginDate) > 92 and
+              datediff(day, Dob, ReferralDate) between 180 and 730        then '2b) not initially removed; between 6m & 24m old'   -- ie, 3 months between referral & removed
+          when datediff(day, ReferralDate, RemovalBeginDate) > 92 and
+              datediff(day, Dob, ReferralDate) > 730                      then '2c) not initially removed; after 24m old'   -- ie, 3 months between referral & removed
+
+          when datediff(day, Dob, RemovalendDate) < 180                   then '3a) initially removed; reunified before 6m old'    
+          when datediff(day, Dob, RemovalendDate) between 180 and 730     then '3b) initially removed; reunified between 6m & 24m old'    
+          when datediff(day, Dob, RemovalendDate) > 730                   then '3c) initially removed; reunified after 24m old' 
+          else                                                         'uncaught case'
+        end as removal_outcome
+
+      FROM [dhs_waiver_premiss_1].[DhsRead].[aocs_removed] a
+        left join dbo.tbl_roster roster on a.ReferralID = roster.referral_id
+      where 
+        GatherSubstance = 1
+        AND
+        '2017-01-01' <= ReferralDate and ReferralDate <= '2017-12-31'
+        and
+        StaffCurrentRegion = 3
+        --and 
+        --roster.group_assignment = 'SAU'
+    )
+    select
+      referral_year,
+      removal_outcome,
+      --group_assignment,
+      count(*) as kid_count,
+      count(distinct referral_sha) as referral_count
+    from r
+    group by 
+      referral_year
+      ,removal_outcome
+      --,group_assignment
+    order by 
+      referral_year
+      ,removal_outcome
+      --,group_assignment
+    
+    ```
+    
 1. *plumber** package:
     > Gives the ability to automatically generate and serve an HTTP API from R functions using the annotations in the R documentation around your functions.
 
