@@ -3,14 +3,28 @@ Open Agenda
 
 [SCUG](https://github.com/OuhscBbmc/StatisticalComputing), September 2019
 
+    
+#### Future Potential Presentations
+
+1. Power BI by Melissa Nestor
+1. [pluripotent](https://github.com/OuhscBbmc/pluripotent) for spawning new repos
+1. Regular Expressions presentations from [Feb 2016](https://github.com/OuhscBbmc/StatisticalComputing#2016-presentations)
+1. Summary of the [3-day warehouse workshop](https://bit.ly/2yVXin4), but a focus on consuming a warehouse (not developing).
+
+
 #### Actual Topics
+
+1. Cliff Mack is hosting 3-Day Dimensional Modeling Workshop (Monday, 23 Sep thru Wednesday 25 Sep).  https://bit.ly/2yVXin4
+
+1. Tweaking [boxplot](https://github.com/OuhscBbmc/usnavy-assignment-survey-1/blob/master/analysis/survey-response-1/figure-png/by-rank-and-specialty-type-1.png) for a specific audience.
+
+    start: [![start](https://raw.githubusercontent.com/OuhscBbmc/usnavy-assignment-survey-1/4e15112ebfbe90a1d326f499d5b4110107bd002e/analysis/survey-response-1/figure-png/by-rank-and-specialty-type-1.png)](https://raw.githubusercontent.com/OuhscBbmc/usnavy-assignment-survey-1/4e15112ebfbe90a1d326f499d5b4110107bd002e/analysis/survey-response-1/figure-png/by-rank-and-specialty-type-1.png)
+
+    finish: [![finish](https://raw.githubusercontent.com/OuhscBbmc/usnavy-assignment-survey-1/422d72d957d72d1894e628154f9953d41f89b213/analysis/survey-response-1/figure-png/by-rank-and-specialty-type-1.png)](https://raw.githubusercontent.com/OuhscBbmc/usnavy-assignment-survey-1/422d72d957d72d1894e628154f9953d41f89b213/analysis/survey-response-1/figure-png/by-rank-and-specialty-type-1.png)
 
 
 #### Possible Topics 
 
-1. Cliff Mack is hosting 3-Day Dimensional Modeling Workshop (Monday, 23 Sep thru Wednesday 25 Sep).  https://bit.ly/2yVXin4
-
-1. Tweaking boxplot for a specific audience.
 
 1. GitLab on campus
 
