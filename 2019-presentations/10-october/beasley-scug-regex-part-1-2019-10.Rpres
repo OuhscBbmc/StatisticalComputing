@@ -45,11 +45,18 @@ Simple Examples
 | **`^mike$`**      | only "mike" |
 
 
-Complicated Example
+Complicated Example #1
 ========================================================
 `\b19(?=(1|2))(\d{2})\b`  and `20\2`<br/>[converts years](https://regex101.com/r/mX5fE4/2) in the 1910s and 1920s to the 2010s and 2020s<br/>(but leaves later years as they are).
 
 [![windows-exporer](./images/forward-lookahead.png)](https://regex101.com/r/mX5fE4/2)
+
+
+Complicated Example #2
+========================================================
+`\b19(?=(1|2))(\d{2})\b`  and `20\2`<br/>[converts years](https://regex101.com/r/mX5fE4/2) in the 1910s and 1920s to the 2010s and 2020s<br/>(but leaves later years as they are).
+
+[![med-stage-1](images/med-stage-1.png)](images/med-stage-1.png) [![med-stage-2](images/med-stage-2.png)](images/med-stage-2.png)
 
 
 Today's Tools
@@ -58,6 +65,7 @@ Today's Tools
 * An online regex tester, **regex101** (https://regex101.com/).
 * Example "subject" text [in SCUG repo](https://github.com/OuhscBbmc/StatisticalComputing/tree/master/2016-presentations/02-february/). <br/>(Google "OU scug github".)
 * A local text editor, choose one of the following:
+    * **Visual Studio _Code_** () -not "Visual Studio".
     * **Atom** (https://atom.io/).
     * **Notepad++** (https://notepad-plus-plus.org/).
 * Today's as language agnostic as possible.  SAS, R, and Python examples in Part 2.
@@ -92,10 +100,10 @@ subscales for a subject 1998-1920
 Strategies and Advice, Part 1
 ===================================
 * Start in a regex tester.
-* Start small/simple, then slowly build complexity & generality.
+* Start verbatum & small/simple, then slowly build complexity & generality.
     * In the regex.
     * In the example/subject text.
-* Leave a breadcrumb trail<br/>(ie, progression of simpler regexes, commented out).
+* Leave a breadcrumb trail<br/>(*i.e.*, progression of simpler regexes, commented out).
 * Include comments to help others and you later.
 * Short-term: use the right-panels of regex101.com.
 
@@ -150,25 +158,25 @@ Example 3
 
 Strategies and Advice, Part 2
 ===================================
-* Anticipate misbehaving subject that you haven't seen yet.
+* Anticipate misbehaving subjects that you haven't seen yet.
 * Try variations of the solutions.  There are usually 10 solutions, each with strengths and weaknesses.
     * Robustness.
     * Readability & maintainability.
     * Generality.
 * Create very selective regexes that loudly fail when they encounter subject text that you haven't anticipated.
-* Long-term: read and reread[*Regular Expressions Cookbook*](http://shop.oreilly.com/product/0636920023630.do), esp Ch 2.
+* Long-term: read and reread [*Regular Expressions Cookbook*](http://shop.oreilly.com/product/0636920023630.do), esp Ch 2.
 
 
 Example 4
 ===================================
 * Erase the "quietly" parameters.
     * In a single file
-    * In many files
+    * In many files (requires a text editor)
 
-```
-requireNamespace("dplyr", quietly=TRUE) #hadley/dplyr
+```r
+requireNamespace("dplyr", quietly=TRUE)  # hadley/dplyr
 requireNamespace("lubridate")
-requireNamespace("OuhscMunge",quietly=T) #OuhscBbmc/OuhscMunge
+requireNamespace("OuhscMunge",quietly=T) # OuhscBbmc/OuhscMunge
 ```
 
 Example 5
@@ -213,11 +221,6 @@ Proceed However You'd Like
     * Invent new challenges
     * Help someone else
     * Check the solutions I thought of.
-
-
-Evaluate the Instructor
-===================================
-Look for an email invitation to a REDCap survey.
 
 
 Potential Solutions for 3 & 4
