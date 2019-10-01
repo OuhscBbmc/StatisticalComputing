@@ -18,6 +18,7 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 
 |        |                    |
 | ------ | ------------------ |
+| Oct<br/>1 | [Text Manipulation with Regular Expressions, Part 1](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2019-presentations/10-october/beasley-scug-regex-part-1-2019-10.html).<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) <br/><br/>*Presentations and supplemental [material](./2019-presentations/10-october/) for the meeting*. |
 | Sept<br/>3|*Open Conversation & Questions.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/><br/>*Presentations and supplemental [material](./2019-presentations/09-september/) for the meeting*. |
 | Aug<br/>6| *cancelled --summer* |
 | July<br/>2| *cancelled --summer* |
