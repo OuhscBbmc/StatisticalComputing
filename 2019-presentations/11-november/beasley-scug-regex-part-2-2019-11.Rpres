@@ -151,6 +151,51 @@ R Functions in Other Packages
     1. Avoid the low-level functions (*i.e.*, `regexpr()`, `gregexpr()`, & `regexec()`)
 
 
+Escalation of R Functions (1 of 3)
+===================================
+
+```{r}
+cols <- c("id", "dx1", "dx2", "dx3", "dx4dx")
+pattern <- "^(dx)(\\d)$"
+
+grep( pattern, cols)
+grep( pattern, cols, value=T) # equivalent: cols[grep(pattern, cols)]
+grepl(pattern, cols)
+```
+
+Escalation of R Functions (2 of 3)
+===================================
+```{r}
+sub("dx", "pz", cols)
+gsub("dx", "pz", cols)
+
+rematch2::re_match(cols, pattern)
+```
+
+Escalation of R Functions (3 of 3)
+===================================
+
+Named capture group produces column names (*e.g.*, `?<index>`).
+```{r}
+pattern_named <- "^(?<type>dx)(?<index>\\d)$"
+
+rematch2::re_match(cols, pattern_named)
+rematch2::re_match(cols, pattern_named)$index
+library(magrittr)
+```
+
+Full **rematch2** example
+===================================
+
+Named capture group produces column names (*e.g.*, `?<index>`).
+```{r}
+pattern_2 <- "^(?<gender>m|f)(?<age>\\d)$"
+tibble::tibble(
+  raw = c("m3", "f4", "f5", "m2")
+) %>%
+rematch2::bind_re_match(raw, pattern_2)
+```
+
 Example 1 in R
 ===================================
 

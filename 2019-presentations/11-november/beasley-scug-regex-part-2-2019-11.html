@@ -1030,6 +1030,118 @@ subscales for a subject 1998-1920
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
+<h3>Escalation of R Functions (1 of 3)</h3>
+<div class="slideContent" >
+<pre><code class="r">cols &lt;- c(&quot;id&quot;, &quot;dx1&quot;, &quot;dx2&quot;, &quot;dx3&quot;, &quot;dx4dx&quot;)
+pattern &lt;- &quot;^(dx)(\\d)$&quot;
+
+grep( pattern, cols)
+</code></pre>
+
+<pre><code>[1] 2 3 4
+</code></pre>
+
+<pre><code class="r">grep( pattern, cols, value=T) # equivalent: cols[grep(pattern, cols)]
+</code></pre>
+
+<pre><code>[1] &quot;dx1&quot; &quot;dx2&quot; &quot;dx3&quot;
+</code></pre>
+
+<pre><code class="r">grepl(pattern, cols)
+</code></pre>
+
+<pre><code>[1] FALSE  TRUE  TRUE  TRUE FALSE
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Escalation of R Functions (2 of 3)</h3>
+<div class="slideContent" >
+<pre><code class="r">sub(&quot;dx&quot;, &quot;pz&quot;, cols)
+</code></pre>
+
+<pre><code>[1] &quot;id&quot;    &quot;pz1&quot;   &quot;pz2&quot;   &quot;pz3&quot;   &quot;pz4dx&quot;
+</code></pre>
+
+<pre><code class="r">gsub(&quot;dx&quot;, &quot;pz&quot;, cols)
+</code></pre>
+
+<pre><code>[1] &quot;id&quot;    &quot;pz1&quot;   &quot;pz2&quot;   &quot;pz3&quot;   &quot;pz4pz&quot;
+</code></pre>
+
+<pre><code class="r">rematch2::re_match(cols, pattern)
+</code></pre>
+
+<pre><code># A tibble: 5 x 4
+  ``    ``    .text .match
+  &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; 
+1 &lt;NA&gt;  &lt;NA&gt;  id    &lt;NA&gt;  
+2 dx    1     dx1   dx1   
+3 dx    2     dx2   dx2   
+4 dx    3     dx3   dx3   
+5 &lt;NA&gt;  &lt;NA&gt;  dx4dx &lt;NA&gt;  
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Escalation of R Functions (3 of 3)</h3>
+<div class="slideContent" >
+<p>Named capture group produces column names (<em>e.g.</em>, <code>?&lt;index&gt;</code>).</p>
+
+<pre><code class="r">pattern_named &lt;- &quot;^(?&lt;type&gt;dx)(?&lt;index&gt;\\d)$&quot;
+
+rematch2::re_match(cols, pattern_named)
+</code></pre>
+
+<pre><code># A tibble: 5 x 4
+  type  index .text .match
+  &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; 
+1 &lt;NA&gt;  &lt;NA&gt;  id    &lt;NA&gt;  
+2 dx    1     dx1   dx1   
+3 dx    2     dx2   dx2   
+4 dx    3     dx3   dx3   
+5 &lt;NA&gt;  &lt;NA&gt;  dx4dx &lt;NA&gt;  
+</code></pre>
+
+<pre><code class="r">rematch2::re_match(cols, pattern_named)$index
+</code></pre>
+
+<pre><code>[1] NA  &quot;1&quot; &quot;2&quot; &quot;3&quot; NA 
+</code></pre>
+
+<pre><code class="r">library(magrittr)
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Full **rematch2** example</h3>
+<div class="slideContent" >
+<p>Named capture group produces column names (<em>e.g.</em>, <code>?&lt;index&gt;</code>).</p>
+
+<pre><code class="r">pattern_2 &lt;- &quot;^(?&lt;gender&gt;m|f)(?&lt;age&gt;\\d)$&quot;
+tibble::tibble(
+  raw = c(&quot;m3&quot;, &quot;f4&quot;, &quot;f5&quot;, &quot;m2&quot;)
+) %&gt;%
+rematch2::bind_re_match(raw, pattern_2)
+</code></pre>
+
+<pre><code>  raw gender age
+1  m3      m   3
+2  f4      f   4
+3  f5      f   5
+4  m2      m   2
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
 <h3>Example 1 in R</h3>
 <div class="slideContent" >
 <pre><code class="r">s &lt;- c(&quot;1916-1918 subscales for a subject&quot;, &quot;1898-2003 subscales for a subject&quot;, &quot;subscales for a subject 1998-1920&quot;)

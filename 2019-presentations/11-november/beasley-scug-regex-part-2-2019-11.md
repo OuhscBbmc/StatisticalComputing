@@ -151,6 +151,126 @@ R Functions in Other Packages
     1. Avoid the low-level functions (*i.e.*, `regexpr()`, `gregexpr()`, & `regexec()`)
 
 
+Escalation of R Functions (1 of 3)
+===================================
+
+
+```r
+cols <- c("id", "dx1", "dx2", "dx3", "dx4dx")
+pattern <- "^(dx)(\\d)$"
+
+grep( pattern, cols)
+```
+
+```
+[1] 2 3 4
+```
+
+```r
+grep( pattern, cols, value=T) # equivalent: cols[grep(pattern, cols)]
+```
+
+```
+[1] "dx1" "dx2" "dx3"
+```
+
+```r
+grepl(pattern, cols)
+```
+
+```
+[1] FALSE  TRUE  TRUE  TRUE FALSE
+```
+
+Escalation of R Functions (2 of 3)
+===================================
+
+```r
+sub("dx", "pz", cols)
+```
+
+```
+[1] "id"    "pz1"   "pz2"   "pz3"   "pz4dx"
+```
+
+```r
+gsub("dx", "pz", cols)
+```
+
+```
+[1] "id"    "pz1"   "pz2"   "pz3"   "pz4pz"
+```
+
+```r
+rematch2::re_match(cols, pattern)
+```
+
+```
+# A tibble: 5 x 4
+  ``    ``    .text .match
+  <chr> <chr> <chr> <chr> 
+1 <NA>  <NA>  id    <NA>  
+2 dx    1     dx1   dx1   
+3 dx    2     dx2   dx2   
+4 dx    3     dx3   dx3   
+5 <NA>  <NA>  dx4dx <NA>  
+```
+
+Escalation of R Functions (3 of 3)
+===================================
+
+Named capture group produces column names (*e.g.*, `?<index>`).
+
+```r
+pattern_named <- "^(?<type>dx)(?<index>\\d)$"
+
+rematch2::re_match(cols, pattern_named)
+```
+
+```
+# A tibble: 5 x 4
+  type  index .text .match
+  <chr> <chr> <chr> <chr> 
+1 <NA>  <NA>  id    <NA>  
+2 dx    1     dx1   dx1   
+3 dx    2     dx2   dx2   
+4 dx    3     dx3   dx3   
+5 <NA>  <NA>  dx4dx <NA>  
+```
+
+```r
+rematch2::re_match(cols, pattern_named)$index
+```
+
+```
+[1] NA  "1" "2" "3" NA 
+```
+
+```r
+library(magrittr)
+```
+
+Full **rematch2** example
+===================================
+
+Named capture group produces column names (*e.g.*, `?<index>`).
+
+```r
+pattern_2 <- "^(?<gender>m|f)(?<age>\\d)$"
+tibble::tibble(
+  raw = c("m3", "f4", "f5", "m2")
+) %>%
+rematch2::bind_re_match(raw, pattern_2)
+```
+
+```
+  raw gender age
+1  m3      m   3
+2  f4      f   4
+3  f5      f   5
+4  m2      m   2
+```
+
 Example 1 in R
 ===================================
 
