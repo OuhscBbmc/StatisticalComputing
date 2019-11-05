@@ -14,13 +14,15 @@ Will Beasley, Dept of Pediatrics,
 
 Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/))
 
-[May 3, 2016](https://github.com/OuhscBbmc/StatisticalComputing/tree/master/2016-presentations/05-may/)
+[November 5, 2019](https://github.com/OuhscBbmc/StatisticalComputing/tree/master/2019-presentations/11-november/)
+
+(Based of the presentation from [May 3, 2016](https://github.com/OuhscBbmc/StatisticalComputing/tree/master/2019-presentations/10-october/))
 
 
 Agenda
 ========================================================
 
-* Review of [Regex Part 1](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2016-presentations/02-february/beasley-scug-regex-part-1-2016-02.html) from two meetings ago.
+* Review of [Regex Part 2](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2016-presentations/02-february/beasley-scug-regex-part-1-2019-10.html) from last month
 * Introduce a few more language-agnostic techniques
 * Apply in a few languages
 
@@ -28,14 +30,13 @@ Environments
 ========================================================
 
 * Text editors
-    * Notepad++, Atom, or anything else halway-serious
+    * Notepad++, Atom, Visual Studio Code, or anything else halfway-serious
 * Languages
     * R, Python, SAS, & most others.
 * Databases
     * First-class support in [Postgres](http://www.postgresql.org/docs/9.3/static/functions-matching.html) with succinct `~` and in [MySQL](http://dev.mysql.com/doc/refman/5.7/en/regexp.html) with `REGEXP`.  And in  [Oracle](https://docs.oracle.com/cd/B19306_01/appdev.102/b14251/adfns_regexp.htm) with `REGEXP_SUBSTR` and `REGEXP_LIKE`, and even `REGEXP_REPLACE`.
     * It's tricky, [but possible](http://stackoverflow.com/questions/24037982/how-used-regexp-in-sqlite) with [SQLite](http://www.sqlite.org/lang_expr.html) and [SQL Server](http://www.codeproject.com/Articles/42764/Regular-Expressions-in-MS-SQL-Server).
-    * The standard/portable [`LIKE`](http://www.w3schools.com/sql/sql_like.asp) SQL operator might do everything you need anyway.
-
+    * The standard/portable [`LIKE`](http://www.w3schools.com/sql/sql_like.asp) SQL operator might do everything you need anyway, if you have only a simple comparison.
 
 
 Overview of Regular Expressions
@@ -95,17 +96,6 @@ Cautions
 * Don't forget the "g" option in regex101.com
 
 
-R Functions
-===================================
-* `grep()` and `grep(..., value=T)`
-* `grepl()`
-* `sub()` and `gsub()`
-* `regexpr()`, `gregexpr()`, `regexec()`
-* Like most R functions, it's designed for vectors.
-    * Careful with subtle differences from documentation for other languages.
-    * Usually, the differences work out for the best.
-
-
 Python Functions
 ===================================
 * Start with
@@ -138,6 +128,28 @@ Example 1
 1998-1914 subscales for a subject
 subscales for a subject 1998-1920
 ```
+
+
+R Functions in Base Package
+===================================
+* `grep()` and `grep(..., value=T)`
+* `grepl()`
+* `sub()` and `gsub()`
+* `regexpr()`, `gregexpr()`, `regexec()`
+* Like most R functions, it's designed for vectors.
+    * Careful with subtle differences from documentation for other languages.
+    * Usually, the differences work out for the best.
+
+R Functions in Other Packages
+===================================
+* **stringr** has been around 10+ years and has some good extraction functions.
+* **rematch2** is fairly new and become my preference in some scenarios.
+
+* My advice:
+    1. See if you can do it naturally with `grep()`, `grepl()`, `sub()` or `gsub()`.
+    1. If not, move to **match2** package.
+    1. Avoid the low-level functions (*i.e.*, `regexpr()`, `gregexpr()`, & `regexec()`)
+
 
 Example 1 in R
 ===================================
@@ -192,6 +204,20 @@ Strategies and Advice, Part 1
 * Short-term: use the right-panels of regex101.com.
 
 
+R-Specific Strategies and Advice
+===================================
+Use the simplest function for the job:
+* `sub()` instead of `gsub()`
+* `re_match()` instead of `re_match_all()` (in rematch2 package)
+
+
+Stack Overflow Regex Advice
+===================================
+Detailed advice for asking regex questions to people outside of your specific project:
+1. https://meta.stackexchange.com/questions/222498/how-to-ask-a-good-regex-question
+1. https://stackoverflow.com/tags/regex/info
+
+Here's an example of one of my regex questions: https://stackoverflow.com/questions/55270833/regex-to-qualify-n
 Example 2
 ===================================
 * **Blacklist**: Flag the bad numeric values.  (Sometimes "bad" is a subjective decision.)
@@ -260,7 +286,7 @@ Example 4
 ```
 requireNamespace("dplyr", quietly=TRUE) #hadley/dplyr
 requireNamespace("lubridate")
-requireNamespace("OuhscMunge",quietly=T) #OuhscBbmc/OuhscMunge
+requireNamespace("OuhscMunge", quietly=T) #OuhscBbmc/OuhscMunge
 ```
 
 Example 5
@@ -305,11 +331,6 @@ Proceed However You'd Like
     * Invent new challenges
     * Help someone else
     * Check the solutions I thought of.
-
-
-Evaluate the Instructor
-===================================
-Look for an email invitation to a REDCap survey.
 
 
 Potential Solutions for 3 & 4
