@@ -5,14 +5,13 @@ Welcome to the file repository for the OUHSC's *Statistical Computing User Group
 
 Our goal is to facilitate the use of statistical and methodological tools and promote collaboration, mentorship, and discussion of research and analysis.
 
-The code and material from previous presentations in the user group  (formerly called the SAS/R User Group) can be accessed here:  [2020](./2020_Presentations/), [2019](./2019_Presentations/), [2018](./2018_Presentations/), [2017](./2017_Presentations/), [2016](./2016_Presentations/), [2015](./2015-presentations/), [2014](./2014-presentations/), [2013](./2013-presentations/), and [2012](./2012-presentations/).
+The code and material from previous presentations in the user group  (formerly called the SAS/R User Group) can be accessed here:  [2020](./2020-presentations/), [2019](./2019-presentations/), [2018](./2018-presentations/), [2017](./2017-presentations/), [2016](./2016-presentations/), [2015](./2015-Presentations/), [2014](./2014_Presentations/), [2013](./2013_Presentations/), and [2012](./2012_Presentations/).
 
 The group is open to anyone interested in the tools used by statisticians and research methodologists. If you would like to present, please contact [Will Beasley](william-beasley@ouhsc.edu).  We encourage any students or employees to participate or present . Alternatively, tell us if there’s a technique that would help your research or assignments, and we’ll try to arrange an expert to teach us about it.
 
 The group's steering committee is Melissa Nestor, Mike Anderson, and Will Beasley.  Previous members include David Thompson and Jessica Hale.
 
 We meet in the East Boardroom of the Samis Education Center in Children's Hospital.  (If you don't see us in the East Boardroom, walk 50 yds to your right and check if we've been moved to the West Boardroom.)  Driving and parking directions are [here](https://raw.github.com/OuhscBbmc/StatisticalComputing/master/Documents/Parking.png).  Once inside the main entrance (which is Level 2), head slightly to the right and take an elevator down to Level 1.  Exit the elevator and turn left; pass through the Samis doors.  The [East Board Room](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/Documents/SamisEdCenterMap.pdf) will be the first room you see.  Please join us.  Electrical outlets and OUHSC Wi-Fi are available.
-
 
 ## 2020 Presentations
 
@@ -21,6 +20,7 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 | Feb<br/>4 | [Scientific Writing with Bookdown](./2020-presentations/02-february/) <br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) |
 
 ## 2019 Presentations
+
 |        |                    |
 | ------ | ------------------ |
 | Dec<br/>3 | Using [Microsoft Power BI](https://powerbi.microsoft.com/en-us/) for Dynamic Reporting on the OUHSC Campus.<br/>by Jeb Sheriff & Melissa Nestor, IT Data Services. |
