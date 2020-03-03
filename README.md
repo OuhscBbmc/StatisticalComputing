@@ -1,7 +1,7 @@
 File Repository for *SCUG*
 ============
 
-Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  In the spring of 2019, our regular meeting time remains 9:30-10:30am on the first Tuesday of each month.
+Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  In the fall of 2020, our regular meeting time remains 9:30-10:30am on the first Tuesday of each month.
 
 Our goal is to facilitate the use of statistical and methodological tools and promote collaboration, mentorship, and discussion of research and analysis.
 
@@ -17,7 +17,9 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 
 |        |                    |
 | ------ | ------------------ |
-| Feb<br/>4 | [Scientific Writing with Bookdown](./2020-presentations/02-february/) <br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) |
+| Apr<br/>7 | [Scientific Writing with Bookdown]() <br/>by [Amanda Schilling](https://libraries.ou.edu/users/amanda-schilling), OU Libraries, [STEM Services](https://libraries.ou.edu/content/stem-services) |
+| Mar<br/>3 | Data Visualization Software on Campus <br/>Melissa Nestor, IT Data Services |
+| Feb<br/>4 | [Scientific Writing with Bookdown](2020-presentations/02-february/) <br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) |
 
 ## 2019 Presentations
 
@@ -26,7 +28,7 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 | Dec<br/>3 | Using [Microsoft Power BI](https://powerbi.microsoft.com/en-us/) for Dynamic Reporting on the OUHSC Campus.<br/>by Jeb Sheriff & Melissa Nestor, IT Data Services. |
 | Nov<br/>5 | [Text Manipulation with Regular Expressions, Part 2](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2019-presentations/11-november/beasley-scug-regex-part-2-2019-11.html).<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) <br/><br/>*Presentations and supplemental [material](./2019-presentations/11-november/) for the meeting*. |
 | Oct<br/>1 | [Text Manipulation with Regular Expressions, Part 1](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2019-presentations/10-october/beasley-scug-regex-part-1-2019-10.html).<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) <br/><br/>*Presentations and supplemental [material](./2019-presentations/10-october/) for the meeting*. |
-| Sept<br/>3|*Open Conversation & Questions.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/><br/>*Presentations and supplemental [material](./2019-presentations/09-september/) for the meeting*. |
+* | Sept<br/>3|*Open Conversation & Questions.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/><br/>*Presentations and supplemental [material](./2019-presentations/09-september/) for the meeting*. |
 | Aug<br/>6| *cancelled --summer* |
 | July<br/>2| *cancelled --summer* |
 | Jun<br/>4|*Open Conversation & Questions.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/><br/>*Presentations and supplemental [material](./2019-presentations/06-june/) for the meeting*. |
