@@ -1,7 +1,7 @@
 Open Agenda
 ======================
 
-[SCUG](https://github.com/OuhscBbmc/StatisticalComputing), September 2019
+[SCUG](https://github.com/OuhscBbmc/StatisticalComputing), March 2020
 
 
 #### Future Potential Presentations
