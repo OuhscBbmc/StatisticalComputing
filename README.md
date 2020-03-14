@@ -1,15 +1,14 @@
-File Repository for *SCUG*
+*SCUG*: Statistical Computing User Group
 ============
 
-Welcome to the file repository for the OUHSC's *Statistical Computing User Group*.  In the fall of 2020, our regular meeting time remains 9:30-10:30am on the first Tuesday of each month.
+Welcome to [OU](http://www.ou.edu/)'s *Statistical Computing User Group*.  In the spring of 2020, our regular meeting time remains 9:30-10:30am on the first Tuesday of each month.
 
 Our goal is to facilitate the use of statistical and methodological tools and promote collaboration, mentorship, and discussion of research and analysis.
 
-The code and material from previous presentations in the user group  (formerly called the SAS/R User Group) can be accessed here:  [2020](./2020-presentations/), [2019](./2019-presentations/), [2018](./2018-presentations/), [2017](./2017-presentations/), [2016](./2016-presentations/), [2015](./2015-Presentations/), [2014](./2014_Presentations/), [2013](./2013_Presentations/), and [2012](./2012_Presentations/).
 
-The group is open to anyone interested in the tools used by statisticians and research methodologists. If you would like to present, please contact [Will Beasley](william-beasley@ouhsc.edu).  We encourage any students or employees to participate or present . Alternatively, tell us if there’s a technique that would help your research or assignments, and we’ll try to arrange an expert to teach us about it.
+The group is open to anyone interested in the tools used by statisticians and research methodologists. If you would like to present, please contact [Will Beasley](william-beasley@ouhsc.edu).  We encourage any students or employees to participate or present. Alternatively, tell us if there’s a technique that would help your research or assignments, and we’ll try to arrange an expert to teach us about it.
 
-The group's steering committee is Melissa Nestor, Mike Anderson, and Will Beasley.  Previous members include David Thompson and Jessica Hale.
+The group's steering committee is Melissa Nestor, Mike Anderson, and Will Beasley.  Previous members include David Thompson and Jessica Hale.  The code and material from previous presentations in the user group  (formerly called the SAS/R User Group) can be accessed here:  [2020](./2020-presentations/), [2019](./2019-presentations/), [2018](./2018-presentations/), [2017](./2017-presentations/), [2016](./2016-presentations/), [2015](./2015-Presentations/), [2014](./2014_Presentations/), [2013](./2013_Presentations/), and [2012](./2012_Presentations/).
 
 We meet in the East Boardroom of the Samis Education Center in Children's Hospital.  (If you don't see us in the East Boardroom, walk 50 yds to your right and check if we've been moved to the West Boardroom.)  Driving and parking directions are [here](https://raw.github.com/OuhscBbmc/StatisticalComputing/master/Documents/Parking.png).  Once inside the main entrance (which is Level 2), head slightly to the right and take an elevator down to Level 1.  Exit the elevator and turn left; pass through the Samis doors.  The [East Board Room](https://github.com/OuhscBbmc/StatisticalComputing/blob/master/Documents/SamisEdCenterMap.pdf) will be the first room you see.  Please join us.  Electrical outlets and OUHSC Wi-Fi are available.
 
@@ -28,7 +27,7 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 | Dec<br/>3 | Using [Microsoft Power BI](https://powerbi.microsoft.com/en-us/) for Dynamic Reporting on the OUHSC Campus.<br/>by Jeb Sheriff & Melissa Nestor, IT Data Services. |
 | Nov<br/>5 | [Text Manipulation with Regular Expressions, Part 2](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2019-presentations/11-november/beasley-scug-regex-part-2-2019-11.html).<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) <br/><br/>*Presentations and supplemental [material](./2019-presentations/11-november/) for the meeting*. |
 | Oct<br/>1 | [Text Manipulation with Regular Expressions, Part 1](https://rawgit.com/OuhscBbmc/StatisticalComputing/master/2019-presentations/10-october/beasley-scug-regex-part-1-2019-10.html).<br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) <br/><br/>*Presentations and supplemental [material](./2019-presentations/10-october/) for the meeting*. |
-* | Sept<br/>3|*Open Conversation & Questions.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/><br/>*Presentations and supplemental [material](./2019-presentations/09-september/) for the meeting*. |
+| Sept<br/>3|*Open Conversation & Questions.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/><br/>*Presentations and supplemental [material](./2019-presentations/09-september/) for the meeting*. |
 | Aug<br/>6| *cancelled --summer* |
 | July<br/>2| *cancelled --summer* |
 | Jun<br/>4|*Open Conversation & Questions.*<br/>hosted by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)). <br/><br/>*Presentations and supplemental [material](./2019-presentations/06-june/) for the meeting*. |
