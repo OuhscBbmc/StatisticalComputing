@@ -17,7 +17,7 @@ We meet in the East Boardroom of the Samis Education Center in Children's Hospit
 |        |                    |
 | ------ | ------------------ |
 | May<br/>? | [Open Science Framework](https://osf.io/) <br/>by [Amanda Schilling](https://libraries.ou.edu/users/amanda-schilling), OU Libraries, [STEM Services](https://libraries.ou.edu/content/stem-services) |
-| Apr<br/>7 | *cancelled --covid practies*  |
+| Apr<br/>7 | *cancelled --covid practices*  |
 | Mar<br/>3 | Data Visualization Software on Campus <br/>Melissa Nestor, IT Data Services |
 | Feb<br/>4 | [Scientific Writing with Bookdown](2020-presentations/02-february/) <br/>by Will Beasley, Dept of Pediatrics, Biomedical and Behavioral Methodology Core ([BBMC](http://ouhsc.edu/BBMC/)) |
 
